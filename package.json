@@ -1,5 +1,6 @@
 {
 	"name": "test-vite-react-github-pages",
+	"homepage": "https://sonatai.github.io/test-github-pages/",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
