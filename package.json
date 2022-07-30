@@ -1,18 +1,17 @@
 {
 	"name": "test-vite-react-github-pages",
-	"homepage": "https://sonatai.github.io/test-github-pages/",
-	"private": true,
 	"version": "0.0.0",
-	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
+		"debug": "vite --debug",
 		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.3.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.15",
