@@ -1,6 +1,6 @@
 {
 	"name": "test-vite-react-github-pages",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
@@ -9,6 +9,8 @@
 		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
+		"@csstools/normalize.css": "^12.0.0",
+		"@mui/base": "^5.0.0-alpha.91",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.3.0"
@@ -17,7 +19,10 @@
 		"@types/react": "^18.0.15",
 		"@types/react-dom": "^18.0.6",
 		"@vitejs/plugin-react": "^2.0.0",
+		"autoprefixer": "^10.4.8",
 		"gh-pages": "^4.0.0",
+		"postcss": "^8.4.14",
+		"tailwindcss": "^3.1.7",
 		"typescript": "^4.6.4",
 		"vite": "^3.0.0"
 	}
