@@ -74,4 +74,4 @@ Error generating stack: `+o.message+`
 					z-20 block 
 					overflow-y-scroll
 					w-2/12
-					`,children:[L("h2",{children:"Blah"}),L("br",{}),L("nav",{children:We("ul",{children:[L("li",{children:"Item 1"}),L("li",{children:"Item 2"}),L("li",{children:"Item 3"})]})})]})]})]});no.createRoot(document.getElementById("root")).render(L(Qc.StrictMode,{children:L(_p,{basename:"/test-github-pages",children:L($p,{})})}));
+					`,children:[L("h2",{children:"Blah"}),L("br",{}),L("nav",{children:We("ul",{children:[L("li",{children:"Item 1"}),L("li",{children:"Item 2"}),L("li",{children:"Item 3"})]})})]})]})]});no.createRoot(document.getElementById("root")).render(L(Qc.StrictMode,{children:L(_p,{basename:"/test-github-pages/docs",children:L($p,{})})}));
