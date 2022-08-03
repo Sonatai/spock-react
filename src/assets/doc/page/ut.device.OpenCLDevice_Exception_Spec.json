@@ -1,0 +1,88 @@
+{
+  "className":"ut.device.OpenCLDevice_Exception_Spec",
+  "statistics":{
+    "runs":"4",
+    "successRate":"100.0%",
+    "failures":"0",
+    "errors":"0",
+    "skipped":"0",
+    "duration":"2.287 seconds"
+  },
+
+  "title":"OpenCLDevice Exception Handling",
+  "narrative":"The OpenCLDevice class, one of many implementations of the Device interface, \n    represents physical OpenCL devices.\n    This specification defines how instances of this class deal with exceptional information.",
+  "headers":["\n            <p>\n                It is important that an OpenCLDevice gives insightful error messages\n                when encountering exceptional situations.\n            </p>\n        "],"tags":{},"see":[],
+  "features":[ 
+    {
+      "id":"An OpenCLDevice will throw an exception when trying to add a tensor whose \"data parent\" is not outsourced.",
+      "result":"PASS",
+      "duration":"1.550 seconds",
+      "iterations":{
+      "tags":{},"see":[],"extraInfo":[]
+      },
+      "blocks":[
+        {"kind":"given","text":"The first found OpenCLDevice instance.","code":[""]},
+        {"kind":"and","text":"A tensor and a slice tensor of the prior.","code":[""]},
+        {"kind":"expect","text":"Both tensors share not only the same data but also the same data type.","code":[""]},
+        {"kind":"when","text":"We try to add the slice to the device.","code":[""]},
+        {"kind":"then","text":"An exception is being thrown.","code":[""]},
+        {"kind":"and","text":"It explains what went wrong.","code":[""]}
+      ],
+      "problems":"[]"
+    },
+  
+    {
+      "id":"Ad hoc compilation produces expected exceptions.",
+      "result":"PASS",
+      "duration":"0.360 seconds",
+      "iterations":{
+      "tags":{},"see":[],"extraInfo":[]
+      },
+      "blocks":[
+        {"kind":"given","text":"----","code":[""]},
+        {"kind":"expect","text":"Initially there is no ad hoc kernel with the following name.","code":[""]},
+        {"kind":"when","text":"We try to compile a new ad hoc kernel named \"right_dummy_kernel_name\" containing the wrong name in source...","code":[""]},
+        {"kind":"then","text":"An exception is being raised because the kernel name provided does not match the one in the source.","code":[""]},
+        {"kind":"and","text":"Still the kernel does not exist because it failed to compile.","code":[""]}
+      ],
+      "problems":"[]"
+    },
+  
+    {
+      "id":"Ad hoc compilation produces expected exceptions when duplication is found.",
+      "result":"PASS",
+      "duration":"0.337 seconds",
+      "iterations":{
+      "tags":{},"see":[],"extraInfo":[]
+      },
+      "blocks":[
+        {"kind":"given","text":"----","code":[""]},
+        {"kind":"expect","text":"Initially there is no ad hoc kernel with the following name.","code":[""]},
+        {"kind":"when","text":"We try to compile a new ad hoc kernel named \"right_dummy_kernel_name\"...","code":[""]},
+        {"kind":"then","text":"The compilation succeeds and the device stores the new ad hoc kernel.","code":[""]},
+        {"kind":"when","text":"We try to compile the same kernel name and source again...","code":[""]},
+        {"kind":"then","text":"This leads to the following exception:","code":[""]},
+        {"kind":"and","text":"Of course the original kernel is still present.","code":[""]}
+      ],
+      "problems":"[]"
+    },
+  
+    {
+      "id":"Trying to restore a tensor which is not on a device raises exception.",
+      "result":"PASS",
+      "duration":"0.024 seconds",
+      "iterations":{
+      "tags":{},"see":[],"extraInfo":[]
+      },
+      "blocks":[
+        {"kind":"given","text":"----","code":[""]},
+        {"kind":"when","text":"We pass a new tensor to the restore method of the device, even though the tensor is not stored on it...","code":[""]},
+        {"kind":"then","text":"The previous attempt raises an illegal argument exception with an explanatory message.","code":[""]},
+        {"kind":"and","text":"This message is also being logged by the internal device logger.","code":[""]}
+      ],
+      "problems":"[]"
+    }
+  
+  ],
+  "generator":"https://github.com/renatoathaydes/spock-reports"
+}

@@ -1,0 +1,57 @@
+{
+  "className":"ut.device.Cross_Device_IO_Spec",
+  "statistics":{
+    "runs":"2",
+    "successRate":"100.0%",
+    "failures":"0",
+    "errors":"0",
+    "skipped":"0",
+    "duration":"0.229 seconds"
+  },
+
+  "title":"Devices manage the states of the tensors they store!",
+  "narrative":"Tensors should not manage their states\n    themselves, simply because the type and location\n    of the data is dependent on the device onto which they are stored.\n    This specification tests of various device implementations\n    enable reading to or writing from the tensors they store.",
+  "headers":[],"tags":{},"see":[],
+  "features":[ 
+    {
+      "id":"We can use the access device API to read from a tensor.",
+      "result":"PASS",
+      "duration":"0.057 seconds",
+      "iterations":{
+      "tags":{},"see":[],"extraInfo":[]
+      },
+      "blocks":[
+        {"kind":"given","text":"We fetch the required device instance from its interface.","code":[""]},
+        {"kind":"and","text":"We fetch the array type of the tested data type!","code":[""]},
+        {"kind":"and","text":"A tensor filled with 4 values which we are going to store on the previously fetched device.","code":[""]},
+        {"kind":"and","text":"A slice from the above tensor.","code":[""]},
+        {"kind":"expect","text":"The device reports that both tensors have the same data array size.","code":[""]},
+        {"kind":"and","text":"Reading the underlying tensor data from the device will yield the expected result.","code":[""]},
+        {"kind":"and","text":"This is also true for when reading at a particular index.","code":[""]},
+        {"kind":"where","text":"We use the following data:","code":[""]}
+      ],
+      "problems":"[]"
+    },
+  
+    {
+      "id":"We can use the access device API to write to a tensor",
+      "result":"PASS",
+      "duration":"0.057 seconds",
+      "iterations":{
+      "tags":{},"see":[],"extraInfo":[]
+      },
+      "blocks":[
+        {"kind":"given","text":"We fetch the required device instance from its interface.","code":[""]},
+        {"kind":"and","text":"We fetch the array type of the tested data type!","code":[""]},
+        {"kind":"and","text":"A tensor filled with 4 values which we are going to store on the previously fetched device.","code":[""]},
+        {"kind":"and","text":"A slice from the above tensor.","code":[""]},
+        {"kind":"when","text":"We write some test data into different ranges within the 2 tensors.","code":[""]},
+        {"kind":"then","text":"Reading the previously written data should yield the expected result.","code":[""]},
+        {"kind":"where","text":"----","code":[""]}
+      ],
+      "problems":"[]"
+    }
+  
+  ],
+  "generator":"https://github.com/renatoathaydes/spock-reports"
+}

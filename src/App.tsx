@@ -3,7 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Container } from './components/shared/Container';
 import { Start } from './pages/Start/Start';
-import { Testerino } from './pages/Testerino/Testerino';
+import { ExampleOne } from './pages/ExampleOne/ExampleOne';
 
 export const App = (): JSX.Element => {
 	return (
@@ -24,7 +24,7 @@ export const App = (): JSX.Element => {
 								<Link to='/'>Home</Link>
 							</li>
 							<li>
-								<Link to='test'>Testerino</Link>
+								<Link to='example_one'>Example 1</Link>
 							</li>
 							<li>Item 2</li>
 							<li>Item 3</li>
@@ -44,7 +44,7 @@ export const App = (): JSX.Element => {
 				<div className='w-8/12 px-6 py-4'>
 					<Routes>
 						<Route path='/' element={<Start />} />
-						<Route path='test' element={<Testerino />} />
+						<Route path='example_one' element={<ExampleOne />} />
 					</Routes>
 				</div>
 				<div
@@ -67,11 +67,3 @@ export const App = (): JSX.Element => {
 		</>
 	);
 };
-
-/*
-className === unique key for spec
-executedFeatures === unique key for test
-feature.id === unique key for test
-kind: GIVEN | WHEN | THEN | AND | CLEANUP | WHERE
-#ff3f81
-*/
