@@ -18,3 +18,25 @@ body,
 	@apply text-gray-300;
 	@apply text-base;
 }
+
+h1 {
+	font-size: 1.875rem;
+	margin-bottom: 3rem;
+}
+
+h2 {
+	font-size: 1.563rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+h4,
+h5,
+h6 {
+	font-size: 0.875rem;
+	margin-bottom: 1rem;
+}

@@ -1,4 +1,5 @@
-import React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 /*
 className === unique key for spec
@@ -14,32 +15,34 @@ export interface IBlock {
 	code: string[];
 }
 
-interface IFeature {
+export interface IFeature {
 	id: string;
-	result: string;
-	duration: string;
 	blocks: IBlock[];
 }
 
 export const Feature = (props: IFeature): JSX.Element => {
-	const { id, result, duration, blocks } = props;
+	const { id, blocks } = props;
 
 	return (
-		<>
-			<h3>{id}</h3>
-			<div className='flex'>
-				<div className='mr-2'>{result}</div>
-				<div>{`Duration: ${duration}`}</div>
-			</div>
+		<section id={id}>
+			<h3>
+				<a href={`#${id}`}>{id}</a>
+			</h3>
 			<div>
 				{blocks.map((block) => (
 					<>
-						{`${block.kind.toUpperCase()} ${block.text || '----'}`}
-						{block.code.length > 0 && <p>{block.code.join('\n')}</p>}
-						<br />
+						{`${block.kind} ${block.text || '----'}`}
+						{block.code.length > 0 && (
+							<SyntaxHighlighter
+								language='kotlin'
+								style={dracula}
+								showLineNumbers>
+								{block.code.join('\n')}
+							</SyntaxHighlighter>
+						)}
 					</>
 				))}
 			</div>
-		</>
+		</section>
 	);
 };
