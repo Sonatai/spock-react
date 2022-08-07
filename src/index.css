@@ -15,8 +15,15 @@ body,
 
 	background-color: #23153c;
 
-	@apply text-gray-300;
+	@apply text-gray-400;
 	@apply text-base;
+}
+
+h2,
+h3,
+h4,
+h6 {
+	margin-top: 2rem;
 }
 
 h1 {
@@ -39,4 +46,11 @@ h5,
 h6 {
 	font-size: 0.875rem;
 	margin-bottom: 1rem;
+}
+
+.sideNavBar {
+	@apply z-20 block;
+	@apply overflow-y-scroll;
+	@apply py-[2rem];
+	@apply px-[0.5rem];
 }

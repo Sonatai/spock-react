@@ -1,6 +1,8 @@
+import { Layout } from '../../components/shared/Layout';
+
 export const Start = (): JSX.Element => {
 	return (
-		<div className='w-10/12 px-6 py-[2rem]'>
+		<Layout>
 			<h1>Main Content</h1>
 			<p>
 				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -81,6 +83,6 @@ export const Start = (): JSX.Element => {
 				dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
 				te feugait nulla facilisi. Lorem ipsum dolor sit amet,
 			</p>
-		</div>
+		</Layout>
 	);
 };

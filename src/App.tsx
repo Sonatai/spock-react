@@ -14,13 +14,10 @@ export const App = (): JSX.Element => {
 			<Container>
 				<div
 					className={`
-					z-20 block 
-					overflow-y-scroll
+					sideNavBar
 					w-2/12
-					py-[2rem]
 					`}>
 					<h5>Examples</h5>
-					<br />
 					<nav>
 						<ul className='text-[0.875rem]'>
 							<li className='pb-[0.5rem]'>
