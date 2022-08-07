@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid';
+import { Fragment } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -30,8 +32,11 @@ export const Feature = (props: IFeature): JSX.Element => {
 			</h3>
 			<div>
 				{blocks.map((block) => (
-					<>
-						{`${block.kind} ${block.text || '----'}`}
+					<Fragment key={nanoid()}>
+						<div className='flex'>
+							<em>{block.kind}</em>
+							<div className='ml-[0.5rem]'>{block.text || '----'}</div>
+						</div>
 						{block.code.length > 0 && (
 							<SyntaxHighlighter
 								language='kotlin'
@@ -40,7 +45,7 @@ export const Feature = (props: IFeature): JSX.Element => {
 								{block.code.join('\n')}
 							</SyntaxHighlighter>
 						)}
-					</>
+					</Fragment>
 				))}
 			</div>
 		</section>
