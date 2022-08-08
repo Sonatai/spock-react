@@ -1,13 +1,15 @@
+import { nanoid } from 'nanoid';
 import { Link, Route, Routes } from 'react-router-dom';
 
-import exampleJson from './assets/doc/pages/Example_Spec.Example_Spec.json';
-import tensorExceptionJson from './assets/doc/pages/ut.tensors.exceptions.Tensor_Exception_Spec.json';
 import { Header } from './components/Header/Header';
 import { Container } from './components/shared/Container';
+import { useGetSummary } from './Hooks/useGetSummary';
 import { Docu } from './pages/Docu/Docu';
 import { Start } from './pages/Start/Start';
 
 export const App = (): JSX.Element => {
+	const { data: summary, isLoading, isError } = useGetSummary();
+
 	return (
 		<>
 			<Header />
@@ -16,6 +18,7 @@ export const App = (): JSX.Element => {
 					className={`
 					sideNavBar
 					w-2/12
+					
 					`}>
 					<h5>Examples</h5>
 					<nav>
@@ -23,40 +26,27 @@ export const App = (): JSX.Element => {
 							<li className='pb-[0.5rem]'>
 								<Link to='/'>Home</Link>
 							</li>
-							<li className='pb-[0.5rem]'>
-								<Link to='example_one'>Example 1</Link>
-							</li>
-							<li className='pb-[0.5rem]'>
-								<Link to='example_two'>Example 2 - tensor exception</Link>
-							</li>
+
+							{summary?.specifications.map((spec) => (
+								<li className='pb-[0.5rem]' key={nanoid()}>
+									<Link to={spec.className}>
+										{spec.title || spec.className}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</nav>
 				</div>
 
 				<Routes>
 					<Route path='/' element={<Start />} />
-					<Route
-						path='example_one'
-						element={
-							<Docu
-								features={exampleJson.features}
-								libClassName={exampleJson.className}
-								narrative={exampleJson.narrative}
-								title={exampleJson.title}
-							/>
-						}
-					/>
-					<Route
-						path='example_two'
-						element={
-							<Docu
-								features={tensorExceptionJson.features}
-								libClassName={tensorExceptionJson.className}
-								narrative={tensorExceptionJson.narrative}
-								title={tensorExceptionJson.title}
-							/>
-						}
-					/>
+					{summary?.specifications.map((spec) => (
+						<Route
+							path={spec.className}
+							element={<Docu fileName={spec.className} />}
+							key={nanoid()}
+						/>
+					))}
 				</Routes>
 			</Container>
 		</>
