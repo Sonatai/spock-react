@@ -10,7 +10,7 @@ interface IExampleOne {
 	fileName: string;
 }
 
-export const Docu = (props: IExampleOne): JSX.Element => {
+export const Document = (props: IExampleOne): JSX.Element => {
 	const { fileName } = props;
 
 	const { data } = useGetSpec({ fileName: fileName });

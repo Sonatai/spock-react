@@ -10,7 +10,24 @@ const getSummary = async () => {
 	return data.data;
 };
 
-interface ISummary {
+export interface ISpecification {
+	className: string;
+	title: string;
+	narrative: string;
+	featureCount: string;
+	failures: string;
+	errors: string;
+	skipped: string;
+	successRate: string;
+	duration: string;
+	executedFeatures: {
+		id: string;
+		extraInfo: any[];
+	}[];
+	ignoredFeatures: any[];
+}
+
+export interface ISummary {
 	generator: string;
 	project: string;
 	version: string;
@@ -23,22 +40,7 @@ interface ISummary {
 		successRate: string;
 		duration: string;
 	};
-	specifications: {
-		className: string;
-		title: string;
-		narrative: string;
-		featureCount: string;
-		failures: string;
-		errors: string;
-		skipped: string;
-		successRate: string;
-		duration: string;
-		executedFeatures: {
-			id: string;
-			extraInfo: any[];
-		}[];
-		ignoredFeatures: any[];
-	}[];
+	specifications: ISpecification[];
 }
 
 export const useGetSummary = () => {
