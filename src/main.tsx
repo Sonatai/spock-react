@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<BrowserRouter basename='/test-github-pages'>
+		<BrowserRouter basename='/test-github-pages/docs'>
 			<QueryClientProvider client={queryClient}>
 				<App />
 			</QueryClientProvider>

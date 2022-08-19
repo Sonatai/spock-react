@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import { Link, Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/Header/Header';
-import { SearchInput } from './components/Search/SearchInput';
+import { Search } from './components/Search/Search';
 import { Container } from './components/shared/Container';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Docu/Document';
@@ -22,8 +22,9 @@ export const App = (): JSX.Element => {
 					w-2/12
 					
 					`}>
-						<SearchInput summary={summary} />
+						<Search summary={summary} />
 						<h5>Examples</h5>
+
 						<nav>
 							<ul className='text-[0.875rem]'>
 								<li className='pb-[0.5rem]'>

@@ -1,0 +1,33 @@
+.backdrop {
+	z-index: 999;
+	position: fixed;
+
+	-webkit-tap-highlight-color: #fff;
+	background-color: #00000080;
+
+	box-sizing: border-box;
+	inset: 0;
+}
+
+.modal-content {
+	z-index: 999;
+	padding: 1rem;
+	width: 40rem;
+	min-height: 10rem;
+	max-height: 30rem;
+
+	position: fixed;
+	top: 10rem;
+	left: 50%;
+
+	-webkit-tap-highlight-color: #fff;
+	background-color: #000;
+
+	box-sizing: border-box;
+	border: 1px solid #fff;
+	@apply rounded-xl;
+
+	outline: 0px;
+	transform: translateX(-50%);
+	overflow-y: auto;
+}
