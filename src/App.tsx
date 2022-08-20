@@ -8,6 +8,14 @@ import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Docu/Document';
 import { Start } from './pages/Start/Start';
 
+/*
+#ff3f81
+#23153c
+#121417
+#1E293B
+#F5D547
+*/
+
 export const App = (): JSX.Element => {
 	const { data: summary } = useGetSummary();
 

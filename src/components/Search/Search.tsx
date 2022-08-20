@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useGenerateSearchEntries } from '../../Hooks/useGenerateSearchEntries';
 import { ISummary } from '../../Hooks/useGetSummary';
 import { getSearchScore } from './getSearchScore';
+import { SearchButton } from './SearchButton/SearchButton';
 
 interface ISearchHit {
 	score: number;
@@ -54,36 +55,35 @@ export const Search = (props: ISearchInput): JSX.Element => {
 			});
 
 			const hits = scoreEntries.filter((entry) => entry.score > 0);
-			setSearchHits(hits.sort((a, b) => b.score - a.score));
+			hits.length > 0
+				? setSearchHits(hits.sort((a, b) => b.score - a.score))
+				: setSearchHits(null);
 		}
 	};
 
 	return (
 		<>
-			<DialogDisclosure {...dialog} className='group modal-button'>
-				<FontAwesomeIcon
-					icon={faMagnifyingGlass}
-					className='fa-lg modal-button-icon'
-				/>
-				<div className='modal-button-text'>Search</div>
+			<DialogDisclosure {...dialog} className='modal-button'>
+				<SearchButton />
 			</DialogDisclosure>
 			<DialogBackdrop {...dialog} className='backdrop'>
 				<Dialog {...dialog} aria-label='Welcome' className='modal-content'>
-					<div className='flex items-baseline'>
-						<FontAwesomeIcon icon={faMagnifyingGlass} className='fa-xl mr-2 ' />
+					<div className='input-wrapper'>
+						<FontAwesomeIcon
+							icon={faMagnifyingGlass}
+							className='fa-xl input-icon'
+						/>
 						<Input
 							onChange={(e) => {
 								setSearchInput(e.target.value);
 								handleSearch(e.target.value);
 							}}
-							className='h-10 w-full rounded-md bg-transparent text-3xl'
+							className='input'
 							value={searchInput}
 							placeholder='search ...'
 						/>
 					</div>
-
-					<Separator />
-					<div className='min-h-[5rem] max-h-[20rem] overflow-auto'>
+					<div className='min-h-[5rem] max-h-[50vh] overflow-auto'>
 						{searchHits ? (
 							searchHits.map((hit) => {
 								const spec = summary.specifications.find(
@@ -112,11 +112,11 @@ export const Search = (props: ISearchInput): JSX.Element => {
 								);
 							})
 						) : (
-							<div className='text-center pt-6'>no recent search results</div>
+							<div className='text-center pt-6'>no search hits</div>
 						)}
 					</div>
 					<Separator />
-					<div className='h-20'>Hello</div>
+					<div>placeholder</div>
 				</Dialog>
 			</DialogBackdrop>
 		</>
