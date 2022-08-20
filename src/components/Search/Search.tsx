@@ -1,6 +1,8 @@
 import './styles.css';
 
+import { nanoid } from 'nanoid';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
 	Dialog,
 	DialogBackdrop,
@@ -10,16 +12,12 @@ import {
 	useDialogState,
 } from 'reakit';
 
-import { faSearch, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { nanoid } from 'nanoid';
 
 import { useGenerateSearchEntries } from '../../Hooks/useGenerateSearchEntries';
 import { ISummary } from '../../Hooks/useGetSummary';
 import { getSearchScore } from './getSearchScore';
-import { hostname } from 'os';
-import { Divide } from '../shared/Divide';
-import { Link } from 'react-router-dom';
 
 interface ISearchHit {
 	score: number;
@@ -62,14 +60,17 @@ export const Search = (props: ISearchInput): JSX.Element => {
 
 	return (
 		<>
-			<DialogDisclosure {...dialog} className=''>
-				<FontAwesomeIcon icon={faMagnifyingGlass} />
-				Search
+			<DialogDisclosure {...dialog} className='group modal-button'>
+				<FontAwesomeIcon
+					icon={faMagnifyingGlass}
+					className='fa-lg modal-button-icon'
+				/>
+				<div className='modal-button-text'>Search</div>
 			</DialogDisclosure>
 			<DialogBackdrop {...dialog} className='backdrop'>
 				<Dialog {...dialog} aria-label='Welcome' className='modal-content'>
 					<div className='flex items-baseline'>
-						<FontAwesomeIcon icon={faMagnifyingGlass} className='fa-xl mr-2' />
+						<FontAwesomeIcon icon={faMagnifyingGlass} className='fa-xl mr-2 ' />
 						<Input
 							onChange={(e) => {
 								setSearchInput(e.target.value);
