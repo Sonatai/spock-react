@@ -20,7 +20,8 @@ body,
 }
 
 button,
-input {
+input,
+a {
 	@apply focus:outline;
 	@apply focus:outline-[#CC004780];
 	@apply focus:outline-4;
