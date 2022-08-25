@@ -19,6 +19,14 @@ body,
 	@apply text-base;
 }
 
+button,
+input {
+	@apply focus:outline;
+	@apply focus:outline-[#CC004780];
+	@apply focus:outline-4;
+	@apply focus:outline-offset-1;
+}
+
 h2,
 h3,
 h4,
