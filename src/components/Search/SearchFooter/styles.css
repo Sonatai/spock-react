@@ -1,0 +1,20 @@
+.modal-footer {
+	@apply h-10;
+	@apply m-2;
+	@apply flex;
+	@apply text-[#FF85AF];
+	@apply justify-between;
+	@apply items-center;
+}
+
+.modal-footer-link {
+	@apply hover:text-[#ff3f81];
+}
+
+.modal-footer-image {
+	@apply w-auto;
+	@apply h-8;
+	@apply rounded-full;
+	@apply bg-[#FF85AF];
+	@apply hover:bg-[#ff3f81];
+}

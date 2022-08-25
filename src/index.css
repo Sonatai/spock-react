@@ -28,6 +28,10 @@ a {
 	@apply focus:outline-offset-1;
 }
 
+a {
+	@apply hover:text-[#ff3f81];
+}
+
 h2,
 h3,
 h4,

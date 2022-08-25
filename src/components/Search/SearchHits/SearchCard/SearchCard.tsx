@@ -24,7 +24,7 @@ export const SearchCard = (props: ISearchCard): JSX.Element => {
 
 	return (
 		<Link key={nanoid()} to={hit.key} onClick={onClick} className='search-card'>
-			<div>
+			<div className='card-text'>
 				{spec && (spec.title || spec.className)}
 				{feature && feature.id}
 			</div>

@@ -3,7 +3,7 @@
 	position: fixed;
 
 	-webkit-tap-highlight-color: #fff;
-	background-color: #fdf6d880;
+	background-color: #cae0e280;
 
 	box-sizing: border-box;
 	inset: 0;
@@ -42,4 +42,8 @@
 	outline: 0;
 	transform: translateX(-50%);
 	overflow-y: auto;
+}
+
+.separator {
+	@apply border-[#ff3f81]/75;
 }

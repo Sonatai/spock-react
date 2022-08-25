@@ -11,6 +11,7 @@ import {
 
 import { ISummary } from '../../Hooks/useGetSummary';
 import { SearchButton } from './SearchButton/SearchButton';
+import { SearchFooter } from './SearchFooter/SearchFooter';
 import { SearchHits } from './SearchHits/SearchHits';
 import { SearchInput } from './SearchInput/SearchInput';
 
@@ -37,7 +38,16 @@ export const Search = (props: ISearchInput): JSX.Element => {
 				<SearchButton />
 			</DialogDisclosure>
 			<DialogBackdrop {...dialog} className='backdrop'>
-				<Dialog {...dialog} aria-label='Welcome' className='modal-content'>
+				<Dialog
+					{...dialog}
+					aria-label='Search Modal'
+					className='modal-content'
+					onKeyDown={(e) => {
+						if (e.key === 'Escape') {
+							setSearchHits(null);
+							setSearchInput('');
+						}
+					}}>
 					<SearchInput
 						summary={summary}
 						setSearchHits={setSearchHits}
@@ -51,8 +61,8 @@ export const Search = (props: ISearchInput): JSX.Element => {
 						setSearchInput={setSearchInput}
 						dialog={dialog}
 					/>
-					<Separator />
-					<div>placeholder</div>
+					<Separator className='separator' />
+					<SearchFooter />
 				</Dialog>
 			</DialogBackdrop>
 		</>

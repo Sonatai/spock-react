@@ -1,5 +1,6 @@
 .search-card {
-	@apply bg-[#F7DC64];
+	@apply bg-[#B0CFD4];
+	@apply hover:bg-[#6DA7B0];
 
 	@apply mb-2;
 	@apply mr-6;
@@ -12,6 +13,7 @@
 	@apply rounded-md;
 
 	@apply text-[#24282D];
+	@apply hover:text-[#24282D];
 
 	@apply leading-5;
 
@@ -20,9 +22,16 @@
 	@apply p-2;
 
 	@apply items-center;
+
+	@apply drop-shadow-sm;
 }
 
 .card-icon {
-	@apply text-[#9B8008];
+	@apply text-[#508A91];
 	@apply mr-2;
+}
+
+.card-text {
+	@apply pr-3;
+	@apply pl-3;
 }
