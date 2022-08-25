@@ -34,12 +34,14 @@ export const Feature = (props: IFeature): JSX.Element => {
 				{blocks.map((block) => (
 					<Fragment key={nanoid()}>
 						<div className='flex'>
-							<em>{block.kind}</em>
-							<div className='ml-[0.5rem]'>{block.text || '----'}</div>
+							<em className='capitalize'>{block.kind}</em>
+							<div className='ml-[0.5rem]'>
+								{block.text ? toLowerFirstLetter(block.text) : '----'}
+							</div>
 						</div>
 						{block.code.length > 0 && (
 							<SyntaxHighlighter
-								language='kotlin'
+								language='groovy'
 								style={dracula}
 								showLineNumbers>
 								{block.code.join('\n')}
@@ -51,3 +53,6 @@ export const Feature = (props: IFeature): JSX.Element => {
 		</section>
 	);
 };
+
+const toLowerFirstLetter = (sentence: string) =>
+	sentence.charAt(0).toLowerCase() + sentence.substring(1);
