@@ -1,0 +1,6 @@
+.search-hit-wrapper {
+	@apply min-h-[5rem];
+	@apply max-h-[50vh];
+	@apply overflow-auto;
+	@apply m-6;
+}

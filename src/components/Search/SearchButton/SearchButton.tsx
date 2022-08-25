@@ -3,7 +3,7 @@ import './styles.css';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const SearchButton = () => {
+export const SearchButton = (): JSX.Element => {
 	return (
 		<>
 			<FontAwesomeIcon

@@ -10,6 +10,11 @@ const getSummary = async () => {
 	return data.data;
 };
 
+export interface IExecutedFeatures {
+	id: string;
+	extraInfo: any[];
+}
+
 export interface ISpecification {
 	className: string;
 	title: string;
@@ -20,10 +25,7 @@ export interface ISpecification {
 	skipped: string;
 	successRate: string;
 	duration: string;
-	executedFeatures: {
-		id: string;
-		extraInfo: any[];
-	}[];
+	executedFeatures: IExecutedFeatures[];
 	ignoredFeatures: any[];
 }
 

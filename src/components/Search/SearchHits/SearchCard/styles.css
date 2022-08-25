@@ -1,0 +1,28 @@
+.search-card {
+	@apply bg-[#F7DC64];
+
+	@apply mb-2;
+	@apply mr-6;
+
+	@apply ml-2;
+	@apply first:mt-2;
+
+	@apply h-14;
+
+	@apply rounded-md;
+
+	@apply text-[#24282D];
+
+	@apply leading-5;
+
+	@apply flex;
+	@apply justify-between;
+	@apply p-2;
+
+	@apply items-center;
+}
+
+.card-icon {
+	@apply text-[#9B8008];
+	@apply mr-2;
+}
