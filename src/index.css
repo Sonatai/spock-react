@@ -7,63 +7,63 @@
 html,
 body,
 :root {
-	max-width: 100%;
-	max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 
-	background-color: #23153c;
+    background-color: #23153c;
 
-	@apply text-gray-400;
-	@apply text-base;
+    @apply text-gray-400;
+    @apply text-base;
 }
 
 button,
 input,
 a {
-	@apply focus:outline;
-	@apply focus:outline-[#CC004780];
-	@apply focus:outline-4;
-	@apply focus:outline-offset-1;
+    @apply focus:outline;
+    @apply focus:outline-[#CC004780];
+    @apply focus:outline-4;
+    @apply focus:outline-offset-1;
 }
 
 a {
-	@apply hover:text-[#ff3f81];
+    @apply hover:text-[#ff3f81];
 }
 
 h2,
 h3,
 h4,
 h6 {
-	margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 h1 {
-	font-size: 1.875rem;
-	margin-bottom: 3rem;
+    font-size: 1.875rem;
+    margin-bottom: 3rem;
 }
 
 h2 {
-	font-size: 1.563rem;
-	margin-bottom: 1rem;
+    font-size: 1.563rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
-	font-size: 1.25rem;
-	margin-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 h4,
 h5,
 h6 {
-	font-size: 0.875rem;
-	margin-bottom: 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
 }
 
 .sideNavBar {
-	@apply z-20 block;
-	@apply overflow-y-scroll;
-	@apply py-[2rem];
-	@apply px-[0.5rem];
+    @apply z-20 block;
+    @apply overflow-y-scroll;
+    @apply py-[2rem];
+    @apply px-[0.5rem];
 }

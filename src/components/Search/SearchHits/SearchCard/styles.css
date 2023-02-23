@@ -1,37 +1,37 @@
 .search-card {
-	@apply bg-[#B0CFD4];
-	@apply hover:bg-[#6DA7B0];
+    @apply bg-[#B0CFD4];
+    @apply hover:bg-[#6DA7B0];
 
-	@apply mb-2;
-	@apply mr-6;
+    @apply mb-2;
+    @apply mr-6;
 
-	@apply ml-2;
-	@apply first:mt-2;
+    @apply ml-2;
+    @apply first:mt-2;
 
-	@apply h-14;
+    @apply h-14;
 
-	@apply rounded-md;
+    @apply rounded-md;
 
-	@apply text-[#24282D];
-	@apply hover:text-[#24282D];
+    @apply text-[#24282D];
+    @apply hover:text-[#24282D];
 
-	@apply leading-5;
+    @apply leading-5;
 
-	@apply flex;
-	@apply justify-between;
-	@apply p-2;
+    @apply flex;
+    @apply justify-between;
+    @apply p-2;
 
-	@apply items-center;
+    @apply items-center;
 
-	@apply drop-shadow-sm;
+    @apply drop-shadow-sm;
 }
 
 .card-icon {
-	@apply text-[#508A91];
-	@apply mr-2;
+    @apply text-[#508A91];
+    @apply mr-2;
 }
 
 .card-text {
-	@apply pr-3;
-	@apply pl-3;
+    @apply pr-3;
+    @apply pl-3;
 }

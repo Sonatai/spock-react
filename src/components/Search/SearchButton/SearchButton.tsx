@@ -4,13 +4,13 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const SearchButton = (): JSX.Element => {
-	return (
-		<>
-			<FontAwesomeIcon
-				icon={faMagnifyingGlass}
-				className='fa-lg modal-button-icon'
-			/>
-			<div className='modal-button-text'>Search</div>
-		</>
-	);
+    return (
+        <>
+            <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                className="fa-lg modal-button-icon"
+            />
+            <div className="modal-button-text">Search</div>
+        </>
+    );
 };

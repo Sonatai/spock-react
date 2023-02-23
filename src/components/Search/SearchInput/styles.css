@@ -1,26 +1,26 @@
 .input {
-	@apply pl-[2.5rem];
-	@apply h-10;
-	@apply w-full;
-	@apply rounded-md;
-	@apply bg-transparent;
-	@apply text-3xl;
+    @apply pl-[2.5rem];
+    @apply h-10;
+    @apply w-full;
+    @apply rounded-md;
+    @apply bg-transparent;
+    @apply text-3xl;
 
-	border: 2px solid #e0004f;
+    border: 2px solid #e0004f;
 
-	@apply placeholder:text-gray-400;
-	@apply text-slate-800;
+    @apply placeholder:text-gray-400;
+    @apply text-slate-800;
 }
 
 .input-icon {
-	@apply mr-[-2rem];
-	@apply text-[#E0004F];
+    @apply mr-[-2rem];
+    @apply text-[#E0004F];
 }
 
 .input-wrapper {
-	@apply flex;
-	@apply items-center;
-	@apply m-4;
-	@apply ml-6;
-	@apply mt-6;
+    @apply flex;
+    @apply items-center;
+    @apply m-4;
+    @apply ml-6;
+    @apply mt-6;
 }

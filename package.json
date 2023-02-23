@@ -1,41 +1,41 @@
 {
-	"name": "test-vite-react-github-pages",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build",
-		"preview": "vite preview",
-		"debug": "vite --debug",
-		"deploy": "gh-pages -d dist"
-	},
-	"dependencies": {
-		"@csstools/normalize.css": "^12.0.0",
-		"@fortawesome/fontawesome-svg-core": "^6.1.2",
-		"@fortawesome/free-regular-svg-icons": "^6.1.2",
-		"@fortawesome/free-solid-svg-icons": "^6.1.2",
-		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@tanstack/react-query": "^4.0.10",
-		"axios": "^0.27.2",
-		"nanoid": "^4.0.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-router-dom": "^6.3.0",
-		"react-syntax-highlighter": "^15.5.0",
-		"reakit": "^1.3.11"
-	},
-	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.4",
-		"@types/jsonfile": "^6.1.0",
-		"@types/node": "^18.6.4",
-		"@types/react": "^18.0.15",
-		"@types/react-dom": "^18.0.6",
-		"@types/react-syntax-highlighter": "^15.5.4",
-		"@vitejs/plugin-react": "^2.0.0",
-		"autoprefixer": "^10.4.8",
-		"gh-pages": "^4.0.0",
-		"postcss": "^8.4.14",
-		"tailwindcss": "^3.1.7",
-		"typescript": "^4.6.4",
-		"vite": "^3.0.0"
-	}
+    "name": "test-vite-react-github-pages",
+    "version": "0.0.2",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "debug": "vite --debug",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "@csstools/normalize.css": "^12.0.0",
+        "@fortawesome/fontawesome-svg-core": "^6.1.2",
+        "@fortawesome/free-regular-svg-icons": "^6.1.2",
+        "@fortawesome/free-solid-svg-icons": "^6.1.2",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@tanstack/react-query": "^4.0.10",
+        "axios": "^0.27.2",
+        "nanoid": "^4.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.3.0",
+        "react-syntax-highlighter": "^15.5.0",
+        "reakit": "^1.3.11"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.4",
+        "@types/jsonfile": "^6.1.0",
+        "@types/node": "^18.6.4",
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
+        "@types/react-syntax-highlighter": "^15.5.4",
+        "@vitejs/plugin-react": "^2.0.0",
+        "autoprefixer": "^10.4.8",
+        "gh-pages": "^4.0.0",
+        "postcss": "^8.4.14",
+        "tailwindcss": "^3.1.7",
+        "typescript": "^4.6.4",
+        "vite": "^3.0.0"
+    }
 }

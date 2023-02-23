@@ -12,47 +12,50 @@ kind: GIVEN | WHEN | THEN | AND | CLEANUP | WHERE | EXPECT
 */
 
 export interface IBlock {
-	kind: string;
-	text: string;
-	code: string[];
+    kind: string;
+    text: string;
+    code: string[];
 }
 
 export interface IFeature {
-	id: string;
-	blocks: IBlock[];
+    id: string;
+    blocks: IBlock[];
 }
 
 export const Feature = (props: IFeature): JSX.Element => {
-	const { id, blocks } = props;
+    const { id, blocks } = props;
 
-	return (
-		<section id={id}>
-			<h3>
-				<a href={`#${id}`}>{id}</a>
-			</h3>
-			<div>
-				{blocks.map((block) => (
-					<Fragment key={nanoid()}>
-						<div className='flex'>
-							<em className='capitalize'>{block.kind}</em>
-							<div className='ml-[0.5rem]'>
-								{block.text ? toLowerFirstLetter(block.text) : '----'}
-							</div>
-						</div>
-						{block.code.length > 0 && (
-							<SyntaxHighlighter
-								language='groovy'
-								style={dracula}
-								showLineNumbers>
-								{block.code.join('\n')}
-							</SyntaxHighlighter>
-						)}
-					</Fragment>
-				))}
-			</div>
-		</section>
-	);
+    return (
+        <section id={id}>
+            <h3>
+                <a href={`#${id}`}>{id}</a>
+            </h3>
+            <div>
+                {blocks.map((block) => (
+                    <Fragment key={nanoid()}>
+                        <div className="flex">
+                            <em className="capitalize">{block.kind}</em>
+                            <div className="ml-[0.5rem]">
+                                {block.text
+                                    ? toLowerFirstLetter(block.text)
+                                    : '----'}
+                            </div>
+                        </div>
+                        {block.code.length > 0 && (
+                            <SyntaxHighlighter
+                                language="groovy"
+                                style={dracula}
+                                showLineNumbers
+                            >
+                                {block.code.join('\n')}
+                            </SyntaxHighlighter>
+                        )}
+                    </Fragment>
+                ))}
+            </div>
+        </section>
+    );
 };
 
 const toLowerFirstLetter = (sentence: string) =>
-	sentence.charAt(0).toLowerCase() + sentence.substring(1);
+    sentence.charAt(0).toLowerCase() + sentence.substring(1);

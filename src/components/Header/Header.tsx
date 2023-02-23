@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
 export const Header = (): JSX.Element => {
-	return (
-		<div
-			className={`
+    return (
+        <div
+            className={`
 				sticky 
 				top-0 
 				z-40 
@@ -14,12 +14,13 @@ export const Header = (): JSX.Element => {
 				border-b 
 				border-slate-50/[0.06] 
 				bg-transparent
-			`}>
-			<div className='max-w-7xl mx-auto py-4'>
-				<Link to='/' className='text-2xl text-[#ff3f81]'>
-					Neureka
-				</Link>
-			</div>
-		</div>
-	);
+			`}
+        >
+            <div className="max-w-7xl mx-auto py-4">
+                <Link to="/" className="text-2xl text-[#ff3f81]">
+                    Neureka
+                </Link>
+            </div>
+        </div>
+    );
 };

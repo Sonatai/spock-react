@@ -1,9 +1,9 @@
 .modal-button-icon {
-	@apply text-[#E0004F];
-	@apply mr-2;
+    @apply text-[#E0004F];
+    @apply mr-2;
 }
 
 .modal-button-text {
-	@apply text-[#E0004F];
-	@apply font-medium;
+    @apply text-[#E0004F];
+    @apply font-medium;
 }

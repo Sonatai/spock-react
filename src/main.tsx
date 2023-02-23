@@ -11,13 +11,13 @@ import { App } from './App';
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-	<React.StrictMode>
-		<BrowserRouter basename='/test-github-pages'>
-			<QueryClientProvider client={queryClient}>
-				<App />
-			</QueryClientProvider>
-		</BrowserRouter>
-	</React.StrictMode>
+    <React.StrictMode>
+        <BrowserRouter basename="/test-github-pages">
+            <QueryClientProvider client={queryClient}>
+                <App />
+            </QueryClientProvider>
+        </BrowserRouter>
+    </React.StrictMode>
 );
 
 /*
