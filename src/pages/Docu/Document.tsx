@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { Feature } from '../../components/Feature/Feature';
 import { Divide } from '../../components/shared/Divide';
 import { Layout } from '../../components/shared/Layout';
-import { useGetSpec } from '../../Hooks/useGetSpec';
+import { type IFeature, useGetSpec } from '../../Hooks/useGetSpec';
 
 interface IExampleOne {
     fileName: string;
@@ -13,16 +13,16 @@ interface IExampleOne {
 export const Document = (props: IExampleOne): JSX.Element => {
     const { fileName } = props;
 
-    const { data } = useGetSpec({ fileName: fileName });
+    const { data } = useGetSpec({ fileName });
 
     return (
         <>
-            {data && (
+            {data !== undefined && data !== null && (
                 <Layout
                     onPageNav={
                         <nav>
                             <ul className="text-[0.875rem]">
-                                {data.features.map((feature: any) => (
+                                {data.features.map((feature: IFeature) => (
                                     <li className="pb-[0.5rem]" key={nanoid()}>
                                         <a href={`#${feature.id}`}>
                                             {feature.id}
@@ -35,7 +35,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
                 >
                     <div className="mb-[3rem]">
                         <h1 className="mb-[0.5rem]">
-                            {data.title || data.className}
+                            {data.title !== '' ? data.title : data.className}
                         </h1>
 
                         {`Class name: ${data.className}`}

@@ -6,9 +6,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
-import { ISummary } from '../../../Hooks/useGetSummary';
+import { type ISummary } from '../../../Hooks/useGetSummary';
 import { getSearchScore } from '../getSearchScore';
-import { ISearchHit } from '../Search';
+import { type ISearchHit } from '../Search';
 
 interface ISearchInput {
     summary: ISummary;
@@ -20,12 +20,12 @@ interface ISearchInput {
 export const SearchInput = (props: ISearchInput): JSX.Element => {
     const { summary, setSearchHits, setSearchInput, searchInput } = props;
 
-    const { searchEntries } = useGenerateSearchEntries({ summary: summary });
+    const searchEntries = useGenerateSearchEntries({ summary });
 
     const handleSearch = (searchInput: string) => {
-        if (!searchEntries) {
+        if (searchEntries === null) {
             setSearchHits(null);
-        } else if (!searchInput) {
+        } else if (searchInput === '') {
             setSearchHits(null);
         } else {
             const toLowerSearchInput = searchInput.trim().toLowerCase();
@@ -37,7 +37,7 @@ export const SearchInput = (props: ISearchInput): JSX.Element => {
                 );
                 return {
                     key: entry.key,
-                    score: score,
+                    score,
                 };
             });
 

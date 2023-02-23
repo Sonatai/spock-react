@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
 
-export const Container = (props: PropsWithChildren) => {
+export const Container = (props: PropsWithChildren): JSX.Element => {
     const { children } = props;
 
     return (

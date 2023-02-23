@@ -2,16 +2,18 @@ import { useEffect, useState } from 'react';
 
 import {
     cleanedSearchData,
-    IMinimizedSummaryEntry,
-    ISearchEntry,
+    type IMinimizedSummaryEntry,
+    type ISearchEntry,
 } from '../components/Search/generateSearchEntries';
-import { ISpecification, ISummary } from './useGetSummary';
+import { type ISpecification, type ISummary } from './useGetSummary';
 
 interface IGenerateSearchEntries {
     summary?: ISummary;
 }
 
-export const useGenerateSearchEntries = (props: IGenerateSearchEntries) => {
+export const useGenerateSearchEntries = (
+    props: IGenerateSearchEntries
+): ISearchEntry[] | null => {
     const { summary } = props;
 
     const [searchEntries, setSearchEntries] = useState<ISearchEntry[] | null>(
@@ -28,9 +30,9 @@ export const useGenerateSearchEntries = (props: IGenerateSearchEntries) => {
             })
         );
 
-        minimizedSummary &&
+        minimizedSummary !== undefined &&
             setSearchEntries(cleanedSearchData(minimizedSummary));
     }, [summary]);
 
-    return { searchEntries };
+    return searchEntries;
 };

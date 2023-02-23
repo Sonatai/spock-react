@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 
 const getSummary = async () => {
-    var data = await axios.get(
+    const data = await axios.get(
         `https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/summary.json`
     );
 
@@ -45,11 +45,9 @@ export interface ISummary {
     specifications: ISpecification[];
 }
 
-export const useGetSummary = () => {
-    const result = useQuery<ISummary>(['summary'], () => getSummary(), {
+export const useGetSummary = (): UseQueryResult<ISummary, unknown> => {
+    return useQuery<ISummary>(['summary'], async () => await getSummary(), {
         cacheTime: 60 * 60 * 24,
         staleTime: 60 * 60 * 24,
     });
-
-    return result;
 };

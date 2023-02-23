@@ -12,11 +12,13 @@ export const Layout = (
     return (
         <>
             <div
-                className={`${onPageNav ? 'w-8/12' : 'w-10/12'} px-6 py-[2rem]`}
+                className={`${
+                    onPageNav !== null ? 'w-8/12' : 'w-10/12'
+                } px-6 py-[2rem]`}
             >
                 {children}
             </div>
-            {onPageNav && (
+            {onPageNav !== null && (
                 <div
                     className={`
                     sideNavBar

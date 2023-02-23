@@ -23,7 +23,7 @@ export const App = (): JSX.Element => {
         <>
             <Header />
             <Container>
-                {summary && (
+                {summary !== undefined && summary !== null && (
                     <div
                         className={`
 					sideNavBar
@@ -43,7 +43,9 @@ export const App = (): JSX.Element => {
                                 {summary.specifications.map((spec) => (
                                     <li className="pb-[0.5rem]" key={nanoid()}>
                                         <Link to={spec.className}>
-                                            {spec.title || spec.className}
+                                            {spec.title !== ''
+                                                ? spec.title
+                                                : spec.className}
                                         </Link>
                                     </li>
                                 ))}

@@ -1,16 +1,35 @@
 import axios from 'axios';
 
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 
 const getSpec = async (file: string) => {
-    var data = await axios.get(
+    const data = await axios.get(
         `https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/${file}.json`
     );
 
     return data.data;
 };
 
-interface Spec {
+interface IBlock {
+    kind: string;
+    text: string;
+    code: string[];
+}
+
+export interface IFeature {
+    id: string;
+    result: string;
+    duration: string;
+    iterations: {
+        tags: any;
+        see: any[];
+        extraInfo: any[];
+    };
+    blocks: IBlock[];
+    problems: any[];
+}
+
+interface ISpec {
     className: string;
     statistics: {
         runs: string;
@@ -25,22 +44,7 @@ interface Spec {
     headers: string[];
     tags: any;
     see: any[];
-    features: {
-        id: string;
-        result: string;
-        duration: string;
-        iterations: {
-            tags: any;
-            see: any[];
-            extraInfo: any[];
-        };
-        blocks: {
-            kind: string;
-            text: string;
-            code: string[];
-        }[];
-        problems: any[];
-    }[];
+    features: IFeature[];
     generator: string;
 }
 
@@ -48,13 +52,11 @@ interface IGetSpec {
     fileName: string;
 }
 
-export const useGetSpec = (props: IGetSpec) => {
+export const useGetSpec = (props: IGetSpec): UseQueryResult<ISpec, unknown> => {
     const { fileName } = props;
 
-    const result = useQuery<Spec>([fileName], () => getSpec(fileName), {
+    return useQuery<ISpec>([fileName], async () => await getSpec(fileName), {
         cacheTime: 60 * 60 * 24,
         staleTime: 60 * 60 * 24,
     });
-
-    return result;
 };

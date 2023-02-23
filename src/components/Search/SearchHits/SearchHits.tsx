@@ -1,10 +1,11 @@
 import './styles.css';
 
-import { DialogStateReturn } from 'reakit/ts';
+import { type DialogStateReturn } from 'reakit/ts';
 
-import { ISummary } from '../../../Hooks/useGetSummary';
-import { ISearchHit } from '../Search';
+import { type ISummary } from '../../../Hooks/useGetSummary';
+import { type ISearchHit } from '../Search';
 import { SearchCard } from './SearchCard/SearchCard';
+import { nanoid } from 'nanoid';
 
 interface ISearchHits {
     searchHits: ISearchHit[] | null;
@@ -26,7 +27,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
 
     return (
         <div className="search-hit-wrapper">
-            {searchHits ? (
+            {searchHits !== null ? (
                 searchHits.map((hit) => {
                     const spec = summary.specifications.find(
                         (spec) => spec.className === hit.key
@@ -39,6 +40,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
 
                     return (
                         <SearchCard
+                            key={nanoid()}
                             onClick={onClick}
                             hit={hit}
                             spec={spec}

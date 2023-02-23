@@ -2,7 +2,7 @@ export interface IMinimizedSummaryEntry {
     className: string;
     title: string;
     narrative: string;
-    features: { id: string }[];
+    features: Array<{ id: string }>;
 }
 
 export interface ISearchEntry {
@@ -46,7 +46,7 @@ const fillWords = [
 
 const replaceCharSet = ['.', '`', ',', '"', '?', '_'];
 
-var re = new RegExp(`[${replaceCharSet.join('')}]`, 'gi');
+const re = new RegExp(`[${replaceCharSet.join('')}]`, 'gi');
 
 const searchWords = (sentence: string) =>
     sentence
@@ -62,7 +62,7 @@ export const cleanedSearchData = (
     data: IMinimizedSummaryEntry[]
 ): ISearchEntry[] => {
     const searchEntries: ISearchEntry[] = [];
-    data.map((entry) => {
+    data.forEach((entry) => {
         const classNameArr = searchWords(entry.className);
         const narrativeArr = searchWords(entry.narrative);
         const titleArr = searchWords(entry.title);
@@ -75,7 +75,7 @@ export const cleanedSearchData = (
             ],
         });
 
-        entry.features.map((feature) => {
+        entry.features.forEach((feature): void => {
             searchEntries.push({
                 key: entry.className,
                 href: feature.id,

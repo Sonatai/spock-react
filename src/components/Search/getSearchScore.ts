@@ -1,4 +1,7 @@
-export const getSearchScore = (searchInput: string, keywords: string[]) => {
+export const getSearchScore = (
+    searchInput: string,
+    keywords: string[]
+): number => {
     let score = 0;
 
     const searchInputs = searchInput
@@ -6,7 +9,7 @@ export const getSearchScore = (searchInput: string, keywords: string[]) => {
         .filter((word) => word?.length > 0);
 
     searchInputs.forEach((word) => {
-        if (keywords.indexOf(word) !== -1) {
+        if (keywords.includes(word)) {
             score += keywords.indexOf(word);
         }
     });

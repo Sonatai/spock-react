@@ -36,7 +36,7 @@ export const Feature = (props: IFeature): JSX.Element => {
                         <div className="flex">
                             <em className="capitalize">{block.kind}</em>
                             <div className="ml-[0.5rem]">
-                                {block.text
+                                {block.text !== ''
                                     ? toLowerFirstLetter(block.text)
                                     : '----'}
                             </div>
