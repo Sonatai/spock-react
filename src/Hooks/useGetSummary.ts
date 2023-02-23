@@ -1,11 +1,10 @@
 import axios from 'axios';
 
 import { useQuery, type UseQueryResult } from '@tanstack/react-query';
+import config from '../../environment.json';
 
 const getSummary = async () => {
-    const data = await axios.get(
-        `https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/summary.json`
-    );
+    const data = await axios.get(config.summaryUrl);
 
     return data.data;
 };

@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import config from '../../../environment.json';
+
 export const Header = (): JSX.Element => {
     return (
         <div
@@ -18,7 +20,7 @@ export const Header = (): JSX.Element => {
         >
             <div className="max-w-7xl mx-auto py-4">
                 <Link to="/" className="text-2xl text-[#ff3f81]">
-                    Neureka
+                    {config.appName}
                 </Link>
             </div>
         </div>

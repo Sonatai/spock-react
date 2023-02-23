@@ -2,13 +2,7 @@ import axios from 'axios';
 
 import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 
-const getSpec = async (file: string) => {
-    const data = await axios.get(
-        `https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/${file}.json`
-    );
-
-    return data.data;
-};
+import config from '../../environment.json';
 
 interface IBlock {
     kind: string;
@@ -47,6 +41,12 @@ interface ISpec {
     features: IFeature[];
     generator: string;
 }
+
+const getSpec = async (file: string) => {
+    const data = await axios.get(`${config.specUrl as string}/${file}.json`);
+
+    return data.data;
+};
 
 interface IGetSpec {
     fileName: string;

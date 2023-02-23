@@ -1,0 +1,15 @@
+{
+    "appName": "Neureka",
+    "profile": {
+        "name": "Gleethos",
+        "url": "https://github.com/Gleethos"
+    },
+    "repoUrl": "https://github.com/Gleethos/neureka",
+    "githubLogo": "Github tentacle mascot with a pink background",
+    "projectPage": {
+        "url": "https://gleethos.github.io/neureka/index.html",
+        "displayText": "Why Neureka?"
+    },
+    "specUrl": "https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports",
+    "summaryUrl": "https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/summary.json"
+}

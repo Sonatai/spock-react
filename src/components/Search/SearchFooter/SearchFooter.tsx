@@ -1,26 +1,24 @@
 import './styles.css';
 
+import config from '../../../../environment.json';
 import Octocat from '../../../img/Octocat.png';
 
 export const SearchFooter = (): JSX.Element => {
     return (
         <div className="modal-footer">
-            <a href="https://github.com/Gleethos/neureka">
+            <a href={config.repoUrl}>
                 <img
                     src={Octocat}
                     className="modal-footer-image"
-                    alt="Neureka Github Repo"
+                    alt={config.githubLogo}
                 />
             </a>
-            <a href="https://github.com/Gleethos" className="modal-footer-link">
-                Gleethos
+            <a href={config.profile.url} className="modal-footer-link">
+                {config.profile.name}
             </a>
 
-            <a
-                href="https://gleethos.github.io/neureka/index.html"
-                className="modal-footer-link"
-            >
-                Why Neureka?
+            <a href={config.projectPage.url} className="modal-footer-link">
+                {config.projectPage.displayText}
             </a>
         </div>
     );

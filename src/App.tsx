@@ -5,8 +5,8 @@ import { Header } from './components/Header/Header';
 import { Search } from './components/Search/Search';
 import { Container } from './components/shared/Container';
 import { useGetSummary } from './Hooks/useGetSummary';
-import { Document } from './pages/Docu/Document';
-import { Start } from './pages/Start/Start';
+import { Document } from './pages/Document';
+import { Start } from './pages/Start';
 
 /*
 #ff3f81

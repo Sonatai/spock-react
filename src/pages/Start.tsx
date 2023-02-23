@@ -1,4 +1,4 @@
-import { Layout } from '../../components/shared/Layout';
+import { Layout } from '../components/shared/Layout';
 
 export const Start = (): JSX.Element => {
     return (

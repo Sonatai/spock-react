@@ -19,7 +19,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
     const { searchHits, summary, setSearchHits, setSearchInput, dialog } =
         props;
 
-    const onClick = () => {
+    const handleClick = () => {
         setSearchHits(null);
         setSearchInput('');
         dialog.setVisible(false);
@@ -41,7 +41,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
                     return (
                         <SearchCard
                             key={nanoid()}
-                            onClick={onClick}
+                            onClick={handleClick}
                             hit={hit}
                             spec={spec}
                             feature={feature}
