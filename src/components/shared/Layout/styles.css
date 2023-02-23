@@ -1,0 +1,4 @@
+.layout-wrapper {
+    @apply px-6;
+    @apply py-[2rem];
+}

@@ -1,3 +1,5 @@
+import './styles.css';
+
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -33,9 +35,9 @@ export const Feature = (props: IFeature): JSX.Element => {
             <div>
                 {blocks.map((block) => (
                     <Fragment key={nanoid()}>
-                        <div className="flex">
-                            <em className="capitalize">{block.kind}</em>
-                            <div className="ml-[0.5rem]">
+                        <div className="feature">
+                            <em>{block.kind}</em>
+                            <div>
                                 {block.text !== ''
                                     ? toLowerFirstLetter(block.text)
                                     : '----'}
@@ -58,4 +60,4 @@ export const Feature = (props: IFeature): JSX.Element => {
 };
 
 const toLowerFirstLetter = (sentence: string) =>
-    sentence.charAt(0).toLowerCase() + sentence.substring(1);
+    sentence.trim().charAt(0).toLowerCase() + sentence.substring(1);

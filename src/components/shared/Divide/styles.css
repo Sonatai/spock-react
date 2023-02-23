@@ -1,0 +1,4 @@
+.divide {
+    @apply my-[3rem];
+    @apply border-[#ff3f81]/75;
+}

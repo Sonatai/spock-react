@@ -1,0 +1,11 @@
+.feature {
+    @apply flex;
+}
+
+.feature > em {
+    @apply capitalize;
+}
+
+.feature > div {
+    @apply ml-[0.5rem];
+}

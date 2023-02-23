@@ -1,0 +1,8 @@
+.container {
+    @apply max-w-7xl;
+    @apply mx-auto;
+    @apply flex bg-[#29000E];
+    @apply bg-opacity-30;
+    @apply shadow-2xl;
+    @apply shadow-[#ff3f81];
+}

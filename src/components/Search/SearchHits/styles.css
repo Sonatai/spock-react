@@ -4,3 +4,8 @@
     @apply overflow-auto;
     @apply m-6;
 }
+
+.no-search-hit {
+    @apply text-center;
+    @apply pt-6;
+}

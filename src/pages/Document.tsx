@@ -2,8 +2,8 @@ import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
 import { Feature } from '../components/Feature/Feature';
-import { Divide } from '../components/shared/Divide';
-import { Layout } from '../components/shared/Layout';
+import { Divide } from '../components/shared/Divide/Divide';
+import { Layout } from '../components/shared/Layout/Layout';
 import { type IFeature, useGetSpec } from '../Hooks/useGetSpec';
 
 interface IExampleOne {

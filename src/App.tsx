@@ -3,7 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/Header/Header';
 import { Search } from './components/Search/Search';
-import { Container } from './components/shared/Container';
+import { Container } from './components/shared/Container/Container';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
 import { Start } from './pages/Start';
@@ -26,10 +26,9 @@ export const App = (): JSX.Element => {
                 {summary !== undefined && summary !== null && (
                     <div
                         className={`
-					sideNavBar
-					w-2/12
-					
-					`}
+					    sideNavBar
+					    w-2/12
+					    `}
                     >
                         <Search summary={summary} />
                         <h5>Examples</h5>

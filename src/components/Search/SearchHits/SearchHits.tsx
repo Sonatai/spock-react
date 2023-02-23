@@ -49,7 +49,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
                     );
                 })
             ) : (
-                <div className="text-center pt-6">no search hits</div>
+                <div className="no-search-hit">no search hits</div>
             )}
         </div>
     );
