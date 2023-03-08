@@ -46,7 +46,6 @@
                 "unnamedComponents": "arrow-function"
             }
         ],
-        "@typescript-eslint/explicit-module-boundary-types": "error",
 
         "react-hooks/rules-of-hooks": "error",
         "react/react-in-jsx-scope": "off",
@@ -54,7 +53,9 @@
         "react/prop-types": "off",
 
         "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/consistent-type-imports": "off",
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/member-delimiter-style": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
