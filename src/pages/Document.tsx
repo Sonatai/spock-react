@@ -35,8 +35,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
                 >
                     <div className="mb-[3rem]">
                         <h1 className="mb-[0.5rem]">
-                            {data.title !== '' ? data.title : data.className}{' '}
-                            BLAAAAA
+                            {data.title !== '' ? data.title : data.className}
                         </h1>
 
                         {`Class name: ${data.className}`}
