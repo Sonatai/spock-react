@@ -13,6 +13,7 @@ export const SearchFooter = (): JSX.Element => {
                     alt={config.githubLogo}
                 />
             </a>
+
             <a href={config.profile.url} className="modal-footer-link">
                 {config.profile.name}
             </a>
