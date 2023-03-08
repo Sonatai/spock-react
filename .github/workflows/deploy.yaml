@@ -1,5 +1,51 @@
-name: Deployment
+name: Deploy
+
 on:
     push:
         branches:
             - main
+
+jobs:
+    build:
+        name: Build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Set Node.js 18.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+
+            - name: Run install
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: install # will run `yarn install` command
+            - name: Build production bundle
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: build # will run `yarn build:prod` command
+            - name: Upload artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: production-files
+                  path: ./dist
+
+    deploy:
+        name: Deploy
+        needs: build
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/main'
+
+        steps:
+            - name: Download artifact
+              uses: actions/download-artifact@v2
+              with:
+                  name: production-files
+                  path: ./dist
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist
