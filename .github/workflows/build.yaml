@@ -1,4 +1,4 @@
-name: Build
+name: Build & Deploy
 on:
     pull_request:
 
@@ -24,7 +24,6 @@ jobs:
               with:
                   cmd: build # will run `yarn build` command
 
-
             # - name: Test the app
             #   uses: borales/actions-yarn@v4
             #   with:
@@ -35,3 +34,13 @@ jobs:
             #   with:
             #       cmd: test
             #       dir: 'frontend' # will run `yarn test` in `frontend` sub folder
+
+    deploy:
+        name: Deployment
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy production build
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: deploy
