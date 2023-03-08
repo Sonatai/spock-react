@@ -1,94 +1,33 @@
-name: unit-tests
-on:
-    pull_request:
+name: Build
+on: [pull_request]
 
 jobs:
     build:
+        name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+            - uses: actions/checkout@v3
 
-            - uses: actions/setup-node@v3
+            - name: Set Node.js 18.x
+              uses: actions/setup-node@v3
               with:
                   node-version: 18.x
 
-            - name: Install Yarn
-              run: npm install -g yarn
-
-            - name: Build lib
-              run: |
-                  yarn install --frozen-lockfile
-                  yarn build
-            - name: Rebuild production node_modules
-              run: |
-                  yarn install --production --frozen-lockfile
-                  ls node_modules
-            - name: artifact
-              uses: actions/upload-artifact@v3
+            - name: Run install
+              uses: borales/actions-yarn@v4
               with:
-                  name: dist
-                  path: |
-                      lib
-                      node_modules
-    integration:
-        runs-on: ubuntu-latest
-        needs: build
-        strategy:
-            matrix:
-                branch: ['gh-pages', 'no-pages']
-                commit: ['singleCommit', 'add commits']
-            max-parallel: 1
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+                  cmd: install # will run `yarn install` command
+            - name: Build production bundle
+              uses: borales/actions-yarn@v4
               with:
-                  persist-credentials: false
+                  cmd: build # will run `yarn build:prod` command
+            # - name: Test the app
+            #   uses: borales/actions-yarn@v4
+            #   with:
+            #     cmd: test # will run `yarn test` command
 
-            - uses: actions/setup-node@v3
-              with:
-                  node-version: 18.x
-
-            - name: Download artifact
-              uses: actions/download-artifact@v3
-              with:
-                  name: dist
-
-            - name: Deploy
-              id: unmodified
-              uses: ./
-              with:
-                  folder: integration
-                  branch: ${{ matrix.branch }}
-                  single-commit: ${{ matrix.commit == 'singleCommit' }}
-                  dry-run: true
-
-            # Usually, this should be skipped, but if the upstream gh-pages
-            # branch doesn't match ours, it should still be a success.
-            - name: Check step output
-              run: |
-                  [[ \
-                  ${{steps.unmodified.outputs.deployment-status}} = skipped || \
-                  ${{steps.unmodified.outputs.deployment-status}} = success \
-                  ]]
-            - name: Tweak content to publish to existing branch
-              if: ${{ matrix.branch == 'gh-pages' }}
-              run: |
-                  echo "<!-- just sayin -->" >> integration/index.html
-            - name: Deploy with modifications to existing branch
-              id: modified
-              uses: ./
-              if: ${{ matrix.branch == 'gh-pages' }}
-              with:
-                  folder: integration
-                  branch: ${{ matrix.branch }}
-                  single-commit: ${{ matrix.commit == 'singleCommit' }}
-                  dry-run: true
-
-            # The modified deployment should be a success, and not skipped.
-            - name: Check step output
-              if: ${{ matrix.branch == 'gh-pages' }}
-              run: |
-                  [[ \
-                  ${{steps.modified.outputs.deployment-status}} = success \
-                  ]]
+            # - name: Run test in sub-folder
+            #   uses: borales/actions-yarn@v4
+            #   with:
+            #     cmd: test
+            #     dir: 'frontend' # will run `yarn test` in `frontend` sub folder
