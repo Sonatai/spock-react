@@ -44,8 +44,7 @@ jobs:
                   name: production-files
                   path: ./dist
 
-            - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v3
+            - name: Build production bundle
+              uses: borales/actions-yarn@v4
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./dist
+                  cmd: deploy # will run `yarn build:prod` command
