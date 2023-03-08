@@ -17,10 +17,16 @@ jobs:
               uses: borales/actions-yarn@v4
               with:
                   cmd: install # will run `yarn install` command
+
+            - name: AutoClean
+              run: |
+                  yarn autoclean
+
             - name: Build production bundle
               uses: borales/actions-yarn@v4
               with:
                   cmd: build # will run `yarn build:prod` command
+
             - name: Upload artifact
               uses: actions/upload-artifact@v3
               with:

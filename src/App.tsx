@@ -23,7 +23,6 @@ export const App = (): JSX.Element => {
         <>
             <Header />
             <Container>
-                HIIIIIIIIII😏🙄🙄
                 {summary !== undefined && summary !== null && (
                     <div
                         className={`
