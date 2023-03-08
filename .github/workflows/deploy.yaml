@@ -5,11 +5,10 @@ on:
 jobs:
     build:
         name: Build
-        runs-on: ubuntu-latest
         run: |
-            git config --global user.email 'github-actions@github.com'
+            git config --global user.email    'github-actions@github.com'
             git config --global user.name 'github-actions'
-
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
             - name: Set Node.js 18.x
