@@ -16,6 +16,6 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
-    "include": ["src"],
+    "include": ["src", "./src/setupTest.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
