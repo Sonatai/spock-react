@@ -8,6 +8,7 @@ export const SearchButton = (): JSX.Element => {
         <>
             <FontAwesomeIcon
                 icon={faMagnifyingGlass}
+                //  eslint-disable-next-line tailwindcss/no-custom-classname
                 className="fa-lg modal-button-icon"
             />
             <div className="modal-button-text">Search</div>
