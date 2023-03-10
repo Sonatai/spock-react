@@ -50,6 +50,7 @@
         "eslint-plugin-promise": "^6.0.0",
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-tailwindcss": "^3.10.1",
         "eslint-plugin-testing-library": "^5.10.2",
         "eslint-plugin-vitest": "^0.0.54",
         "gh-pages": "^4.0.0",

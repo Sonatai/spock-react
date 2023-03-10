@@ -35,7 +35,12 @@ export const SearchCard = (props: ISearchCard): JSX.Element => {
                     (spec.title !== '' ? spec.title : spec.className)}
                 {feature?.id}
             </div>
-            <FontAwesomeIcon icon={faAngleRight} className="fa-lg card-icon" />
+
+            <FontAwesomeIcon
+                icon={faAngleRight}
+                //  eslint-disable-next-line tailwindcss/no-custom-classname
+                className="fa-lg card-icon"
+            />
         </Link>
     );
 };
