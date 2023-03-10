@@ -1,4 +1,4 @@
-name: Build
+name: Build & Test
 on: [pull_request]
 
 jobs:
@@ -32,13 +32,8 @@ jobs:
               with:
                   name: production-files
                   path: ./dist
-            # - name: Test the app
-            #   uses: borales/actions-yarn@v4
-            #   with:
-            #     cmd: test # will run `yarn test` command
 
-            # - name: Run test in sub-folder
-            #   uses: borales/actions-yarn@v4
-            #   with:
-            #     cmd: test
-            #     dir: 'frontend' # will run `yarn test` in `frontend` sub folder
+            - name: Test the app
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: test # will run `yarn test` command
