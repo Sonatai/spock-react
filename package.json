@@ -4,6 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
+        "test": "vitest",
         "preview": "vite preview",
         "debug": "vite --debug",
         "deploy": "gh-pages -d dist",
@@ -27,6 +28,9 @@
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.4",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^14.0.0",
+        "@testing-library/react-hooks": "^8.0.1",
         "@types/jsonfile": "^6.1.0",
         "@types/node": "^18.6.4",
         "@types/react": "^18.0.15",
@@ -47,11 +51,15 @@
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-testing-library": "^5.10.2",
+        "eslint-plugin-vitest": "^0.0.54",
         "gh-pages": "^4.0.0",
+        "happy-dom": "^8.9.0",
+        "msw": "^1.1",
         "postcss": "^8.4.14",
         "prettier": "^2.8.4",
         "tailwindcss": "^3.1.7",
         "typescript": "*",
-        "vite": "^3.0.0"
+        "vite": "^3.0.0",
+        "vitest": "^0.29.2"
     }
 }

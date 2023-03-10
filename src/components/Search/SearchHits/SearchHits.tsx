@@ -1,11 +1,11 @@
 import './styles.css';
 
-import { type DialogStateReturn } from 'reakit/ts';
-
-import { type ISummary } from '../../../Hooks/useGetSummary';
-import { type ISearchHit } from '../Search';
-import { SearchCard } from './SearchCard/SearchCard';
 import { nanoid } from 'nanoid';
+import { DialogStateReturn } from 'reakit/ts';
+
+import { ISummary } from '../../../Hooks/useGetSummary';
+import { ISearchHit } from '../Search';
+import { SearchCard } from './SearchCard/SearchCard';
 
 interface ISearchHits {
     searchHits: ISearchHit[] | null;

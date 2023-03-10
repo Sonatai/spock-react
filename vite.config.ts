@@ -5,4 +5,10 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     base: '/spock-react/',
     plugins: [react()],
+    // @ts-ignore
+    test: {
+        globals: true,
+        environment: 'happy-dom',
+        setupFiles: ['./src/setupTest.ts'],
+    },
 });
