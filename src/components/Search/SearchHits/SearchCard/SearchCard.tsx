@@ -7,10 +7,10 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {
-    type IExecutedFeatures,
-    type ISpecification,
+    IExecutedFeatures,
+    ISpecification,
 } from '../../../../Hooks/useGetSummary';
-import { type ISearchHit } from '../../Search';
+import { ISearchHit } from '../../Search';
 
 interface ISearchCard {
     onClick: (e?: any) => void;

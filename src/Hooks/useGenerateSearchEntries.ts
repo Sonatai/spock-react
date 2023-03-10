@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 
 import {
     cleanedSearchData,
-    type IMinimizedSummaryEntry,
-    type ISearchEntry,
+    IMinimizedSummaryEntry,
+    ISearchEntry,
 } from '../components/Search/generateSearchEntries';
-import { type ISpecification, type ISummary } from './useGetSummary';
+import { ISpecification, ISummary } from './useGetSummary';
 
 interface IGenerateSearchEntries {
     summary?: ISummary;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { useQuery, type UseQueryResult } from '@tanstack/react-query';
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
 
 import config from '../../environment.json';
 
@@ -43,7 +43,7 @@ interface ISpec {
 }
 
 const getSpec = async (file: string) => {
-    const data = await axios.get(`${config.specUrl as string}/${file}.json`);
+    const data = await axios.get(`${config.specUrl}/${file}.json`);
 
     return data.data;
 };

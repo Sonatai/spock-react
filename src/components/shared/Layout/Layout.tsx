@@ -1,6 +1,6 @@
 import './styles.css';
 
-import { type PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 interface ILayout {
     onPageNav?: JSX.Element;

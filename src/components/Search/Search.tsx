@@ -9,7 +9,7 @@ import {
     useDialogState,
 } from 'reakit';
 
-import { type ISummary } from '../../Hooks/useGetSummary';
+import { ISummary } from '../../Hooks/useGetSummary';
 import { SearchButton } from './SearchButton/SearchButton';
 import { SearchFooter } from './SearchFooter/SearchFooter';
 import { SearchHits } from './SearchHits/SearchHits';
