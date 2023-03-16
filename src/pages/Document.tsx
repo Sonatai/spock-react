@@ -5,6 +5,7 @@ import { Feature } from '../components/Feature/Feature';
 import { Divide } from '../components/shared/Divide/Divide';
 import { Layout } from '../components/shared/Layout/Layout';
 import { IFeature, useGetSpec } from '../Hooks/useGetSpec';
+import { useScrollUp } from '../Hooks/useScrollUp';
 
 interface IExampleOne {
     fileName: string;
@@ -14,6 +15,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
     const { fileName } = props;
 
     const { data } = useGetSpec({ fileName });
+    useScrollUp();
 
     return (
         <>
