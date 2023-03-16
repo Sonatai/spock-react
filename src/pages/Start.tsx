@@ -1,6 +1,9 @@
 import { Layout } from '../components/shared/Layout/Layout';
+import { useScrollUp } from '../Hooks/useScrollUp';
 
 export const Start = (): JSX.Element => {
+    useScrollUp();
+
     return (
         <Layout>
             <h1>Main Content</h1>
