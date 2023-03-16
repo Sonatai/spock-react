@@ -1,5 +1,17 @@
 # 🖖 Spock React 🖖
 
-SpockReact ist ein einfacher Weg automatisch aus Spock Tests eine Dokumentation zu generieren, die ihr über Github hosten könnt.
+SpockReact is an easy way to automatically generate documentation from Spock tests that you can host via Github.
 
-[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Build & Test](https://github.com/Sonatai/spock-react/actions/workflows/build.yaml/badge.svg) ![Deployment](https://github.com/Sonatai/spock-react/actions/workflows/deploy.yaml/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Getting Started
+
+// TODO
+
+## Documentation
+
+// TODO
+
+## Contributing
+
+// TODO
