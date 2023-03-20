@@ -31,20 +31,14 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                   name: production-files
-                  path: ./
-    test:
-        name: Test
-        runs-on: ubuntu-latest
-        needs: Build
-        steps:
-            - name: Download artifact
-              uses: actions/download-artifact@v3
-              with:
-                  name: production-files
-                  path: ./
+                  path: ./dist
 
             - name: Test the app
               uses: borales/actions-yarn@v4
               with:
                   cmd: test # will run `yarn test` command
 
+            - name: Lint the app
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: eslint:all
