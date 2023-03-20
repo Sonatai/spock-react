@@ -16,7 +16,7 @@ jobs:
             - name: Run install
               uses: borales/actions-yarn@v4
               with:
-                  cmd: install # will run `yarn install` command
+                  cmd: install
 
             - name: AutoClean
               run: |
@@ -25,7 +25,7 @@ jobs:
             - name: Build production bundle
               uses: borales/actions-yarn@v4
               with:
-                  cmd: build # will run `yarn build:prod` command
+                  cmd: build
 
             - name: Upload artifact
               uses: actions/upload-artifact@v3
@@ -33,7 +33,12 @@ jobs:
                   name: production-files
                   path: ./dist
 
+            - name: Lint the app
+              uses: borales/actions-yarn@v4
+              with:
+                  cmd: eslint:all
+
             - name: Test the app
               uses: borales/actions-yarn@v4
               with:
-                  cmd: test # will run `yarn test` command
+                  cmd: test
