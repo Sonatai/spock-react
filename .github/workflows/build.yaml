@@ -35,6 +35,7 @@ jobs:
     test:
         name: Test
         runs-on: ubuntu-latest
+        need: Build
         steps:
             - name: Download artifact
               uses: actions/download-artifact@v3
