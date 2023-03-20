@@ -35,6 +35,7 @@ jobs:
     test:
         name: Test
         runs-on: ubuntu-latest
+        needs: Build
         steps:
             - name: Test the app
               uses: borales/actions-yarn@v4
