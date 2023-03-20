@@ -32,7 +32,9 @@ jobs:
               with:
                   name: production-files
                   path: ./dist
-
+    test:
+        name: Test
+        steps:
             - name: Test the app
               uses: borales/actions-yarn@v4
               with:
