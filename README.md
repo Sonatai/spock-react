@@ -24,20 +24,34 @@ served dynamically.
 ## Getting Started
 
 To create living react documentation from your Spock test suite, 
-you need 2 simple dependencies:
+you need a few simple dependencies:
 
-The [Spock test framework](https://github.com/spockframework/spock):
+First and foremost, the [Spock test framework](https://github.com/spockframework/spock):
 ```groovy
-  testImplementation platform("org.spockframework:spock-bom:$spockVersion")
-  testImplementation "org.spockframework:spock-core"
+testImplementation platform("org.spockframework:spock-bom:$spockVersion")
+testImplementation "org.spockframework:spock-core"
 ```
-The [Spock reports plugin](https://github.com/renatoathaydes/spock-reports):
+Keep in mind that Spock is based on Groovy, so make sure you have
+the Groovy plugin for Gradle, otherwise Gradle will not be able
+to find (and execute) your Spock tests:
 ```groovy
-  // you can use testRuntimeClasspath if you don't want to use spock-report-specific features in your Specs
-  testImplementation( "com.athaydes:spock-reports:$spockReportsVersion" ) {
-      transitive = false // this avoids affecting your version of Groovy/Spock
-  }
+plugins {
+    id 'groovy'
+    // ... some other plugins ...
+}
 ```
+And finally you need the [Spock reports plugin](https://github.com/renatoathaydes/spock-reports)
+which is used to generate the raw json files from your Spock tests:
+```groovy
+// you can use testRuntimeClasspath if you don't want to use spock-report-specific features in your Specs
+testImplementation( "com.athaydes:spock-reports:$spockReportsVersion" ) {
+    transitive = false // this avoids affecting your version of Groovy/Spock
+}
+// if you don't already have slf4j-api and an implementation of it in the classpath, add this! (needed for reports)
+testImplementation 'org.slf4j:slf4j-api:1.7.30'
+testImplementation 'org.slf4j:slf4j-simple:1.7.30' // You might need to adjust the version for spock-reports...
+```
+
 
 After you have added the dependencies to your project, you need to 
 give the report plugin some configuration and templates to work with.
