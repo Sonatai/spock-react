@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { Feature } from '../components/Feature/Feature';
 import { Divide } from '../components/shared/Divide/Divide';
 import { Layout } from '../components/shared/Layout/Layout';
-import { IFeature, useGetSpec } from '../Hooks/useGetSpec';
+import { useGetSpec } from '../Hooks/useGetSpec';
 import { useScrollUp } from '../Hooks/useScrollUp';
 
 interface IExampleOne {
@@ -20,21 +20,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
     return (
         <>
             {data !== undefined && data !== null && (
-                <Layout
-                    onPageNav={
-                        <nav>
-                            <ul className="text-[0.875rem]">
-                                {data.features.map((feature: IFeature) => (
-                                    <li className="pb-[0.5rem]" key={nanoid()}>
-                                        <a href={`#${feature.id}`}>
-                                            {feature.id}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-                    }
-                >
+                <Layout hasOnPageNav features={data.features}>
                     <div className="mb-[3rem]">
                         <h1 className="mb-[0.5rem]">
                             {data.title !== '' ? data.title : data.className}
