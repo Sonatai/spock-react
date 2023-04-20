@@ -60,10 +60,3 @@ h6 {
     font-size: 0.875rem;
     margin-bottom: 1rem;
 }
-
-.sideNavBar {
-    @apply z-20 block;
-    @apply overflow-y-scroll;
-    @apply py-[2rem];
-    @apply px-[0.5rem];
-}
