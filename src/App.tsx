@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 import { Link, Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/Header/Header';
+import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
 import { Search } from './components/Search/Search';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
@@ -16,10 +17,11 @@ import { Start } from './pages/Start';
 */
 
 export const App = (): JSX.Element => {
-    const { data: summary } = useGetSummary();
+    const { data: summary, isLoading, isError } = useGetSummary();
 
     return (
         <>
+            {!isError && <LoadingSpinner isLoading={isLoading} />}
             <Header />
             <main>
                 <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">

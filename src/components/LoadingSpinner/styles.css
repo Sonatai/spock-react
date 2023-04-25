@@ -1,0 +1,20 @@
+#backdrop {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-screen;
+    @apply h-screen;
+    @apply z-[999];
+    @apply bg-davysGray/[0.5];
+}
+
+.text-center {
+    @apply flex;
+    @apply justify-around;
+    @apply items-center;
+    @apply h-full;
+}
+
+.spinner-border {
+    @apply text-redNcs/[0.7] text-[8rem];
+}
