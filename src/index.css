@@ -12,10 +12,9 @@ body,
 
     margin: 0;
     padding: 0;
+    @apply bg-eerieBlack;
 
-    background-color: #23153c;
-
-    @apply text-gray-400;
+    @apply text-silver;
     @apply text-base;
 }
 
