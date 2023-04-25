@@ -19,8 +19,8 @@ export const Layout = (props: PropsWithChildren<ILayout>): JSX.Element => {
                 {children}
 
                 {hasOnPageNav !== undefined && hasOnPageNav && (
-                    <div className="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block">
-                        <h5>On the Page</h5>
+                    <div className="fixed z-20 top-0 bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] pb-10 overflow-y-hidden hidden xl:block">
+                        <h4>On the Page</h4>
                         <nav>
                             <ul className="text-[0.875rem]">
                                 {features?.map((feature: IFeature) => (

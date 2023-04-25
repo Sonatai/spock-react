@@ -19,10 +19,3 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </BrowserRouter>
     </React.StrictMode>
 );
-
-/*
-Info
-
-#23153C
-#FF3F81
-*/
