@@ -1,7 +1,6 @@
 import { nanoid } from 'nanoid';
 import { Link, Route, Routes } from 'react-router-dom';
 
-import { Header } from './components/Header/Header';
 import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
 import { Search } from './components/Search/Search';
 import { useGetSummary } from './Hooks/useGetSummary';
@@ -22,11 +21,11 @@ export const App = (): JSX.Element => {
     return (
         <>
             {!isError && <LoadingSpinner isLoading={isLoading} />}
-            <Header />
+
             <main>
                 <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
                     {summary !== undefined && summary !== null && (
-                        <div className="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto mt-[2rem] pt-[0.25rem]">
+                        <div className="hidden lg:block fixed z-20 inset-0 left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto pt-[0.25rem]">
                             <nav className="lg:text-sm lg:leading-6 relative">
                                 <div className="sticky top-0 -ml-0.5">
                                     <Search summary={summary} />
