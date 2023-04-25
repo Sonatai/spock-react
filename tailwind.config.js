@@ -31,21 +31,6 @@ module.exports = {
 };
 
 /*
-Dark Theme:
-    #1A1A1D
-    #4E4E50
-    #B3B0A8
-    #BF2232
-    #950740
-    #C3073F
-*/
-
-/*
-Light Theme:
-    #2C211B
-    #5D001E
-    #E3E2DF
-    #E3AFBC
-    #9A1750
-    #EE4C7C
+    Dark Theme:
+        headlines: #EE4C7C
 */

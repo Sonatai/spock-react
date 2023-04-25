@@ -31,7 +31,7 @@ export const App = (): JSX.Element => {
                                     <Search summary={summary} />
                                 </div>
 
-                                <h5>Examples</h5>
+                                <h4>Examples</h4>
 
                                 <ul className="text-[0.875rem]">
                                     <li className="pb-[0.5rem]">
