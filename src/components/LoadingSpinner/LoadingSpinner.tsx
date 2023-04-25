@@ -19,6 +19,8 @@ export const LoadingSpinner = (props: ILoadingSpinner): JSX.Element => {
                             icon={faSpinner}
                             spin
                             className=" spinner-border"
+                            role="status"
+                            aria-label="page is loading"
                         />
                     </div>
                 </div>

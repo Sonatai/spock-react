@@ -1,5 +1,5 @@
 #backdrop {
-    @apply absolute;
+    @apply fixed;
     @apply top-0;
     @apply left-0;
     @apply w-screen;

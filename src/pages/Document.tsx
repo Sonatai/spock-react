@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
 import { Feature } from '../components/Feature/Feature';
+import { LoadingSpinner } from '../components/LoadingSpinner/LoadingSpinner';
 import { Divide } from '../components/shared/Divide/Divide';
 import { Layout } from '../components/shared/Layout/Layout';
 import { useGetSpec } from '../Hooks/useGetSpec';
@@ -14,11 +15,12 @@ interface IExampleOne {
 export const Document = (props: IExampleOne): JSX.Element => {
     const { fileName } = props;
 
-    const { data } = useGetSpec({ fileName });
+    const { data, isLoading, isError } = useGetSpec({ fileName });
     useScrollUp();
 
     return (
         <>
+            {!isError && <LoadingSpinner isLoading={isLoading} />}
             {data !== undefined && data !== null && (
                 <Layout hasOnPageNav features={data.features}>
                     <div className="mb-[3rem]">
