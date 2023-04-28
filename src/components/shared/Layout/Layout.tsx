@@ -15,7 +15,7 @@ export const Layout = (props: PropsWithChildren<ILayout>): JSX.Element => {
 
     return (
         <div className="lg:pl-[19.5rem]">
-            <div className="max-w-3xl mx-auto pt-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
+            <div className="max-w-3xl mx-auto py-10 xl:max-w-none xl:ml-0 xl:mr-[15.5rem] xl:pr-16">
                 {children}
 
                 {hasOnPageNav !== undefined && hasOnPageNav && (

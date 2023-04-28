@@ -8,13 +8,13 @@
     @apply bg-davysGray/[0.5];
 }
 
-.text-center {
+.text--center {
     @apply flex;
     @apply justify-around;
     @apply items-center;
     @apply h-full;
 }
 
-.spinner-border {
+.spinner__border {
     @apply text-redNcs/[0.7] text-[8rem];
 }

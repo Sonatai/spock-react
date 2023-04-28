@@ -49,7 +49,7 @@ h6 {
 }
 
 h1 {
-    @apply text-2xl;
+    @apply text-3xl;
     @apply mb-12;
 }
 
@@ -68,5 +68,9 @@ h5,
 h6 {
     @apply text-base;
     @apply font-medium;
+    @apply mb-4;
+}
+
+p {
     @apply mb-4;
 }
