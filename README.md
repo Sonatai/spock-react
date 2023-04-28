@@ -83,6 +83,9 @@ of a URL in the `environment.json` file.
 So if you host your documentation on GitHub, you might have a URL
 looking something like this: `https://raw.githubusercontent.com/user/proj-reo/master/docs/spock/reports`
 
+## Frontend
+
+// TODO
 
 ## Documentation
 
