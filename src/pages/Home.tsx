@@ -1,4 +1,4 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 import {
@@ -141,12 +141,12 @@ export const Home = (): JSX.Element => {
             />
             <div>
                 Both code snippets express the following equations
-                <ul role="list" className="ml-16 my-4">
+                <ul role="list" className="home__list">
                     <li className="home__listItem">
                         <code>f(x) = ((x-4)*2)^2 | f(3) = 4</code>
                     </li>
                     <li className="home__listItem">
-                        <code>f(x)' = 8 * x - 32 | f(3)' = -8</code>
+                        <code>f(x)&#39; = 8 * x - 32 | f(3)&#39; = -8</code>
                     </li>
                 </ul>
             </div>
@@ -158,7 +158,7 @@ export const Home = (): JSX.Element => {
                 allow for rapid prototyping and highly readable math heavy
                 code...
             </p>
-            <ul role="list" className="ml-16 my-4">
+            <ul role="list" className="home__list">
                 <li className="home__listItem">+ : plus(...)</li>
                 <li className="home__listItem">- : minus(...)</li>
                 <li className="home__listItem">* : times(...)</li>
@@ -190,7 +190,7 @@ export const Home = (): JSX.Element => {
                 convolution...
             </p>
             <p>
-                Currently Neureka is mostly held back by the JVM's lack of
+                Currently Neureka is mostly held back by the JVM&#39;s lack of
                 allowing for more memory localized types and also a lack of an
                 API for consistent SIMD vectorization.{' '}
                 <a href="https://openjdk.org/jeps/338">

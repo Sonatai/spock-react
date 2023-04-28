@@ -1,8 +1,13 @@
 .home__listItem::before {
     content: '•';
-    color: theme(colors.claret);
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+
     @apply text-2xl;
+    @apply text-claret;
+}
+
+.home__list {
+    @apply ml-16 my-4;
 }
