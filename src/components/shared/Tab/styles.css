@@ -1,0 +1,9 @@
+.tab {
+    @apply p-2 mr-2;
+}
+
+.tab--selected {
+    @apply border-t-4 border-claret border-solid;
+    @apply bg-eerieBlack;
+    @apply text-frenchRose font-semibold;
+}

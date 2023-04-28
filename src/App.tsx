@@ -5,7 +5,7 @@ import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
 import { Search } from './components/Search/Search';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
-import { Home } from './pages/Home';
+import { Home } from './pages/Home/Home';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();

@@ -1,0 +1,29 @@
+.home__listItem::before {
+    content: '•';
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+
+    @apply text-2xl;
+    @apply text-claret;
+}
+
+.home__list {
+    @apply ml-16 my-4;
+}
+
+.home__icons {
+    @apply text-claret text-5xl;
+}
+
+.home__image {
+    @apply rounded mr-4 w-44;
+}
+
+.home__description {
+    @apply text-center mb-12 text-lg italic;
+}
+
+.home__headline {
+    @apply text-center mb-4;
+}

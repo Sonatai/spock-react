@@ -1,3 +1,5 @@
+import './styles.css';
+
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -8,10 +10,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Layout } from '../components/shared/Layout/Layout';
-import { CustomTab } from '../components/shared/Tab/CustomTab';
-import { useScrollUp } from '../Hooks/useScrollUp';
-import './styles.css';
+import { Layout } from '../../components/shared/Layout/Layout';
+import { CustomTab } from '../../components/shared/Tab/CustomTab';
+import { useScrollUp } from '../../Hooks/useScrollUp';
 
 const groovySnippet = {
     content: (
@@ -45,8 +46,8 @@ export const Home = (): JSX.Element => {
 
     return (
         <Layout>
-            <h1 className="text-center mb-4">Neureka</h1>
-            <p className="text-center mb-12 text-lg italic">
+            <h1 className="home__headline">Neureka</h1>
+            <p className="home__description">
                 A lightweight open source platform independent nd-array library
                 for the JVM
             </p>
@@ -56,7 +57,7 @@ export const Home = (): JSX.Element => {
                     <div className="text-center">
                         <FontAwesomeIcon
                             icon={faFileExport}
-                            className="text-claret text-5xl"
+                            className="home__icons"
                         />
                     </div>
                     <div className="text-center text-sm">
@@ -68,7 +69,7 @@ export const Home = (): JSX.Element => {
                     <div className="text-center">
                         <FontAwesomeIcon
                             icon={faWandSparkles}
-                            className="text-claret text-5xl"
+                            className="home__icons"
                         />
                     </div>
                     <div className="text-center text-sm">
@@ -79,7 +80,7 @@ export const Home = (): JSX.Element => {
                     <div className="text-center">
                         <FontAwesomeIcon
                             icon={faComputer}
-                            className="text-claret text-5xl"
+                            className="home__icons"
                         />
                     </div>
                     <div className="text-center text-sm">
@@ -103,7 +104,7 @@ export const Home = (): JSX.Element => {
                 <img
                     src="https://gleethos.github.io/neureka/src/img/archimedes.jpg"
                     alt="archimedes"
-                    className="rounded mr-4 w-44"
+                    className="home__image"
                 />
                 <p>
                     In that case a developer has to build a neural network

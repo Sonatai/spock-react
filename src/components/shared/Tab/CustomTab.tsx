@@ -1,3 +1,5 @@
+import './styles.css';
+
 import { ReactNode } from 'react';
 import { Tab, TabList, TabPanel, useTabState } from 'reakit';
 
@@ -17,16 +19,16 @@ export const CustomTab = (props: ICustomTab) => {
 
     return (
         <div className="mb-12">
-            <TabList {...tab} aria-label="My tabs">
+            <TabList {...tab} aria-label="at home some code examples">
                 <div className="bg-[#27272B]">
                     {tabConfigs.map((tabConfig) => (
                         <Tab
                             id={tabConfig.header}
                             key={`tabH-${tabConfig.header}`}
                             {...tab}
-                            className={`p-2 mr-2 ${
+                            className={`tab ${
                                 tab.selectedId === tabConfig.header
-                                    ? 'border-t-4 border-claret border-solid bg-eerieBlack text-frenchRose font-semibold'
+                                    ? 'tab--selected'
                                     : ''
                             }  `}
                         >
