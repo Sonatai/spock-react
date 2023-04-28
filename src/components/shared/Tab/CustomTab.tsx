@@ -26,7 +26,7 @@ export const CustomTab = (props: ICustomTab) => {
                             {...tab}
                             className={`p-2 mr-2 ${
                                 tab.selectedId === tabConfig.header
-                                    ? 'border-t-4 border-claret border-solid bg-eerieBlack text-redNcs'
+                                    ? 'border-t-4 border-claret border-solid bg-eerieBlack text-frenchRose font-semibold'
                                     : ''
                             }  `}
                         >
