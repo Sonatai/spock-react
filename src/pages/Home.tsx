@@ -99,7 +99,11 @@ export const Home = (): JSX.Element => {
                 require the definition of a computation graph ahead of time.
             </p>
             <div className="flex">
-                <img src="https://gleethos.github.io/neureka/src/img/archimedes.jpg" />
+                <img
+                    src="https://gleethos.github.io/neureka/src/img/archimedes.jpg"
+                    alt="archimedes"
+                    className="rounded mr-4 w-44"
+                />
                 <p>
                     In that case a developer has to build a neural network
                     structure which cannot change during runtime. Neureka on the
@@ -114,7 +118,7 @@ export const Home = (): JSX.Element => {
             </div>
 
             <h2 className="text-center">Why Java?</h2>
-            <p>
+            <p className="mb-4">
                 Although Java is a robust and safe language, it is often times
                 considered to be too verbose and explicit for simple prototyping
                 or more explorative workloads... Therefore popular machine
@@ -123,12 +127,13 @@ export const Home = (): JSX.Element => {
                 come to wonder, why would anybody ever build a deep learning
                 library for Java? The answer is simple!
             </p>
-            <p>
-                Nobody did! This library was written for all JVM-languages,
-                namely: Groovy, Kotlin, Scala, and Jython just to name a few.
-                Take a look at the following examples side by side! Neureka can
-                be integrated by any language which compiles to, or understands
-                JVM bytecode!
+
+            <h3 className="text-center">Nobody did!</h3>
+            <p className="mb-8">
+                This library was written for all JVM-languages, namely: Groovy,
+                Kotlin, Scala, and Jython just to name a few. Take a look at the
+                following examples side by side! Neureka can be integrated by
+                any language which compiles to, or understands JVM bytecode!
             </p>
             <CustomTab
                 tabConfigs={[groovySnippet, JavaSnippet, KotlinSnippet]}
