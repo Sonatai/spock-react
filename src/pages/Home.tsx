@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Layout } from '../components/shared/Layout/Layout';
 import { CustomTab } from '../components/shared/Tab/CustomTab';
 import { useScrollUp } from '../Hooks/useScrollUp';
+import './styles.css';
 
 const groovySnippet = {
     content: (
@@ -88,7 +89,7 @@ export const Home = (): JSX.Element => {
             </div>
 
             <h2 className="text-center">Why Neureka?</h2>
-            <p className="mb-4">
+            <p>
                 Not only is it a flexible nd-array library for general purpose
                 use, but also a tensor library for doing deep learning.
             </p>
@@ -98,7 +99,7 @@ export const Home = (): JSX.Element => {
                 frameworks such as TensorFlow, Theano, Caffe, and CNTK which
                 require the definition of a computation graph ahead of time.
             </p>
-            <div className="flex">
+            <div className="flex items-center">
                 <img
                     src="https://gleethos.github.io/neureka/src/img/archimedes.jpg"
                     alt="archimedes"
@@ -118,7 +119,7 @@ export const Home = (): JSX.Element => {
             </div>
 
             <h2 className="text-center">Why Java?</h2>
-            <p className="mb-4">
+            <p>
                 Although Java is a robust and safe language, it is often times
                 considered to be too verbose and explicit for simple prototyping
                 or more explorative workloads... Therefore popular machine
@@ -140,9 +141,13 @@ export const Home = (): JSX.Element => {
             />
             <div>
                 Both code snippets express the following equations
-                <ul>
-                    <li>f(x) = ((x-4)*2)^2 | f(3) = 4</li>
-                    <li>f(x)' = 8 * x - 32 | f(3)' = -8</li>
+                <ul role="list" className="ml-16 my-4">
+                    <li className="home__listItem">
+                        <code>f(x) = ((x-4)*2)^2 | f(3) = 4</code>
+                    </li>
+                    <li className="home__listItem">
+                        <code>f(x)' = 8 * x - 32 | f(3)' = -8</code>
+                    </li>
                 </ul>
             </div>
             <p>
@@ -153,12 +158,12 @@ export const Home = (): JSX.Element => {
                 allow for rapid prototyping and highly readable math heavy
                 code...
             </p>
-            <ul>
-                <li>+ : plus(...)</li>
-                <li>- : minus(...)</li>
-                <li>* : times(...)</li>
-                <li>/ : divide(...)</li>
-                <li>...</li>
+            <ul role="list" className="ml-16 my-4">
+                <li className="home__listItem">+ : plus(...)</li>
+                <li className="home__listItem">- : minus(...)</li>
+                <li className="home__listItem">* : times(...)</li>
+                <li className="home__listItem">/ : divide(...)</li>
+                <li className="home__listItem">...</li>
             </ul>
             <p>
                 If you prefer fast prototyping with Jupyter, then Neureka can be
@@ -173,18 +178,26 @@ export const Home = (): JSX.Element => {
                 implemented as generalized, modular and concise as possible,
                 they are also optimized for multi-threading and specifically
                 designed to be auto-vectorizable by the JVM into SIMD machine
-                code instructions. However performance wise Neureka still has
-                lots of room for improvement, but because it is a lightweight
-                and highly extensible library with a consistent API designed to
-                allow for the support of any backend, you can easily go the
-                extra mile to improve performance for your specific use case.
-                like for example implementing a more specialized kind of OpenCL
-                kernel for convolution... Currently Neureka is mostly held back
-                by the JVM's lack of allowing for more memory localized types
-                and also a lack of an API for consistent SIMD vectorization.{' '}
+                code instructions.
+            </p>
+            <p>
+                However performance wise Neureka still has lots of room for
+                improvement, but because it is a lightweight and highly
+                extensible library with a consistent API designed to allow for
+                the support of any backend, you can easily go the extra mile to
+                improve performance for your specific use case. like for example
+                implementing a more specialized kind of OpenCL kernel for
+                convolution...
+            </p>
+            <p>
+                Currently Neureka is mostly held back by the JVM's lack of
+                allowing for more memory localized types and also a lack of an
+                API for consistent SIMD vectorization.{' '}
                 <a href="https://openjdk.org/jeps/338">
                     (...take a look at the upcoming vector API...)
-                </a>{' '}
+                </a>
+            </p>
+            <p>
                 This upcoming vector API alongside the introduction of
                 inline/value types from Project-Valhalla will greatly benefit
                 the performance of Neureka as well as improve Machine Learning
