@@ -14,11 +14,11 @@ export const LoadingSpinner = (props: ILoadingSpinner): JSX.Element => {
         <>
             {isLoading && (
                 <div id="backdrop">
-                    <div className="text-center">
+                    <div className="text--center">
                         <FontAwesomeIcon
                             icon={faSpinner}
                             spin
-                            className=" spinner-border"
+                            className=" spinner__border"
                             role="status"
                             aria-label="page is loading"
                         />

@@ -5,15 +5,7 @@ import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
 import { Search } from './components/Search/Search';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
-import { Start } from './pages/Start';
-
-/*
-#ff3f81
-#23153c
-#121417
-#1E293B
-#F5D547
-*/
+import { Home } from './pages/Home';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -55,7 +47,7 @@ export const App = (): JSX.Element => {
                         </div>
                     )}
                     <Routes>
-                        <Route path="/" element={<Start />} />
+                        <Route path="/" element={<Home />} />
                         {summary?.specifications.map((spec) => (
                             <Route
                                 path={spec.className}
