@@ -1,6 +1,6 @@
 {
     "name": "test-vite-react-github-pages",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
@@ -18,7 +18,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.1.2",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@tanstack/react-query": "^4.0.10",
-        "axios": "^0.27.2",
+        "axios": "^1.00",
         "nanoid": "^4.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -38,7 +38,7 @@
         "@types/react-syntax-highlighter": "^15.5.4",
         "@typescript-eslint/eslint-plugin": "^5.0.0",
         "@typescript-eslint/parser": "^5.53.0",
-        "@vitejs/plugin-react": "^2.0.0",
+        "@vitejs/plugin-react": "^4.0.0",
         "autoprefixer": "^10.4.8",
         "eslint": "^8.0.1",
         "eslint-config-prettier": "^8.6.0",
@@ -52,15 +52,15 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-tailwindcss": "^3.10.1",
         "eslint-plugin-testing-library": "^5.10.2",
-        "eslint-plugin-vitest": "^0.0.54",
-        "gh-pages": "^4.0.0",
-        "happy-dom": "^8.9.0",
+        "eslint-plugin-vitest": "^0.1.0",
+        "gh-pages": "^5.0.0",
+        "happy-dom": "^9.0.0",
         "msw": "^1.1",
         "postcss": "^8.4.14",
         "prettier": "^2.8.4",
         "tailwindcss": "^3.1.7",
         "typescript": "*",
-        "vite": "^3.0.0",
-        "vitest": "^0.29.2"
+        "vite": "^4.0.0",
+        "vitest": "^0.30.0"
     }
 }
