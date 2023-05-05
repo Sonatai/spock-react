@@ -1,0 +1,21 @@
+.main {
+    @apply hidden lg:block;
+    @apply fixed;
+    @apply z-20;
+    @apply inset-0;
+    @apply left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem];
+    @apply pb-10 px-8 pt-[0.25rem];
+    @apply overflow-y-auto;
+}
+
+.main__nav {
+    @apply lg:text-sm;
+    @apply lg:leading-6;
+    @apply relative;
+}
+
+.main__nav__search {
+    @apply sticky;
+    @apply top-0;
+    @apply -ml-0.5;
+}

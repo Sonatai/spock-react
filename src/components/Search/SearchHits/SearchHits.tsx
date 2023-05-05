@@ -26,7 +26,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
     };
 
     return (
-        <div className="search-hit-wrapper">
+        <div className="search__hit__wrapper">
             {searchHits !== null ? (
                 searchHits.map((hit) => {
                     const spec = summary.specifications.find(
@@ -49,7 +49,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
                     );
                 })
             ) : (
-                <div className="no-search-hit">no search hits</div>
+                <div className="no__search__hit">no search hits</div>
             )}
         </div>
     );

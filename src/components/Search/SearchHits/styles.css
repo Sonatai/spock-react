@@ -1,11 +1,10 @@
-.search-hit-wrapper {
-    @apply min-h-[5rem];
-    @apply max-h-[50vh];
+.search__hit__wrapper {
+    @apply min-h-[5rem] max-h-[50vh];
     @apply overflow-auto;
     @apply m-6;
 }
 
-.no-search-hit {
+.no__search__hit {
     @apply text-center;
     @apply pt-6;
 }

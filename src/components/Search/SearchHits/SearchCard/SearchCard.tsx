@@ -27,9 +27,9 @@ export const SearchCard = (props: ISearchCard): JSX.Element => {
             key={nanoid()}
             to={hit.key}
             onClick={onClick}
-            className="search-card"
+            className="search__card"
         >
-            <div className="card-text">
+            <div className="card__text">
                 {spec !== null &&
                     spec !== undefined &&
                     (spec.title !== '' ? spec.title : spec.className)}
@@ -39,7 +39,7 @@ export const SearchCard = (props: ISearchCard): JSX.Element => {
             <FontAwesomeIcon
                 icon={faAngleRight}
                 //  eslint-disable-next-line tailwindcss/no-custom-classname
-                className="fa-lg card-icon"
+                className="fa-lg card__icon"
             />
         </Link>
     );

@@ -5,20 +5,20 @@ import Octocat from '../../../img/Octocat.png';
 
 export const SearchFooter = (): JSX.Element => {
     return (
-        <div className="modal-footer">
+        <div className="modal__footer">
             <a href={config.repoUrl}>
                 <img
                     src={Octocat}
-                    className="modal-footer-image"
+                    className="modal__footer__image"
                     alt={config.githubLogo}
                 />
             </a>
 
-            <a href={config.profile.url} className="modal-footer-link">
+            <a href={config.profile.url} className="modal__footer__link">
                 {config.profile.name}
             </a>
 
-            <a href={config.projectPage.url} className="modal-footer-link">
+            <a href={config.projectPage.url} className="modal__footer__link">
                 {config.projectPage.displayText}
             </a>
         </div>
