@@ -34,14 +34,14 @@ export const Search = (props: ISearchInput): JSX.Element => {
 
     return (
         <>
-            <DialogDisclosure {...dialog} className="modal-button">
+            <DialogDisclosure {...dialog} className="modal__button">
                 <SearchButton />
             </DialogDisclosure>
             <DialogBackdrop {...dialog} className="backdrop">
                 <Dialog
                     {...dialog}
                     aria-label="Search Modal"
-                    className="modal-content"
+                    className="modal__content"
                     onKeyDown={(e) => {
                         if (e.key === 'Escape') {
                             setSearchHits(null);

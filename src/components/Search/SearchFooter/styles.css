@@ -1,4 +1,4 @@
-.modal-footer {
+.modal__footer {
     @apply h-10;
     @apply m-2;
     @apply flex;
@@ -7,11 +7,11 @@
     @apply items-center;
 }
 
-.modal-footer-link {
+.modal__footer__link {
     @apply hover:text-[#ff3f81];
 }
 
-.modal-footer-image {
+.modal__footer__image {
     @apply w-auto;
     @apply h-8;
     @apply rounded-full;

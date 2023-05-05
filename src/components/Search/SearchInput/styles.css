@@ -12,15 +12,13 @@
     @apply text-slate-800;
 }
 
-.input-icon {
+.input__icon {
     @apply mr-[-2rem];
     @apply text-[#E0004F];
 }
 
-.input-wrapper {
+.input__wrapper {
     @apply flex;
     @apply items-center;
-    @apply m-4;
-    @apply ml-6;
-    @apply mt-6;
+    @apply m-4 ml-6 mt-6;
 }

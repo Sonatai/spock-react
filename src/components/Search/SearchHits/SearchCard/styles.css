@@ -1,19 +1,13 @@
-.search-card {
-    @apply bg-[#B0CFD4];
-    @apply hover:bg-[#6DA7B0];
+.search__card {
+    @apply bg-[#B0CFD4] hover:bg-[#6DA7B0];
 
-    @apply mb-2;
-    @apply mr-6;
-
-    @apply ml-2;
-    @apply first:mt-2;
+    @apply mb-2 mr-6 ml-2 first:mt-2;
 
     @apply h-14;
 
     @apply rounded-md;
 
-    @apply text-[#24282D];
-    @apply hover:text-[#24282D];
+    @apply text-[#24282D] hover:text-[#24282D];
 
     @apply leading-5;
 
@@ -26,12 +20,11 @@
     @apply drop-shadow-sm;
 }
 
-.card-icon {
+.card__icon {
     @apply text-[#508A91];
     @apply mr-2;
 }
 
-.card-text {
-    @apply pr-3;
-    @apply pl-3;
+.card__text {
+    @apply pr-3 pl-3;
 }
