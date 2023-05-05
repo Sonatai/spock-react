@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
-import { Search } from './components/Search/Search';
+import { MainNav } from './components/MainNav/MainNav';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
 import { Home } from './pages/Home/Home';
@@ -15,36 +15,9 @@ export const App = (): JSX.Element => {
             {!isError && <LoadingSpinner isLoading={isLoading} />}
 
             <main>
-                <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
+                <div className="app">
                     {summary !== undefined && summary !== null && (
-                        <div className="hidden lg:block fixed z-20 inset-0 left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto pt-[0.25rem]">
-                            <nav className="lg:text-sm lg:leading-6 relative">
-                                <div className="sticky top-0 -ml-0.5">
-                                    <Search summary={summary} />
-                                </div>
-
-                                <h4>Examples</h4>
-
-                                <ul className="text-[0.875rem]">
-                                    <li className="pb-[0.5rem]">
-                                        <Link to="/">Home</Link>
-                                    </li>
-
-                                    {summary.specifications.map((spec) => (
-                                        <li
-                                            className="pb-[0.5rem]"
-                                            key={nanoid()}
-                                        >
-                                            <Link to={spec.className}>
-                                                {spec.title !== ''
-                                                    ? spec.title
-                                                    : spec.className}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
-                        </div>
+                        <MainNav summary={summary} />
                     )}
                     <Routes>
                         <Route path="/" element={<Home />} />
