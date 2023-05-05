@@ -19,7 +19,7 @@ export const CustomTab = (props: ICustomTab) => {
 
     return (
         <div className="mb-12">
-            <TabList {...tab} aria-label="at home some code examples">
+            <TabList {...tab} aria-label="at home, some code examples">
                 <div className="bg-[#27272B]">
                     {tabConfigs.map((tabConfig) => (
                         <Tab

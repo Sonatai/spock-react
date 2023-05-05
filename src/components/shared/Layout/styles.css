@@ -1,4 +1,17 @@
-.layout-wrapper {
-    @apply px-6;
-    @apply py-[2rem];
+.onPage {
+    @apply fixed;
+    @apply z-20;
+    @apply top-0 bottom-0;
+    @apply right-[max(0px,calc(50%-45rem))];
+    @apply w-[19.5rem];
+    @apply pb-10;
+    @apply overflow-y-hidden;
+    @apply hidden;
+    @apply xl:block;
+}
+
+.layout__wrapper {
+    @apply max-w-3xl mx-auto xl:max-w-none;
+    @apply py-10 xl:pr-16;
+    @apply xl:ml-0 xl:mr-[15.5rem];
 }
