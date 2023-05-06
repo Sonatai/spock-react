@@ -13,9 +13,12 @@ export const OnPageNav = (props: IOnPageNave): JSX.Element => {
         <div className="onPage">
             <h4>On the Page</h4>
             <nav>
-                <ul className="text-[0.875rem]">
+                <ul className="layout__list">
                     {features.map((feature: IFeature) => (
-                        <li className="pb-[0.5rem]" key={nanoid()}>
+                        <li
+                            className="layout__list__item pb-[0.5rem]"
+                            key={nanoid()}
+                        >
                             <a href={`#${feature.id}`}>{feature.id}</a>
                         </li>
                     ))}
