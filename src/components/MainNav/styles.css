@@ -19,3 +19,12 @@
     @apply top-0;
     @apply -ml-0.5;
 }
+
+.main__list__item::before {
+    display: none !important;
+}
+
+.main__list {
+    @apply m-0;
+    @apply text-[0.875rem];
+}

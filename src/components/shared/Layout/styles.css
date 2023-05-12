@@ -15,3 +15,12 @@
     @apply py-10 xl:pr-16;
     @apply xl:ml-0 xl:mr-[15.5rem];
 }
+
+.layout__list__item::before {
+    display: none !important;
+}
+
+.layout__list {
+    @apply m-0;
+    @apply text-[0.875rem];
+}

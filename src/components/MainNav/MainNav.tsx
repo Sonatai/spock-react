@@ -22,13 +22,16 @@ export const MainNav = (props: IMainNav) => {
 
                 <h4>Examples</h4>
 
-                <ul className="text-[0.875rem]">
-                    <li className="pb-[0.5rem]">
+                <ul className="main__list">
+                    <li className="main__list__item pb-[0.5rem]">
                         <Link to="/">Home</Link>
                     </li>
 
                     {summary.specifications.map((spec) => (
-                        <li className="pb-[0.5rem]" key={nanoid()}>
+                        <li
+                            className="main__list__item pb-[0.5rem]"
+                            key={nanoid()}
+                        >
                             <Link to={spec.className}>
                                 {spec.title !== ''
                                     ? spec.title

@@ -6,6 +6,7 @@ import { MainNav } from './components/MainNav/MainNav';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
 import { Home } from './pages/Home/Home';
+import { MarkdownExample } from './pages/MarkdownPages/MarkdownExample';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -28,6 +29,7 @@ export const App = (): JSX.Element => {
                                 key={nanoid()}
                             />
                         ))}
+                        <Route path="/markdown" element={<MarkdownExample />} />
                     </Routes>
                 </div>
             </main>

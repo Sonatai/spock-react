@@ -142,11 +142,11 @@ export const Home = (): JSX.Element => {
             />
             <div>
                 Both code snippets express the following equations
-                <ul role="list" className="home__list">
-                    <li className="home__listItem">
+                <ul role="list">
+                    <li>
                         <code>f(x) = ((x-4)*2)^2 | f(3) = 4</code>
                     </li>
-                    <li className="home__listItem">
+                    <li>
                         <code>f(x)&#39; = 8 * x - 32 | f(3)&#39; = -8</code>
                     </li>
                 </ul>
@@ -160,11 +160,11 @@ export const Home = (): JSX.Element => {
                 code...
             </p>
             <ul role="list" className="home__list">
-                <li className="home__listItem">+ : plus(...)</li>
-                <li className="home__listItem">- : minus(...)</li>
-                <li className="home__listItem">* : times(...)</li>
-                <li className="home__listItem">/ : divide(...)</li>
-                <li className="home__listItem">...</li>
+                <li>+ : plus(...)</li>
+                <li>- : minus(...)</li>
+                <li>* : times(...)</li>
+                <li>/ : divide(...)</li>
+                <li>...</li>
             </ul>
             <p>
                 If you prefer fast prototyping with Jupyter, then Neureka can be
