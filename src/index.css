@@ -98,3 +98,12 @@ ol {
 ol {
     list-style: decimal-leading-zero;
 }
+
+blockquote {
+    @apply border-solid border-redNcs border-l-4;
+    @apply my-3;
+}
+
+blockquote > p {
+    @apply p-4;
+}

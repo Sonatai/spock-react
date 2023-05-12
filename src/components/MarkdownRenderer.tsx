@@ -1,16 +1,16 @@
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 import remarkGfm from 'remark-gfm';
+
 import { Divide } from './shared/Divide/Divide';
 
 interface IMarkdownRenderer {
-    content: string;
+    children: string;
 }
 
 export const MarkdownRenderer = (props: IMarkdownRenderer) => {
-    const { content } = props;
+    const { children: content } = props;
 
     return (
         <ReactMarkdown
