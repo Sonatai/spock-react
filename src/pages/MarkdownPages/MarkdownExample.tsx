@@ -5,6 +5,10 @@ export const MarkdownExample = (): JSX.Element => {
 {`
 ~~~ts
 const a = 'what';
+const b = 2;
+
+console.log("a: ", a);
+console.log("b: ", b);
 ~~~
 
 # H1

@@ -1,8 +1,5 @@
 import './styles.css';
 
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 import {
     faComputer,
     faFileExport,
@@ -12,31 +9,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Layout } from '../../components/shared/Layout/Layout';
 import { CustomTab } from '../../components/shared/Tab/CustomTab';
+import { SyntaxHighlighter } from '../../components/SyntaxHighlighter';
 import { useScrollUp } from '../../Hooks/useScrollUp';
 
 const groovySnippet = {
     content: (
-        <SyntaxHighlighter language="groovy" style={dracula} showLineNumbers>
-            {`var x = Tsr.of(3d).setRqsGradient(true)\nvar b = Tsr.of(-4d)\nvar w =Tsr.of(2d)\nvar y = ((x+b)*w)**2 y.backward(1)\n// x.getGradient(): "(1):[-8]"`}
-        </SyntaxHighlighter>
+        <SyntaxHighlighter
+            language="groovy"
+            code={`var x = Tsr.of(3d).setRqsGradient(true)\nvar b = Tsr.of(-4d)\nvar w =Tsr.of(2d)\nvar y = ((x+b)*w)**2 y.backward(1)\n// x.getGradient(): "(1):[-8]"`}
+        />
     ),
     header: 'Groovy',
 };
 
 const JavaSnippet = {
     content: (
-        <SyntaxHighlighter language="java" style={dracula} showLineNumbers>
-            {`var x = Tsr.of(3d).setRqsGradient(true)\nvar b = Tsr.of(-4d);\nvar w = Tsr.of(2d);\nvar y = Tsr.of("((i0+i1)*i2)^2", x, b, w);\ny.backward(1);\n// x.getGradient(): "(1):[-8]"`}
-        </SyntaxHighlighter>
+        <SyntaxHighlighter
+            language="java"
+            code={`var x = Tsr.of(3d).setRqsGradient(true)\nvar b = Tsr.of(-4d);\nvar w = Tsr.of(2d);\nvar y = Tsr.of("((i0+i1)*i2)^2", x, b, w);\ny.backward(1);\n// x.getGradient(): "(1):[-8]"`}
+        />
     ),
     header: 'Java',
 };
 
 const KotlinSnippet = {
     content: (
-        <SyntaxHighlighter language="kotlin" style={dracula} showLineNumbers>
-            {`val x = Tsr.of(3.0).setRqsGradient(true)\nval b = Tsr.of(-4.0)\nval w = Tsr.of(2.0)\nval y = Tsr.of("((i0+i1)*i2)^2", x, b, w)\ny.backward(1.0)\n// x.getGradient(): "(1):[-8]"`}
-        </SyntaxHighlighter>
+        <SyntaxHighlighter
+            language="kotlin"
+            code={`val x = Tsr.of(3.0).setRqsGradient(true)\nval b = Tsr.of(-4.0)\nval w = Tsr.of(2.0)\nval y = Tsr.of("((i0+i1)*i2)^2", x, b, w)\ny.backward(1.0)\n// x.getGradient(): "(1):[-8]"`}
+        />
     ),
     header: 'Kotlin',
 };
