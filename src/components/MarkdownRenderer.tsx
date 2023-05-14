@@ -1,9 +1,8 @@
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import remarkGfm from 'remark-gfm';
 
 import { Divide } from './shared/Divide/Divide';
+import { SyntaxHighlighter } from './SyntaxHighlighter';
 
 interface IMarkdownRenderer {
     children: string;
@@ -20,13 +19,9 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
                     return (inline === undefined || !inline) &&
                         match !== null ? (
                         <SyntaxHighlighter
-                            {...props}
-                            style={dracula}
+                            code={String(children)}
                             language={match[1]}
-                            showLineNumbers
-                        >
-                            {String(children).replace(/\n$/, '')}
-                        </SyntaxHighlighter>
+                        />
                     ) : (
                         <code {...props} className={className}>
                             {children}

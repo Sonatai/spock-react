@@ -2,8 +2,8 @@ import './styles.css';
 
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+import { SyntaxHighlighter } from '../SyntaxHighlighter';
 
 /*
 className === unique key for spec
@@ -45,12 +45,9 @@ export const Feature = (props: IFeature): JSX.Element => {
                         </div>
                         {block.code.length > 0 && (
                             <SyntaxHighlighter
+                                code={block.code.join('\n')}
                                 language="groovy"
-                                style={dracula}
-                                showLineNumbers
-                            >
-                                {block.code.join('\n')}
-                            </SyntaxHighlighter>
+                            />
                         )}
                     </Fragment>
                 ))}
