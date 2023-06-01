@@ -16,22 +16,22 @@ export const MainNav = (props: IMainNav) => {
     return (
         <div className="main">
             <div className="main__logo">Neureka</div>
-            <div className="main__nav__search">
+            <div className="main__search">
                 <Search summary={summary} />
             </div>
-            <nav className="main__nav">
-                <h4>Examples</h4>
 
+            <nav className="main__nav">
                 <ul className="main__list">
-                    <li className="main__list__item pb-[0.5rem]">
+                    <li className="main__list__item">
                         <Link to="/">Home</Link>
                     </li>
+                </ul>
 
+                <h4>Guides & Concepts</h4>
+
+                <ul className="main__list">
                     {summary.specifications.map((spec) => (
-                        <li
-                            className="main__list__item pb-[0.5rem]"
-                            key={nanoid()}
-                        >
+                        <li className="main__list__item" key={nanoid()}>
                             <Link to={spec.className}>
                                 {spec.title !== ''
                                     ? spec.title
