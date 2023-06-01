@@ -11,7 +11,6 @@ import { Layout } from '../../components/shared/Layout/Layout';
 import { SyntaxHighlighter } from '../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../components/shared/Tab/CustomTab';
 import { useScrollUp } from '../../Hooks/useScrollUp';
-import { Message } from '../../components/shared/ErrorMessage/Message';
 
 const groovySnippet = {
     content: (
@@ -48,18 +47,6 @@ export const Home = (): JSX.Element => {
 
     return (
         <Layout>
-            <Message level="error" headline="Meh Error happen">
-                Meh
-            </Message>
-            <Message level="warning" headline="Meh Error happen">
-                Meh
-            </Message>
-            <Message level="success" headline="Meh Error happen">
-                Meh
-            </Message>
-            <Message level="info" headline="Meh Error happen">
-                Meh
-            </Message>
             <h1 className="home__headline">Neureka</h1>
             <p className="home__description">
                 A lightweight open source platform independent nd-array library

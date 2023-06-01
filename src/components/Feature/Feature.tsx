@@ -10,7 +10,6 @@ className === unique key for spec
 executedFeatures === unique key for test
 feature.id === unique key for test
 kind: GIVEN | WHEN | THEN | AND | CLEANUP | WHERE | EXPECT
-#ff3f81
 */
 
 export interface IBlock {

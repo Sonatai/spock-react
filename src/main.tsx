@@ -8,7 +8,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { App } from './App';
 import { ErrorBoundary } from 'react-error-boundary';
-import { Message } from './components/shared/ErrorMessage/Message';
+import { Message } from './components/shared/Message/Message';
 
 const queryClient = new QueryClient();
 
