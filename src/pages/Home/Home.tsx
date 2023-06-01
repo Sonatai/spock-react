@@ -7,9 +7,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { Message } from '../../components/shared/ErrorMessage/Message';
 import { Layout } from '../../components/shared/Layout/Layout';
+import { SyntaxHighlighter } from '../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../components/shared/Tab/CustomTab';
-import { SyntaxHighlighter } from '../../components/SyntaxHighlighter';
 import { useScrollUp } from '../../Hooks/useScrollUp';
 
 const groovySnippet = {
@@ -47,6 +48,7 @@ export const Home = (): JSX.Element => {
 
     return (
         <Layout>
+            <Message headline="Error is happening" />
             <h1 className="home__headline">Neureka</h1>
             <p className="home__description">
                 A lightweight open source platform independent nd-array library

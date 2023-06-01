@@ -1,4 +1,4 @@
-import { MarkdownPage } from '../../components/MarkdownPage';
+import { MarkdownPage } from '../../components/shared/MarkdownPage';
 
 export const MarkdownExample = (): JSX.Element => {
     return <MarkdownPage>

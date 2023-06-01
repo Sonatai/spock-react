@@ -3,7 +3,7 @@ import './styles.css';
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
-import { SyntaxHighlighter } from '../SyntaxHighlighter';
+import { SyntaxHighlighter } from '../shared/SyntaxHighlighter';
 
 /*
 className === unique key for spec
