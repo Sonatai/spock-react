@@ -15,11 +15,11 @@ export const MainNav = (props: IMainNav) => {
 
     return (
         <div className="main">
+            <div className="main__logo">Neureka</div>
+            <div className="main__nav__search">
+                <Search summary={summary} />
+            </div>
             <nav className="main__nav">
-                <div className="main__nav__search">
-                    <Search summary={summary} />
-                </div>
-
                 <h4>Examples</h4>
 
                 <ul className="main__list">

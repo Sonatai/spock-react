@@ -4,14 +4,15 @@
     @apply z-20;
     @apply inset-0;
     @apply left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem];
-    @apply pb-10 px-8 pt-[0.25rem];
-    @apply overflow-y-auto;
+    @apply pb-10 px-8;
 }
 
 .main__nav {
     @apply lg:text-sm;
     @apply lg:leading-6;
     @apply relative;
+    @apply h-full;
+    @apply overflow-auto;
 }
 
 .main__nav__search {
@@ -27,4 +28,14 @@
 .main__list {
     @apply m-0;
     @apply text-[0.875rem];
+}
+
+.main__logo {
+    @apply text-3xl;
+    @apply py-6;
+    background: -webkit-linear-gradient(350deg, #ba1ec2, #f79d65, #ce2d4f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    block-size: fit-content;
 }
