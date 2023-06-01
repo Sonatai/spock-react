@@ -1,2 +1,37 @@
-.error__message {
+.message {
+    border: #4c5457 solid 1px;
+    background-color: #262a2c;
+    width: 40rem;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message__icon {
+    margin-right: 1rem;
+}
+
+.message__header {
+    margin-bottom: 0.5rem;
+}
+
+.message__error {
+    color: #fd5d63;
+}
+
+.message__success {
+    color: #6bc940;
+}
+
+.message__warning {
+    color: #ff8533;
+}
+
+.message__info {
+    color: #68c1df;
+}
+
+.message__content {
+    margin-left: 2rem;
 }
