@@ -1,5 +1,5 @@
 import { MarkdownRenderer } from './MarkdownRenderer';
-import { Layout } from './shared/Layout/Layout';
+import { Layout } from './Layout/Layout';
 
 interface IMarkdownPage {
     children: string;

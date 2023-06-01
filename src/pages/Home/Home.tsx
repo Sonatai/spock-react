@@ -8,8 +8,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Layout } from '../../components/shared/Layout/Layout';
+import { SyntaxHighlighter } from '../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../components/shared/Tab/CustomTab';
-import { SyntaxHighlighter } from '../../components/SyntaxHighlighter';
 import { useScrollUp } from '../../Hooks/useScrollUp';
 
 const groovySnippet = {

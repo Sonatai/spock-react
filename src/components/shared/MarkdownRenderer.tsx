@@ -1,8 +1,8 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-import { Divide } from './shared/Divide/Divide';
 import { SyntaxHighlighter } from './SyntaxHighlighter';
+import { Divide } from './Divide/Divide';
 
 interface IMarkdownRenderer {
     children: string;

@@ -1,0 +1,37 @@
+.message {
+    @apply border-[1px];
+    @apply border-outerSpcae;
+    @apply bg-gummetal;
+    @apply w-180;
+    @apply p-4;
+    @apply m-4;
+    @apply mx-auto;
+}
+
+.message__icon {
+    @apply mr-4;
+}
+
+.message__header {
+    @apply mb-2;
+}
+
+.message__error {
+    @apply text-error;
+}
+
+.message__success {
+    @apply text-success;
+}
+
+.message__warning {
+    @apply text-warning;
+}
+
+.message__info {
+    @apply text-info;
+}
+
+.message__content {
+    @apply ml-8;
+}
