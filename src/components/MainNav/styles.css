@@ -4,30 +4,41 @@
     @apply z-20;
     @apply inset-0;
     @apply left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem];
-    @apply pb-10 px-8;
+    @apply px-8;
+    @apply h-screen;
+    @apply flex;
+    @apply flex-col;
+    @apply overflow-hidden;
+}
+
+.main__search {
+    @apply top-0;
+    @apply -ml-0.5;
 }
 
 .main__nav {
     @apply lg:text-sm;
     @apply lg:leading-6;
-    @apply relative;
-    @apply h-full;
     @apply overflow-auto;
 }
 
-.main__nav__search {
-    @apply sticky;
-    @apply top-0;
-    @apply -ml-0.5;
+.main__nav > h4 {
+    @apply mt-3;
+    @apply mb-2;
+}
+
+.main__list {
+    @apply m-0;
+    @apply text-[0.875rem];
 }
 
 .main__list__item::before {
     display: none !important;
 }
 
-.main__list {
-    @apply m-0;
-    @apply text-[0.875rem];
+.main__list__item {
+    @apply pb-2;
+    @apply px-2;
 }
 
 .main__logo {
