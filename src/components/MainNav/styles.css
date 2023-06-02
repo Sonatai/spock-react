@@ -1,12 +1,11 @@
 .main {
-    @apply hidden lg:block;
+    @apply hidden lg:flex;
     @apply fixed;
     @apply z-20;
     @apply inset-0;
     @apply left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem];
     @apply px-8;
     @apply h-screen;
-    @apply flex;
     @apply flex-col;
     @apply overflow-hidden;
 }
