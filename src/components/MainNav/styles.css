@@ -42,7 +42,8 @@
 
 .main__logo {
     @apply text-3xl;
-    @apply py-6;
+    @apply my-4;
+    @apply py-2;
     background: -webkit-linear-gradient(350deg, #ba1ec2, #f79d65, #ce2d4f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

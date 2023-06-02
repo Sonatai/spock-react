@@ -15,7 +15,9 @@ export const MainNav = (props: IMainNav) => {
 
     return (
         <div className="main">
-            <div className="main__logo">Neureka</div>
+            <Link to="/" className="main__logo">
+                Neureka
+            </Link>
             <div className="main__search">
                 <Search summary={summary} />
             </div>
