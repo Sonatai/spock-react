@@ -50,3 +50,18 @@
     @apply w-fit;
     block-size: fit-content;
 }
+
+.main__github {
+    @apply w-5;
+    @apply h-5;
+}
+
+.main__menu__icon {
+    @apply ml-2;
+    @apply text-white;
+}
+
+.main__menu {
+    @apply flex;
+    @apply items-center;
+}

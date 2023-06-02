@@ -1,7 +1,7 @@
 import './styles.css';
 
 import config from '../../../../environment.json';
-import Octocat from '../../../img/Octocat.png';
+import Octocat from '../../../assets/img/Octocat.png';
 
 export const SearchFooter = (): JSX.Element => {
     return (
