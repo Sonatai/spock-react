@@ -32,12 +32,12 @@ export const MainNav = (props: IMainNav) => {
                 <ul className="main__list">
                     <li className="main__list__item">
                         <Link to="/" className="main__menu">
+                            Home{' '}
                             <FontAwesomeIcon
                                 icon={faHouseChimney}
                                 size="lg"
                                 className="main__menu__icon"
                             />
-                            Home
                         </Link>
                     </li>
                     <li className="main__list__item">
@@ -45,12 +45,12 @@ export const MainNav = (props: IMainNav) => {
                             to="https://github.com/Gleethos/neureka"
                             className="main__menu"
                         >
+                            Github{' '}
                             <img
                                 src={GithubLogo}
                                 alt="Github Logo"
                                 className="main__github main__menu__icon"
                             />
-                            Github
                         </Link>
                     </li>
                     <li className="main__list__item">
@@ -58,12 +58,12 @@ export const MainNav = (props: IMainNav) => {
                             to="https://gleethos.github.io/neureka/jdocs/index.html"
                             className="main__menu"
                         >
+                            JDocs
                             <FontAwesomeIcon
                                 icon={faBook}
                                 size="lg"
                                 className="main__menu__icon"
                             />
-                            JDocs
                         </Link>
                     </li>
                 </ul>

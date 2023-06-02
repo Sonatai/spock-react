@@ -57,7 +57,7 @@
 }
 
 .main__menu__icon {
-    @apply mr-2;
+    @apply ml-2;
     @apply text-white;
 }
 
