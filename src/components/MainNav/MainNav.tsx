@@ -76,6 +76,11 @@ export const MainNav = (props: IMainNav) => {
                         </Link>
                     </li>
                     <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-apache-maven">
+                            Getting Started With Apache Maven
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
                         <Link to="/getting-started/getting-started-with-gradle">
                             Getting Started With Gradle
                         </Link>
