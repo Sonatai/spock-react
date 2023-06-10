@@ -68,6 +68,14 @@ export const MainNav = (props: IMainNav) => {
                     </li>
                 </ul>
 
+                <h4>Getting Started</h4>
+                <ul className="main__list">
+                    <li className="main__list__item">
+                        <Link to="/getting-started/Neural-networks-quickstart">
+                            Neural Networks Quickstart
+                        </Link>
+                    </li>
+                </ul>
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">
                     {summary.specifications.map((spec) => (

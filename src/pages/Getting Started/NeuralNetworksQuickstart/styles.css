@@ -1,0 +1,7 @@
+.nnq__description {
+    @apply mb-12 text-lg italic;
+}
+
+.nnq__headline {
+    @apply mb-4;
+}

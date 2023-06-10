@@ -6,15 +6,16 @@ import { MainNav } from './components/MainNav/MainNav';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
 import { Home } from './pages/Home/Home';
-import { MarkdownExample } from './pages/MarkdownPages/MarkdownExample';
+import { MarkdownExample } from './pages/MarkdownExample/MarkdownExample';
 import { Message } from './components/shared/Message/Message';
+import { NeuralNetworksQuickstart } from './pages/Getting Started/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
 
     if (isError) {
         return (
-            <Message level="error" headline={`The summary couldn't be loaded`}>
+            <Message level="error" headline="The summary couldn't be loaded">
                 The summary has some loading problems. Please try again later.
                 If the problem still occurs, please open an{' '}
                 <a href="https://github.com/Sonatai/spock-react/issues">
@@ -42,6 +43,10 @@ export const App = (): JSX.Element => {
                             />
                         ))}
                         <Route path="/markdown" element={<MarkdownExample />} />
+                        <Route
+                            path="/getting-started/Neural-networks-quickstart"
+                            element={<NeuralNetworksQuickstart />}
+                        />
                     </Routes>
                 </div>
             </main>
