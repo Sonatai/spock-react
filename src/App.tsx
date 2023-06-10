@@ -9,6 +9,8 @@ import { Home } from './pages/Home/Home';
 import { MarkdownExample } from './pages/MarkdownExample/MarkdownExample';
 import { Message } from './components/shared/Message/Message';
 import { NeuralNetworksQuickstart } from './pages/Getting Started/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
+import { MarkdownPage } from './components/shared/MarkdownPage';
+import gswGradlePath from './pages/Getting Started/GettingStartedWithGradle.md';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -43,9 +45,14 @@ export const App = (): JSX.Element => {
                             />
                         ))}
                         <Route path="/markdown" element={<MarkdownExample />} />
+
                         <Route
-                            path="/getting-started/Neural-networks-quickstart"
+                            path="/getting-started/neural-networks-quickstart"
                             element={<NeuralNetworksQuickstart />}
+                        />
+                        <Route
+                            path="/getting-started/getting-started-with-gradle"
+                            element={<MarkdownPage filePath={gswGradlePath} />}
                         />
                     </Routes>
                 </div>

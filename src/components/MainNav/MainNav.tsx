@@ -71,8 +71,13 @@ export const MainNav = (props: IMainNav) => {
                 <h4>Getting Started</h4>
                 <ul className="main__list">
                     <li className="main__list__item">
-                        <Link to="/getting-started/Neural-networks-quickstart">
+                        <Link to="/getting-started/neural-networks-quickstart">
                             Neural Networks Quickstart
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-gradle">
+                            Getting Started With Gradle
                         </Link>
                     </li>
                 </ul>
