@@ -59,6 +59,7 @@
 .main__menu__icon {
     @apply ml-2;
     @apply text-white;
+    @apply opacity-40;
 }
 
 .main__menu {
