@@ -9,19 +9,6 @@
     inset: 0;
 }
 
-.modal__button {
-    @apply rounded-full;
-    @apply bg-[#FFEBF2];
-    @apply p-1;
-    @apply w-full;
-    @apply flex;
-    @apply items-center;
-    @apply mb-4;
-    border: 1px solid #ffebf2;
-
-    @apply hover:bg-[#FFC2D7];
-}
-
 .modal__content {
     z-index: 999;
     margin: 12vh;

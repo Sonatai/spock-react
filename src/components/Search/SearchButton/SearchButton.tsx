@@ -2,16 +2,25 @@ import './styles.css';
 
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { DialogDisclosure } from 'reakit';
+import { DialogStateReturn } from 'reakit/ts/Dialog/DialogState';
 
-export const SearchButton = (): JSX.Element => {
+interface ISearchButton {
+    dialog: DialogStateReturn;
+}
+
+export const SearchButton = (props: ISearchButton): JSX.Element => {
+    const { dialog } = props;
+
     return (
-        <>
+        <DialogDisclosure {...dialog} className="modal__button">
             <FontAwesomeIcon
                 icon={faMagnifyingGlass}
-                //  eslint-disable-next-line tailwindcss/no-custom-classname
-                className="fa-lg modal-button-icon"
+                size="lg"
+                className="
+                modal-button-icon"
             />
             <div className="modal-button-text">Search</div>
-        </>
+        </DialogDisclosure>
     );
 };
