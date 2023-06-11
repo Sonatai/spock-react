@@ -3,6 +3,9 @@ import './styles.css';
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
+import { faHashtag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { SyntaxHighlighter } from '../shared/SyntaxHighlighter';
 
 /*
@@ -28,9 +31,21 @@ export const Feature = (props: IFeature): JSX.Element => {
 
     return (
         <section id={id}>
-            <h3>
-                <a href={`#${id}`}>{id}</a>
-            </h3>
+            <div
+                className="feature__headline group"
+                id="applying-conditionally"
+            >
+                <h3>
+                    <a href={`#${id}`} className="">
+                        {id}
+                        <FontAwesomeIcon
+                            icon={faHashtag}
+                            size="lg"
+                            className="feature__headline__hashtag"
+                        />
+                    </a>
+                </h3>
+            </div>
             <div>
                 {blocks.map((block) => (
                     <Fragment key={nanoid()}>
