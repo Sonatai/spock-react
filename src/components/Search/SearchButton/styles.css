@@ -1,22 +1,33 @@
-.modal-button-icon {
-    @apply text-[#E0004F];
+.modal__button__icon {
+    @apply text-silver;
     @apply mr-2;
 }
 
-.modal-button-text {
-    @apply text-[#E0004F];
+.modal__button__text {
+    @apply text-silver;
     @apply font-medium;
+}
+
+.modal__button:hover .modal__button__text {
+    background: -webkit-linear-gradient(350deg, #ee4c7c, #f79d65);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal__button:hover .modal__button__icon {
+    @apply text-frenchRose;
 }
 
 .modal__button {
     @apply rounded-full;
-    @apply bg-[#FFEBF2];
-    @apply p-1;
+    @apply bg-onxy;
+    @apply py-1;
+    @apply px-2;
     @apply w-full;
     @apply flex;
     @apply items-center;
     @apply mb-4;
-    border: 1px solid #ffebf2;
+    border: 2px solid #3a3a40;
 
-    @apply hover:bg-[#FFC2D7];
+    @apply hover:border-frenchRose;
 }

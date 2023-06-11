@@ -13,6 +13,7 @@
 .main__search {
     @apply top-0;
     @apply -ml-0.5;
+    @apply mr-6;
 }
 
 .main__nav {

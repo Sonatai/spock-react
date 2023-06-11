@@ -13,14 +13,14 @@ export const SearchButton = (props: ISearchButton): JSX.Element => {
     const { dialog } = props;
 
     return (
-        <DialogDisclosure {...dialog} className="modal__button">
+        <DialogDisclosure {...dialog} className="group modal__button">
             <FontAwesomeIcon
                 icon={faMagnifyingGlass}
                 size="lg"
                 className="
-                modal-button-icon"
+                modal__button__icon"
             />
-            <div className="modal-button-text">Search</div>
+            <div className="modal__button__text">Search</div>
         </DialogDisclosure>
     );
 };
