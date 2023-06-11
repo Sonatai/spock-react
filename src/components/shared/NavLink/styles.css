@@ -1,0 +1,30 @@
+.nav__link {
+    @apply flex;
+    @apply items-center;
+    @apply w-full;
+}
+
+.nav__link:focus {
+    background: -webkit-linear-gradient(350deg, #ba1ec2, #f79d65);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav__link:hover {
+    @apply text-silver;
+}
+
+.nav__link__list__item::before {
+    display: none !important;
+}
+
+.nav__link__list__item {
+    @apply py-1;
+    @apply px-2;
+}
+
+.nav__link__list__item:hover {
+    @apply bg-davysGray;
+    @apply rounded-lg;
+    @apply bg-opacity-20;
+}
