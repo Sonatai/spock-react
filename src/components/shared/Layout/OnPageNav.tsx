@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 
 import { IFeature } from '../../../Hooks/useGetSpec';
+import { NavAnchor } from '../NavLink/NavAnchor';
 
 interface IOnPageNave {
     features: IFeature[];
@@ -15,12 +16,13 @@ export const OnPageNav = (props: IOnPageNave): JSX.Element => {
             <nav>
                 <ul className="layout__list">
                     {features.map((feature: IFeature) => (
-                        <li
-                            className="layout__list__item pb-[0.5rem]"
+                        <NavAnchor
+                            href={`#${feature.id}`}
+                            id={feature.id}
                             key={nanoid()}
                         >
-                            <a href={`#${feature.id}`}>{feature.id}</a>
-                        </li>
+                            {feature.id}
+                        </NavAnchor>
                     ))}
                 </ul>
             </nav>
