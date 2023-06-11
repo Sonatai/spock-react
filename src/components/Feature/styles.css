@@ -9,3 +9,18 @@
 .feature > div {
     @apply ml-[0.5rem];
 }
+
+.feature__headline {
+    @apply flex;
+    @apply items-baseline;
+}
+
+.feature__headline:hover .feature__headline__hashtag {
+    @apply opacity-60;
+    @apply text-silver;
+}
+
+.feature__headline__hashtag {
+    @apply ml-2;
+    @apply opacity-0;
+}
