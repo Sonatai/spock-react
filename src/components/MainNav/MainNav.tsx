@@ -9,6 +9,7 @@ import { Search } from '../Search/Search';
 import GithubLogo from '../../assets/img/github-mark-white.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from '../shared/NavLink/NavLink';
 
 interface IMainNav {
     summary: ISummary;
@@ -30,87 +31,61 @@ export const MainNav = (props: IMainNav) => {
             <nav className="main__nav">
                 <h4>Menu</h4>
                 <ul className="main__list">
-                    <li className="main__list__item">
-                        <Link to="/" className="main__menu">
-                            Home{' '}
-                            <FontAwesomeIcon
-                                icon={faHouseChimney}
-                                size="lg"
-                                className="main__menu__icon"
-                            />
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link
-                            to="https://github.com/Gleethos/neureka"
-                            className="main__menu"
-                        >
-                            Github{' '}
-                            <img
-                                src={GithubLogo}
-                                alt="Github Logo"
-                                className="main__github main__menu__icon"
-                            />
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link
-                            to="https://gleethos.github.io/neureka/jdocs/index.html"
-                            className="main__menu"
-                        >
-                            JDocs
-                            <FontAwesomeIcon
-                                icon={faBook}
-                                size="lg"
-                                className="main__menu__icon"
-                            />
-                        </Link>
-                    </li>
+                    <NavLink href="/">
+                        Home{' '}
+                        <FontAwesomeIcon
+                            icon={faHouseChimney}
+                            size="lg"
+                            className="main__menu__icon"
+                        />
+                    </NavLink>
+
+                    <NavLink href="https://github.com/Gleethos/neureka">
+                        Github{' '}
+                        <img
+                            src={GithubLogo}
+                            alt="Github Logo"
+                            className="main__github main__menu__icon"
+                        />
+                    </NavLink>
+
+                    <NavLink href="https://gleethos.github.io/neureka/jdocs/index.html">
+                        JDocs
+                        <FontAwesomeIcon
+                            icon={faBook}
+                            size="lg"
+                            className="main__menu__icon"
+                        />
+                    </NavLink>
                 </ul>
 
                 <h4>Getting Started</h4>
                 <ul className="main__list">
-                    <li className="main__list__item">
-                        <Link to="/getting-started/neural-networks-quickstart">
-                            Neural Networks Quickstart
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link to="/getting-started/getting-started-with-apache-maven">
-                            Getting Started With Apache Maven
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link to="/getting-started/getting-started-with-gradle">
-                            Getting Started With Gradle
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link to="/getting-started/getting-started-with-jitpack">
-                            Getting Started With Jitpack
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link to="/getting-started/getting-started-with-groovy-grape">
-                            Getting Started With Groovy Grape
-                        </Link>
-                    </li>
-                    <li className="main__list__item">
-                        <Link to="/getting-started/building-from-source">
-                            Building From Source
-                        </Link>
-                    </li>
+                    <NavLink href="/getting-started/neural-networks-quickstart">
+                        Neural Networks Quickstart
+                    </NavLink>
+                    <NavLink href="/getting-started/getting-started-with-apache-maven">
+                        Getting Started With Apache Maven
+                    </NavLink>
+                    <NavLink href="/getting-started/getting-started-with-gradle">
+                        Getting Started With Gradle
+                    </NavLink>
+                    <NavLink href="/getting-started/getting-started-with-jitpack">
+                        Getting Started With Jitpack
+                    </NavLink>
+                    <NavLink href="/getting-started/getting-started-with-groovy-grape">
+                        Getting Started With Groovy Grape
+                    </NavLink>
+                    <NavLink href="/getting-started/building-from-source">
+                        Building From Source
+                    </NavLink>
                 </ul>
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">
                     {summary.specifications.map((spec) => (
-                        <li className="main__list__item" key={nanoid()}>
-                            <Link to={spec.className}>
-                                {spec.title !== ''
-                                    ? spec.title
-                                    : spec.className}
-                            </Link>
-                        </li>
+                        <NavLink href={spec.className} key={nanoid()}>
+                            {spec.title !== '' ? spec.title : spec.className}
+                        </NavLink>
                     ))}
                 </ul>
             </nav>

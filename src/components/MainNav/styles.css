@@ -31,15 +31,6 @@
     @apply text-[0.875rem];
 }
 
-.main__list__item::before {
-    display: none !important;
-}
-
-.main__list__item {
-    @apply pb-2;
-    @apply px-2;
-}
-
 .main__logo {
     @apply text-3xl;
     @apply my-4;
@@ -60,9 +51,4 @@
     @apply ml-2;
     @apply text-white;
     @apply opacity-40;
-}
-
-.main__menu {
-    @apply flex;
-    @apply items-center;
 }
