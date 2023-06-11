@@ -95,6 +95,11 @@ export const MainNav = (props: IMainNav) => {
                             Getting Started With Groovy Grape
                         </Link>
                     </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/building-from-source">
+                            Building From Source
+                        </Link>
+                    </li>
                 </ul>
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">

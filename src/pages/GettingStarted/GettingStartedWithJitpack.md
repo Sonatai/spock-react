@@ -1,4 +1,6 @@
-# Getting started with [![](https://jitpack.io/v/Gleethos/neureka.svg)](https://jitpack.io/#Gleethos/neureka)
+# Getting started with Jitpack
+
+[![](https://jitpack.io/v/Gleethos/neureka.svg)](https://jitpack.io/#Gleethos/neureka)
 
 **1. Add the JitPack url in your root `build.gradle` at the end of `repositories`**
 

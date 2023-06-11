@@ -14,6 +14,7 @@ import gswGradlePath from './pages/GettingStarted/GettingStartedWithGradle.md';
 import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
 import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
 import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape.md';
+import buildingFromSource from './pages/GettingStarted/BuildingFromSource.md';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -70,6 +71,12 @@ export const App = (): JSX.Element => {
                         <Route
                             path="/getting-started/getting-started-with-groovy-grape"
                             element={<MarkdownPage filePath={gswGroovyGrape} />}
+                        />
+                        <Route
+                            path="/getting-started/building-from-source"
+                            element={
+                                <MarkdownPage filePath={buildingFromSource} />
+                            }
                         />
                     </Routes>
                 </div>
