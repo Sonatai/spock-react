@@ -16,7 +16,7 @@ export const OnPageNav = (props: IOnPageNave): JSX.Element => {
             <nav>
                 <ul className="layout__list">
                     {features.map((feature: IFeature) => (
-                        <NavAnchor href={`#${feature.id}`} key={nanoid()}>
+                        <NavAnchor href={feature.id} key={nanoid()}>
                             {feature.id}
                         </NavAnchor>
                     ))}

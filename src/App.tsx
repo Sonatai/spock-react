@@ -43,7 +43,7 @@ export const App = (): JSX.Element => {
                         <Route path="/" element={<Home />} />
                         {summary?.specifications.map((spec) => (
                             <Route
-                                path={spec.className}
+                                path={`/${spec.className}`}
                                 element={<Document fileName={spec.className} />}
                                 key={nanoid()}
                             />

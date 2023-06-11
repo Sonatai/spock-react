@@ -15,7 +15,7 @@ export const NavAnchor = (props: INavAnchor) => {
     return (
         <li className="nav__link__list__item">
             <a
-                href={href}
+                href={`#${href}`}
                 className={`nav__link ${
                     activeAnchor === href ? 'nav__link--active' : ''
                 }`}
