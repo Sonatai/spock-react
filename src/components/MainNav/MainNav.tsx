@@ -68,6 +68,39 @@ export const MainNav = (props: IMainNav) => {
                     </li>
                 </ul>
 
+                <h4>Getting Started</h4>
+                <ul className="main__list">
+                    <li className="main__list__item">
+                        <Link to="/getting-started/neural-networks-quickstart">
+                            Neural Networks Quickstart
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-apache-maven">
+                            Getting Started With Apache Maven
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-gradle">
+                            Getting Started With Gradle
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-jitpack">
+                            Getting Started With Jitpack
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-groovy-grape">
+                            Getting Started With Groovy Grape
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/building-from-source">
+                            Building From Source
+                        </Link>
+                    </li>
+                </ul>
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">
                     {summary.specifications.map((spec) => (

@@ -1,15 +1,10 @@
-import { MarkdownPage } from '../../components/shared/MarkdownPage';
-
-export const MarkdownExample = (): JSX.Element => {
-    return <MarkdownPage>
-{`
-~~~ts
+```ts
 const a = 'what';
 const b = 2;
 
-console.log("a: ", a);
-console.log("b: ", b);
-~~~
+console.log('a: ', a);
+console.log('b: ', b);
+```
 
 # H1
 
@@ -51,9 +46,3 @@ Alternatively, for H1 and H2, an underline-ish style:
 woap Woap
 
 > Another Lane
----
-
-
-`}
-    </MarkdownPage>;
-};

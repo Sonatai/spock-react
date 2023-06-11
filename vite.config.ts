@@ -11,4 +11,5 @@ export default defineConfig({
         environment: 'happy-dom',
         setupFiles: ['./src/setupTest.ts'],
     },
+    assetsInclude: ['**/*.md'],
 });
