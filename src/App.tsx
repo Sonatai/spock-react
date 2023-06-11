@@ -12,6 +12,8 @@ import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQ
 import { MarkdownPage } from './components/shared/MarkdownPage';
 import gswGradlePath from './pages/GettingStarted/GettingStartedWithGradle.md';
 import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
+import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
+import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape.md';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -60,6 +62,14 @@ export const App = (): JSX.Element => {
                         <Route
                             path="/getting-started/getting-started-with-gradle"
                             element={<MarkdownPage filePath={gswGradlePath} />}
+                        />
+                        <Route
+                            path="/getting-started/getting-started-with-jitpack"
+                            element={<MarkdownPage filePath={gswJitpack} />}
+                        />
+                        <Route
+                            path="/getting-started/getting-started-with-groovy-grape"
+                            element={<MarkdownPage filePath={gswGroovyGrape} />}
                         />
                     </Routes>
                 </div>

@@ -85,6 +85,16 @@ export const MainNav = (props: IMainNav) => {
                             Getting Started With Gradle
                         </Link>
                     </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-jitpack">
+                            Getting Started With Jitpack
+                        </Link>
+                    </li>
+                    <li className="main__list__item">
+                        <Link to="/getting-started/getting-started-with-groovy-grape">
+                            Getting Started With Groovy Grape
+                        </Link>
+                    </li>
                 </ul>
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">
