@@ -9,6 +9,7 @@ module.exports = {
                 eerieBlack: '#1A1A1D',
                 davysGray: '#4E4E50',
                 silver: '#B3B0A8',
+                onxy: '#3A3A40',
                 claret: '#950740',
                 redNcs: '#C3073F',
                 frenchRose: '#EE4C7C',

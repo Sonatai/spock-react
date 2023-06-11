@@ -1,13 +1,7 @@
 import './styles.css';
 
 import { useState } from 'react';
-import {
-    Dialog,
-    DialogBackdrop,
-    DialogDisclosure,
-    Separator,
-    useDialogState,
-} from 'reakit';
+import { Dialog, DialogBackdrop, Separator, useDialogState } from 'reakit';
 
 import { ISummary } from '../../Hooks/useGetSummary';
 import { SearchButton } from './SearchButton/SearchButton';
@@ -34,9 +28,7 @@ export const Search = (props: ISearchInput): JSX.Element => {
 
     return (
         <>
-            <DialogDisclosure {...dialog} className="modal__button">
-                <SearchButton />
-            </DialogDisclosure>
+            <SearchButton dialog={dialog} />
             <DialogBackdrop {...dialog} className="backdrop">
                 <Dialog
                     {...dialog}
