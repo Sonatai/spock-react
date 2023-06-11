@@ -91,7 +91,7 @@ export const MainNav = (props: IMainNav) => {
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">
                     {summary.specifications.map((spec) => (
-                        <NavLink href={spec.className} key={nanoid()}>
+                        <NavLink href={`/${spec.className}`} key={nanoid()}>
                             {spec.title !== '' ? spec.title : spec.className}
                         </NavLink>
                     ))}
