@@ -39,7 +39,7 @@ export const MainNav = (props: IMainNav) => {
             <nav className="main__nav">
                 <h4>Menu</h4>
                 <ul className="main__list">
-                    <NavLink href="/" id="home">
+                    <NavLink href="/">
                         Home{' '}
                         <FontAwesomeIcon
                             icon={faHouseChimney}
@@ -48,10 +48,7 @@ export const MainNav = (props: IMainNav) => {
                         />
                     </NavLink>
 
-                    <NavLink
-                        href="https://github.com/Gleethos/neureka"
-                        id="github"
-                    >
+                    <NavLink href="https://github.com/Gleethos/neureka">
                         Github{' '}
                         <img
                             src={GithubLogo}
@@ -60,10 +57,7 @@ export const MainNav = (props: IMainNav) => {
                         />
                     </NavLink>
 
-                    <NavLink
-                        href="https://gleethos.github.io/neureka/jdocs/index.html"
-                        id="jdocs"
-                    >
+                    <NavLink href="https://gleethos.github.io/neureka/jdocs/index.html">
                         JDocs
                         <FontAwesomeIcon
                             icon={faBook}
@@ -75,51 +69,29 @@ export const MainNav = (props: IMainNav) => {
 
                 <h4>Getting Started</h4>
                 <ul className="main__list">
-                    <NavLink
-                        href="/getting-started/neural-networks-quickstart"
-                        id="nnq"
-                    >
+                    <NavLink href="/getting-started/neural-networks-quickstart">
                         Neural Networks Quickstart
                     </NavLink>
-                    <NavLink
-                        href="/getting-started/getting-started-with-apache-maven"
-                        id="gswApacheMaven"
-                    >
+                    <NavLink href="/getting-started/getting-started-with-apache-maven">
                         Getting Started With Apache Maven
                     </NavLink>
-                    <NavLink
-                        href="/getting-started/getting-started-with-gradle"
-                        id="gswGradle"
-                    >
+                    <NavLink href="/getting-started/getting-started-with-gradle">
                         Getting Started With Gradle
                     </NavLink>
-                    <NavLink
-                        href="/getting-started/getting-started-with-jitpack"
-                        id="gswJitpack"
-                    >
+                    <NavLink href="/getting-started/getting-started-with-jitpack">
                         Getting Started With Jitpack
                     </NavLink>
-                    <NavLink
-                        href="/getting-started/getting-started-with-groovy-grape"
-                        id="gswGroovyGrape"
-                    >
+                    <NavLink href="/getting-started/getting-started-with-groovy-grape">
                         Getting Started With Groovy Grape
                     </NavLink>
-                    <NavLink
-                        href="/getting-started/building-from-source"
-                        id="bfs"
-                    >
+                    <NavLink href="/getting-started/building-from-source">
                         Building From Source
                     </NavLink>
                 </ul>
                 <h4>Guides & Concepts</h4>
                 <ul className="main__list">
                     {summary.specifications.map((spec) => (
-                        <NavLink
-                            href={spec.className}
-                            key={nanoid()}
-                            id={spec.className}
-                        >
+                        <NavLink href={spec.className} key={nanoid()}>
                             {spec.title !== '' ? spec.title : spec.className}
                         </NavLink>
                     ))}

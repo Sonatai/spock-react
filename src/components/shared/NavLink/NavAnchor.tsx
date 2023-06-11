@@ -5,11 +5,10 @@ import { useActiveAnchor } from '../../../Hooks/useActiveAnchor';
 interface INavAnchor {
     href: string;
     children: string | ReactNode;
-    id: string;
 }
 
 export const NavAnchor = (props: INavAnchor) => {
-    const { children: displayText, href, id } = props;
+    const { children: displayText, href } = props;
 
     const { activeAnchor, setActiveAnchor } = useActiveAnchor();
 
@@ -18,10 +17,10 @@ export const NavAnchor = (props: INavAnchor) => {
             <a
                 href={href}
                 className={`nav__link ${
-                    activeAnchor === id ? 'nav__link--active' : ''
+                    activeAnchor === href ? 'nav__link--active' : ''
                 }`}
                 onClick={() => {
-                    setActiveAnchor(id);
+                    setActiveAnchor(href);
                 }}
             >
                 <span>{displayText}</span>

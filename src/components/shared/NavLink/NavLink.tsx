@@ -7,11 +7,10 @@ import { useActiveLink } from '../../../Hooks/useActiveLink';
 interface INavLink {
     href: string;
     children: string | ReactNode;
-    id: string;
 }
 
 export const NavLink = (props: INavLink): JSX.Element => {
-    const { children: displayText, href, id } = props;
+    const { children: displayText, href } = props;
 
     const { activeLink, setActiveLink } = useActiveLink();
 
@@ -20,10 +19,10 @@ export const NavLink = (props: INavLink): JSX.Element => {
             <Link
                 to={href}
                 className={`nav__link ${
-                    activeLink === id ? 'nav__link--active' : ''
+                    activeLink === href ? 'nav__link--active' : ''
                 }`}
                 onClick={() => {
-                    setActiveLink(id);
+                    setActiveLink(href);
                 }}
             >
                 {displayText}
