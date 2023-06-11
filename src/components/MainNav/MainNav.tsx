@@ -3,13 +3,14 @@ import './styles.css';
 import { nanoid } from 'nanoid';
 import { Link } from 'react-router-dom';
 
-import { ISummary } from '../../Hooks/useGetSummary';
-import { Search } from '../Search/Search';
+import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import GithubLogo from '../../assets/img/github-mark-white.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
+import { ISummary } from '../../Hooks/useGetSummary';
+import { Search } from '../Search/Search';
 import { NavLink } from '../shared/NavLink/NavLink';
+import { useActiveLink } from '../../Hooks/useActiveLink';
 
 interface IMainNav {
     summary: ISummary;
@@ -17,10 +18,17 @@ interface IMainNav {
 
 export const MainNav = (props: IMainNav) => {
     const { summary } = props;
+    const { setActiveLink } = useActiveLink();
 
     return (
         <div className="main">
-            <Link to="/" className="main__logo">
+            <Link
+                to="/"
+                className="main__logo"
+                onClick={() => {
+                    setActiveLink('home');
+                }}
+            >
                 Neureka
             </Link>
 

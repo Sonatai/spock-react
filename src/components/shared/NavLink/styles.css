@@ -4,14 +4,14 @@
     @apply w-full;
 }
 
-.nav__link:focus {
+.nav__link:hover {
+    @apply text-silver;
+}
+
+.nav__link--active {
     background: -webkit-linear-gradient(350deg, #ba1ec2, #f79d65);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.nav__link:hover {
-    @apply text-silver;
 }
 
 .nav__link__list__item::before {
