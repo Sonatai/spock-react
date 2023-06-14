@@ -15,7 +15,7 @@ export const NavLink = (props: INavLink): JSX.Element => {
     const { activeLink, setActiveLink } = useActiveLink();
 
     return (
-        <li className="nav__link__list__item">
+        <li className="nav__link__list__item mr-2">
             <Link
                 to={href}
                 className={`nav__link ${
