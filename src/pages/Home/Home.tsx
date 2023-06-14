@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Layout } from '../../components/shared/Layout/Layout';
 import { SyntaxHighlighter } from '../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../components/shared/Tab/CustomTab';
+import { Table } from '../../components/shared/Table/Table';
 import { useScrollUp } from '../../Hooks/useScrollUp';
 
 const groovySnippet = {
@@ -47,6 +48,25 @@ export const Home = (): JSX.Element => {
 
     return (
         <Layout>
+            <Table
+                headers={['shape', 'mode', 'expected']}
+                rows={[
+                    {
+                        row: [
+                            '[2,3]',
+                            '"fap"',
+                            '(2x3):[\n[ -4.0 , -3.0 , -2.0 ],\n [ -1.0 , 0.0 , 1.0 ]\n]',
+                        ],
+                    },
+                    {
+                        row: [
+                            '[2,2,3,4]',
+                            '"fp"',
+                            '(2x2x3x4):[\n [\n [\n [ -4.0 , -3.0 , -2.0 , -1.0 ],\n [ 0.0 , 1.0 , 2.0 , 3.0 ],\n [ 4.0 , 5.0 , -4.0 , -3.0 ]\n ],\n [\n [ -2.0 , -1.0 , 0.0 , 1.0 ],\n [ 2.0 , 3.0 , 4.0 , 5.0 ],\n [ -4.0 , -3.0 , -2.0 , -1.0 ]\n ]\n ],\n [\n [\n [ 0.0 , 1.0 , 2.0 , 3.0 ],\n [ 4.0 , 5.0 , -4.0 , -3.0 ],\n [ -2.0 , -1.0 , 0.0 , 1.0 ]\n ],\n [\n [ 2.0 , 3.0 , 4.0 , 5.0 ],\n [ -4.0 , -3.0 , -2.0 , -1.0 ],\n [ 0.0 , 1.0 , 2.0 , 3.0 ]\n ]\n ]\n]',
+                        ],
+                    },
+                ]}
+            />
             <h1 className="home__headline">Neureka</h1>
             <p className="home__description">
                 A lightweight open source platform independent nd-array library
