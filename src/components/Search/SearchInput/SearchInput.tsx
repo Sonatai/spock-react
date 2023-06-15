@@ -52,8 +52,8 @@ export const SearchInput = (props: ISearchInput): JSX.Element => {
         <div className="input__wrapper">
             <FontAwesomeIcon
                 icon={faMagnifyingGlass}
-                //  eslint-disable-next-line tailwindcss/no-custom-classname
-                className="fa-xl input__icon"
+                className="input__icon"
+                size="xl"
             />
             <Input
                 onChange={(e) => {

@@ -38,8 +38,8 @@ export const SearchCard = (props: ISearchCard): JSX.Element => {
 
             <FontAwesomeIcon
                 icon={faAngleRight}
-                //  eslint-disable-next-line tailwindcss/no-custom-classname
-                className="fa-lg card__icon"
+                className="card__icon"
+                size="lg"
             />
         </Link>
     );

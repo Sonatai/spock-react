@@ -1,3 +1,4 @@
+import * as config from '../../../environment.json';
 import { useMarkdown } from '../../Hooks/useMarkdown';
 import { Layout } from './Layout/Layout';
 import { LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
@@ -18,10 +19,7 @@ export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
             <Message level="error" headline="Page couldn't be loaded">
                 Sorry the page could not be loaded. Please try again later. If
                 the error still occurs, please open an{' '}
-                <a href="https://github.com/Sonatai/spock-react/issues">
-                    issue
-                </a>
-                .
+                <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
     } else if (isLoading) {
