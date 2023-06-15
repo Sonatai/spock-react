@@ -9,7 +9,9 @@
         "debug": "vite --debug",
         "deploy": "gh-pages -d dist",
         "eslint:all": "eslint ./src",
-        "eslint:fix": "eslint ./src --fix"
+        "eslint:fix": "eslint ./src --fix",
+        "format": "npx prettier --write .",
+        "format:check": "npx prettier --find-config-path  -c ."
     },
     "dependencies": {
         "@csstools/normalize.css": "^12.0.0",
@@ -45,7 +47,7 @@
         "@vitejs/plugin-react": "^4.0.0",
         "autoprefixer": "^10.4.8",
         "eslint": "^8.0.1",
-        "eslint-config-prettier": "^8.6.0",
+        "eslint-config-prettier": "^8.8.0",
         "eslint-config-standard-with-typescript": "^34.0.0",
         "eslint-plugin-import": "^2.25.2",
         "eslint-plugin-jest-dom": "^4.0.3",

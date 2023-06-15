@@ -1,5 +1,7 @@
 import './styles.css';
 
+import { ReactNode } from 'react';
+
 import {
     faCircleCheck,
     faCircleInfo,
@@ -7,7 +9,6 @@ import {
     faTriangleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ReactNode } from 'react';
 
 type TLevel = 'error' | 'success' | 'info' | 'warning';
 

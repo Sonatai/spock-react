@@ -2,12 +2,12 @@ import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ErrorBoundary } from 'react-error-boundary';
 import { BrowserRouter } from 'react-router-dom';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { App } from './App';
-import { ErrorBoundary } from 'react-error-boundary';
 import { Message } from './components/shared/Message/Message';
 
 const queryClient = new QueryClient();

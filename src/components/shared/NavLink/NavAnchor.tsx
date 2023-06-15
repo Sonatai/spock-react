@@ -1,5 +1,7 @@
-import { ReactNode } from 'react';
 import './styles.css';
+
+import { ReactNode } from 'react';
+
 import { useActiveAnchor } from '../../../Hooks/useActiveAnchor';
 
 interface INavAnchor {

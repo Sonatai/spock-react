@@ -2,12 +2,12 @@ import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
 import { Feature } from '../components/Feature/Feature';
-import { LoadingSpinner } from '../components/shared/LoadingSpinner/LoadingSpinner';
 import { Divide } from '../components/shared/Divide/Divide';
 import { Layout } from '../components/shared/Layout/Layout';
+import { LoadingSpinner } from '../components/shared/LoadingSpinner/LoadingSpinner';
+import { Message } from '../components/shared/Message/Message';
 import { useGetSpec } from '../Hooks/useGetSpec';
 import { useScrollUp } from '../Hooks/useScrollUp';
-import { Message } from '../components/shared/Message/Message';
 
 interface IExampleOne {
     fileName: string;

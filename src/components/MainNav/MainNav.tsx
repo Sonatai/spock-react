@@ -7,10 +7,10 @@ import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import GithubLogo from '../../assets/img/github-mark-white.png';
+import { useActiveLink } from '../../Hooks/useActiveLink';
 import { ISummary } from '../../Hooks/useGetSummary';
 import { Search } from '../Search/Search';
 import { NavLink } from '../shared/NavLink/NavLink';
-import { useActiveLink } from '../../Hooks/useActiveLink';
 
 interface IMainNav {
     summary: ISummary;
