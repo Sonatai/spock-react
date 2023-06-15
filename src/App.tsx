@@ -16,7 +16,6 @@ import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape
 import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
 import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
 import { Home } from './pages/Home/Home';
-import { MarkdownExample } from './pages/MarkdownExample/MarkdownExample';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -51,7 +50,6 @@ export const App = (): JSX.Element => {
                                 key={nanoid()}
                             />
                         ))}
-                        <Route path="/markdown" element={<MarkdownExample />} />
 
                         <Route
                             path="/getting-started/neural-networks-quickstart"
