@@ -1,0 +1,9 @@
+LICENSE
+**/*.png
+**/*.jpeg
+**/*.jpg
+**/.gitignore
+.prettierignore
+yarn.lock
+dist/**/*
+spock-conf/**/*

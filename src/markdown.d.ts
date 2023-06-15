@@ -1,4 +1,4 @@
 declare module '*.md' {
-    const value: string; // markdown is just a string
+    const value: string;
     export default value;
 }

@@ -1,33 +1,35 @@
 import { nanoid } from 'nanoid';
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { LoadingSpinner } from './components/shared/LoadingSpinner/LoadingSpinner';
+import * as config from '../environment.json';
 import { MainNav } from './components/MainNav/MainNav';
+import { LoadingSpinner } from './components/shared/LoadingSpinner/LoadingSpinner';
+import { MarkdownPage } from './components/shared/MarkdownPage';
+import { Message } from './components/shared/Message/Message';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
-import { Home } from './pages/Home/Home';
-import { MarkdownExample } from './pages/MarkdownExample/MarkdownExample';
-import { Message } from './components/shared/Message/Message';
-import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
-import { MarkdownPage } from './components/shared/MarkdownPage';
-import gswGradlePath from './pages/GettingStarted/GettingStartedWithGradle.md';
-import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
-import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
-import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape.md';
 import buildingFromSource from './pages/GettingStarted/BuildingFromSource.md';
+import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
+import gswGradlePath from './pages/GettingStarted/GettingStartedWithGradle.md';
+import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape.md';
+import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
+import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
+import { Home } from './pages/Home/Home';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
+
+    useEffect(() => {
+        document.title = config.appName;
+    }, []);
 
     if (isError) {
         return (
             <Message level="error" headline="The summary couldn't be loaded">
                 The summary has some loading problems. Please try again later.
                 If the problem still occurs, please open an{' '}
-                <a href="https://github.com/Sonatai/spock-react/issues">
-                    issue
-                </a>
-                .
+                <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
     } else if (isLoading) {
@@ -48,7 +50,6 @@ export const App = (): JSX.Element => {
                                 key={nanoid()}
                             />
                         ))}
-                        <Route path="/markdown" element={<MarkdownExample />} />
 
                         <Route
                             path="/getting-started/neural-networks-quickstart"
