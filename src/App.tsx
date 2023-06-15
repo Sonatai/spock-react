@@ -1,6 +1,8 @@
 import { nanoid } from 'nanoid';
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+import * as config from '../environment.json';
 import { MainNav } from './components/MainNav/MainNav';
 import { LoadingSpinner } from './components/shared/LoadingSpinner/LoadingSpinner';
 import { MarkdownPage } from './components/shared/MarkdownPage';
@@ -19,15 +21,16 @@ import { MarkdownExample } from './pages/MarkdownExample/MarkdownExample';
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
 
+    useEffect(() => {
+        document.title = config.appName;
+    }, []);
+
     if (isError) {
         return (
             <Message level="error" headline="The summary couldn't be loaded">
                 The summary has some loading problems. Please try again later.
                 If the problem still occurs, please open an{' '}
-                <a href="https://github.com/Sonatai/spock-react/issues">
-                    issue
-                </a>
-                .
+                <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
     } else if (isLoading) {

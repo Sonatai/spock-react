@@ -1,9 +1,10 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import * as config from './environment.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/spock-react/',
+    base: config.rootUrl,
     plugins: [react()],
     // @ts-ignore
     test: {

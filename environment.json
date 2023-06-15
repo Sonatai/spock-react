@@ -11,5 +11,7 @@
         "displayText": "Why Neureka?"
     },
     "specUrl": "https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports",
-    "summaryUrl": "https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/summary.json"
+    "summaryUrl": "https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/summary.json",
+    "rootUrl": "/spock-react/",
+    "LinkToIssueReport": "https://github.com/Sonatai/spock-react/issues"
 }

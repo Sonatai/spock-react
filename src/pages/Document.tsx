@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
+import * as config from '../../environment.json';
 import { Feature } from '../components/Feature/Feature';
 import { Divide } from '../components/shared/Divide/Divide';
 import { Layout } from '../components/shared/Layout/Layout';
@@ -24,10 +25,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
             <Message level="error" headline={`${fileName} couldn't be loaded`}>
                 The page has some loading problems. Please try again later. If
                 the problem still occurs, please open an{' '}
-                <a href="https://github.com/Sonatai/spock-react/issues">
-                    issue
-                </a>
-                .
+                <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
     } else if (isLoading) {

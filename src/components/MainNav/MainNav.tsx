@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import * as config from '../../../environment.json';
 import GithubLogo from '../../assets/img/github-mark-white.png';
 import { useActiveLink } from '../../Hooks/useActiveLink';
 import { ISummary } from '../../Hooks/useGetSummary';
@@ -18,6 +19,7 @@ interface IMainNav {
 
 export const MainNav = (props: IMainNav) => {
     const { summary } = props;
+
     const { setActiveLink } = useActiveLink();
 
     return (
@@ -29,7 +31,7 @@ export const MainNav = (props: IMainNav) => {
                     setActiveLink('home');
                 }}
             >
-                Neureka
+                {config.appName}
             </Link>
 
             <div className="main__search">
@@ -40,7 +42,7 @@ export const MainNav = (props: IMainNav) => {
                 <h4>Menu</h4>
                 <ul className="main__list">
                     <NavLink href="/">
-                        Home{' '}
+                        Home
                         <FontAwesomeIcon
                             icon={faHouseChimney}
                             size="lg"
@@ -49,7 +51,7 @@ export const MainNav = (props: IMainNav) => {
                     </NavLink>
 
                     <NavLink href="https://github.com/Gleethos/neureka">
-                        Github{' '}
+                        Github
                         <img
                             src={GithubLogo}
                             alt="Github Logo"
