@@ -160,7 +160,7 @@ export const Home = (): JSX.Element => {
                 allow for rapid prototyping and highly readable math heavy
                 code...
             </p>
-            <ul role="list" className="home__list">
+            <ul role="list">
                 <li>+ : plus(...)</li>
                 <li>- : minus(...)</li>
                 <li>* : times(...)</li>

@@ -23,6 +23,7 @@ export const Message = (props: IErrorMessage): JSX.Element => {
 
     return (
         <div className="message">
+            {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
             <div className={`message__header message__${level}`}>
                 <FontAwesomeIcon icon={icon(level)} className="message__icon" />
                 {headline}

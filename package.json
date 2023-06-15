@@ -8,7 +8,7 @@
         "preview": "vite preview",
         "debug": "vite --debug",
         "deploy": "gh-pages -d dist",
-        "eslint:all": "eslint ./src",
+        "eslint:all": "eslint ./src  --max-warnings=0",
         "eslint:fix": "eslint ./src --fix",
         "format": "npx prettier --write .",
         "format:check": "npx prettier --find-config-path  -c .",
