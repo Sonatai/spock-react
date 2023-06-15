@@ -3,6 +3,6 @@
 
 npm run build
 npm run eslint:fix 
-npm run eslint:all 
+npm run eslint:all --max-warnings=0
 npm run format
 npm test run
