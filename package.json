@@ -11,12 +11,8 @@
         "eslint:all": "eslint ./src",
         "eslint:fix": "eslint ./src --fix",
         "format": "npx prettier --write .",
-        "format:check": "npx prettier --find-config-path  -c ."
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run build && npm run eslint:fix && npm run eslint:all && npm run format && npm run test"
-        }
+        "format:check": "npx prettier --find-config-path  -c .",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@csstools/normalize.css": "^12.0.0",
