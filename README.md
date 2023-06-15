@@ -23,6 +23,8 @@ served dynamically.
 
 ## Getting Started
 
+### Generate Json Files
+
 To create living react documentation from your Spock test suite,
 you need a few simple dependencies:
 
@@ -102,7 +104,7 @@ of a URL in the `environment.json` file.
 So if you host your documentation on GitHub, you might have a URL
 looking something like this: `https://raw.githubusercontent.com/user/proj-reo/master/docs/spock/reports`
 
-## Frontend
+### Frontend
 
 // TODO
 
