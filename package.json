@@ -1,6 +1,6 @@
 {
     "name": "test-vite-react-github-pages",
-    "version": "0.2.3",
+    "version": "0.3.0",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
