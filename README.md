@@ -88,13 +88,13 @@ This is by default set to `./docs/spock`, but you can change it to whatever loca
 
 First, all dependencies must be installed. To do this, run the following command in a terminal in the root folder:
 
-```yarn
+```shell
 yarn
 ```
 
 To verify that the project build, execute the following command:
 
-```yarn
+```shell
 yarn run build
 ```
 
@@ -102,13 +102,13 @@ Next you have to configure the project! All settings can be found in `./environm
 
 Now you can run your project locally:
 
-```yarn
+```shell
 yarn dev
 ```
 
 If you want to deploy the project from a local command, then you need to run these two commands:
 
-```yarn
+```shell
 yarn build
 yarn deploy
 ```
