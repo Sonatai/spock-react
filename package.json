@@ -8,8 +8,11 @@
         "preview": "vite preview",
         "debug": "vite --debug",
         "deploy": "gh-pages -d dist",
-        "eslint:all": "eslint ./src",
-        "eslint:fix": "eslint ./src --fix"
+        "eslint:all": "eslint ./src  --max-warnings=0",
+        "eslint:fix": "eslint ./src --fix",
+        "format": "npx prettier --write .",
+        "format:check": "npx prettier --find-config-path  -c .",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@csstools/normalize.css": "^12.0.0",
@@ -45,7 +48,7 @@
         "@vitejs/plugin-react": "^4.0.0",
         "autoprefixer": "^10.4.8",
         "eslint": "^8.0.1",
-        "eslint-config-prettier": "^8.6.0",
+        "eslint-config-prettier": "^8.8.0",
         "eslint-config-standard-with-typescript": "^34.0.0",
         "eslint-plugin-import": "^2.25.2",
         "eslint-plugin-jest-dom": "^4.0.3",
@@ -59,6 +62,7 @@
         "eslint-plugin-vitest": "^0.1.0",
         "gh-pages": "^5.0.0",
         "happy-dom": "^9.0.0",
+        "husky": "^8.0.3",
         "msw": "^1.1",
         "postcss": "^8.4.14",
         "prettier": "^2.8.4",

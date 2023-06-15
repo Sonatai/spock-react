@@ -1,7 +1,8 @@
+import './styles.css';
+
 import { Layout } from '../../../components/shared/Layout/Layout';
 import { SyntaxHighlighter } from '../../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../../components/shared/Tab/CustomTab';
-import './styles.css';
 
 export const NeuralNetworksQuickstart = () => {
     return (
