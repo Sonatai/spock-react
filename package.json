@@ -13,6 +13,11 @@
         "format": "npx prettier --write .",
         "format:check": "npx prettier --find-config-path  -c ."
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run build && npm run eslint:fix && npm run eslint:all && npm run format && npm run test"
+        }
+    },
     "dependencies": {
         "@csstools/normalize.css": "^12.0.0",
         "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -61,6 +66,7 @@
         "eslint-plugin-vitest": "^0.1.0",
         "gh-pages": "^5.0.0",
         "happy-dom": "^9.0.0",
+        "husky": "^8.0.3",
         "msw": "^1.1",
         "postcss": "^8.4.14",
         "prettier": "^2.8.4",
