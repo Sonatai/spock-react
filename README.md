@@ -14,7 +14,7 @@ So every time you run your tests and the json files are updated, the documentati
 
 ## Getting Started
 
-First of all you need to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo?tool=cli&platform=windows) this repository .
+First of all you need to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo?tool=cli&platform=windows) this repository.
 
 Two parts must be set up:
 
@@ -86,9 +86,32 @@ This is by default set to `./docs/spock`, but you can change it to whatever loca
 
 ### Frontend
 
-// TODO
+First, all dependencies must be installed. To do this, run the following command in a terminal in the root folder:
 
-You have to specify this same location in the form of a URL in the `environment.json` file. So if you host your documentation on GitHub, you might have a URL looking something like this: `https://raw.githubusercontent.com/user/proj-reo/master/docs/spock/reports`
+```yarn
+yarn
+```
+
+To verify that the project build, execute the following command:
+
+```yarn
+yarn run build
+```
+
+Next you have to configure the project! All settings can be found in `./environment.json`. There you have to store all the URLs (see also [Documentation](https://github.com/Sonatai/spock-react#documentation)).
+
+Now you can run your project locally:
+
+```yarn
+yarn dev
+```
+
+If you want to deploy the project from a local command, then you need to run these two commands:
+
+```yarn
+yarn build
+yarn deploy
+```
 
 ## Documentation
 
