@@ -8,23 +8,22 @@ interface IRow {
 }
 
 interface ITable {
-    title?: string;
     headers: string[];
     rows: IRow[];
     breakOn?: 'small' | 'medium' | 'large';
 }
 
 export const Table = (props: ITable) => {
-    const { breakOn = 'medium', headers, rows, title } = props;
+    const { breakOn = 'medium', headers, rows } = props;
 
     let tableClass = 'table-container__table';
 
     if (breakOn === 'small') {
-        tableClass += ' table-container__table--break-sm';
+        tableClass += ' table-container__table--break';
     } else if (breakOn === 'medium') {
-        tableClass += ' table-container__table--break-md';
+        tableClass += ' table-container__table--break';
     } else if (breakOn === 'large') {
-        tableClass += ' table-container__table--break-lg';
+        tableClass += ' table-container__table--break';
     }
 
     const data = rows.map((row) => {
@@ -41,20 +40,20 @@ export const Table = (props: ITable) => {
 
     return (
         <div className="table-container">
-            {title !== undefined && title !== '' && (
-                <div className="table-container__title">
-                    <h2>{title}</h2>
-                </div>
-            )}
             <table className={tableClass}>
                 <thead>
                     <tr>
                         {headers.map((col) => (
-                            <th key={nanoid()}>{col}</th>
+                            <th
+                                key={nanoid()}
+                                className="table-container__header"
+                            >
+                                {col}
+                            </th>
                         ))}
                     </tr>
                 </thead>
-                <tbody>{data}</tbody>
+                <tbody className="align-baseline">{data}</tbody>
             </table>
         </div>
     );
