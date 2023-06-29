@@ -1,112 +1,73 @@
-@media (min-width: 992px) {
-    .table-container {
-        @apply w-full;
-        @apply ml-auto mr-auto mt-0 mb-10;
-        @apply max-h-[31.25rem];
-        @apply overflow-auto;
-    }
-
-    .table-container__table {
-        @apply w-full;
-        @apply border-collapse;
-    }
-
-    .table-container__table thead tr th {
-        @apply bg-claret;
-        @apply text-[#D0CEC8];
-    }
-
-    .table-container__table > thead > tr {
-        @apply bg-claret;
-        @apply text-[#D0CEC8];
-        @apply drop-shadow-lg;
-    }
-
-    .table-container__table td,
-    th {
-        @apply p-3;
-        @apply text-left;
-    }
-
-    .table-container__header {
-        @apply sticky;
-        @apply top-0;
-        @apply z-10;
-    }
-
-    .table-container__table tr:nth-child(even) {
-        @apply bg-[#27272b];
-    }
-
-    .table-container__table tr:nth-child(odd) {
-        @apply bg-[#303036];
-    }
+.table-container__table thead {
+    @apply hidden md:table-header-group;
 }
 
-@media (max-width: 991px) {
-    .table-container__table td:nth-child(even) {
-        @apply bg-[#27272b];
-    }
+.table-container {
+    @apply w-full;
+    @apply mx-auto mt-0 mb-10;
+    @apply max-h-[28.125rem] md:max-h-[31.25rem];
+    @apply overflow-auto;
+}
 
-    .table-container__table td:nth-child(odd) {
-        @apply bg-[#303036];
-    }
+.table-container__table {
+    @apply w-auto;
+    @apply border-collapse;
+}
 
-    .table-container__table {
-        @apply w-auto;
-        @apply border-collapse;
-    }
+.table-container__header {
+    @apply md:sticky;
+    @apply md:top-0;
+    @apply md:z-10;
+}
 
-    .table-container__table td {
-        @apply p-4;
-        @apply text-left;
-        @apply text-xs;
-    }
+.table-container__table tr {
+    @apply md:even:bg-[#27272b] md:odd:bg-[#303036];
 
-    .table-container {
-        @apply w-full;
-        @apply ml-auto mr-auto mt-0 mb-10;
-        @apply max-h-[28.125rem];
-        @apply overflow-auto;
-    }
+    @apply max-md:block;
+    @apply max-md:mb-1 max-md:last:mb-0;
+}
 
-    .table-container__table--break thead {
-        @apply hidden;
-    }
-    .table-container__table--break tr {
-        @apply block;
-        @apply mb-1;
-    }
-    .table-container__table--break tr:last-child {
-        @apply mb-0;
-    }
+.table-container__table thead tr {
+    @apply md:bg-claret;
+    @apply md:text-[#D0CEC8];
+    @apply md:drop-shadow-lg;
+}
 
-    .table-container__table--break td {
-        @apply block;
-        @apply relative;
-        @apply pl-32;
-        @apply text-left;
-        @apply mb-0;
-    }
+.table-container__table thead tr th {
+    @apply md:bg-claret;
+    @apply md:text-[#D0CEC8];
+}
 
-    .table-container__table--break td::before {
-        @apply content-[attr(data-heading)];
-        @apply absolute;
-        @apply top-0;
-        @apply left-0;
-        @apply w-[7.5rem];
-        @apply h-full;
-        @apply flex;
-        @apply items-center;
-        @apply bg-[#950740];
-        @apply text-[#d0cec8];
-        @apply text-sm;
-        @apply pt-0 pb-0 pr-1 pl-1;
-        @apply justify-center;
-        @apply font-bold;
-    }
+.table-container__table th {
+    @apply md:p-3;
+    @apply md:text-left;
+}
 
-    .table-container__table--break td:nth-child(even)::before {
-        @apply bg-[#af084b];
-    }
+.table-container__table td {
+    @apply block md:table-cell;
+    @apply max-md:relative;
+    @apply p-4 pl-32 md:p-3;
+    @apply text-left;
+
+    @apply text-xs md:text-base;
+
+    @apply max-md:before:content-[attr(data-heading)];
+    @apply max-md:before:absolute;
+    @apply max-md:before:top-0;
+    @apply max-md:before:left-0;
+    @apply max-md:before:w-[7.5rem];
+    @apply max-md:before:h-full;
+    @apply max-md:before:flex;
+    @apply max-md:before:items-center;
+    @apply max-md:before:bg-[#950740];
+    @apply max-md:before:text-[#d0cec8];
+
+    @apply max-md:before:text-sm;
+    @apply max-md:before:py-0;
+    @apply max-md:before:px-1;
+    @apply max-md:before:justify-center;
+    @apply max-md:before:font-bold;
+
+    @apply max-md:before:even:bg-[#af084b];
+    @apply max-md:even:bg-[#27272b]  max-md:odd:bg-[#303036];
 }
