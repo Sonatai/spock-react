@@ -52,7 +52,6 @@ export const Home = (): JSX.Element => {
                 A lightweight open source platform independent nd-array library
                 for the JVM
             </p>
-
             <div className="flex justify-center">
                 <div className="mr-2">
                     <div className="text-center">
@@ -89,7 +88,6 @@ export const Home = (): JSX.Element => {
                     </div>
                 </div>
             </div>
-
             <h2 className="text-center">Why Neureka?</h2>
             <p>
                 Not only is it a flexible nd-array library for general purpose
@@ -119,7 +117,6 @@ export const Home = (): JSX.Element => {
                     flexibility.
                 </p>
             </div>
-
             <h2 className="text-center">Why Java?</h2>
             <p>
                 Although Java is a robust and safe language, it is often times
@@ -130,7 +127,6 @@ export const Home = (): JSX.Element => {
                 come to wonder, why would anybody ever build a deep learning
                 library for Java? The answer is simple!
             </p>
-
             <h3 className="text-center">Nobody did!</h3>
             <p className="mb-8">
                 This library was written for all JVM-languages, namely: Groovy,
@@ -173,7 +169,6 @@ export const Home = (): JSX.Element => {
                 jupyter extension that supports many JVM languages like Groovy,
                 Scala, Clojure, Kotlin and Java.
             </p>
-
             <h2 className="text-center">Performance</h2>
             <p>
                 Not only are the operations within the default backend
