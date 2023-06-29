@@ -91,24 +91,22 @@
 
     .table-container__table--break td::before {
         @apply content-[attr(data-heading)];
-        /* content: attr(data-heading); */
         @apply absolute;
         @apply top-0;
         @apply left-0;
         @apply w-[7.5rem];
-
-        height: 100%;
-        display: flex;
-        align-items: center;
-        background-color: #950740;
-        color: #d0cec8;
-        font-size: 0.8rem;
-        padding: 0 5px;
-        justify-content: center;
+        @apply h-full;
+        @apply flex;
+        @apply items-center;
+        @apply bg-[#950740];
+        @apply text-[#d0cec8];
+        @apply text-sm;
+        @apply pt-0 pb-0 pr-1 pl-1;
+        @apply justify-center;
         @apply font-bold;
     }
 
     .table-container__table--break td:nth-child(even)::before {
-        background-color: #af084b;
+        @apply bg-[#af084b];
     }
 }
