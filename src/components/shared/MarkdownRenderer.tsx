@@ -3,6 +3,14 @@ import remarkGfm from 'remark-gfm';
 
 import { Divide } from './Divide/Divide';
 import { SyntaxHighlighter } from './SyntaxHighlighter';
+import {
+    MdTable,
+    MdTableBody,
+    MdTableCell,
+    MdTableHead,
+    MdTableHeader,
+    MdTableRow,
+} from './Table';
 
 interface IMarkdownRenderer {
     children: string;
@@ -14,7 +22,7 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
     return (
         <ReactMarkdown
             components={{
-                code({ inline, className, children, ...props }) {
+                code: ({ inline, className, children, ...props }) => {
                     const match = /language-(\w+)/.exec(className ?? '');
                     return (inline === undefined || !inline) &&
                         match !== null ? (
@@ -28,8 +36,38 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
                         </code>
                     );
                 },
-                hr() {
+                hr: () => {
                     return <Divide />;
+                },
+                table: (props) => {
+                    const { children } = props;
+
+                    return <MdTable>{children}</MdTable>;
+                },
+                thead: (props) => {
+                    const { children } = props;
+
+                    return <MdTableHead>{children}</MdTableHead>;
+                },
+                th: (props) => {
+                    const { children } = props;
+
+                    return <MdTableHeader>{children}</MdTableHeader>;
+                },
+                tbody: (props) => {
+                    const { children } = props;
+
+                    return <MdTableBody>{children}</MdTableBody>;
+                },
+                td: (props) => {
+                    const { children } = props;
+
+                    return <MdTableCell>{children}</MdTableCell>;
+                },
+                tr: (props) => {
+                    const { children } = props;
+
+                    return <MdTableRow>{children}</MdTableRow>;
                 },
             }}
             remarkPlugins={[remarkGfm]}

@@ -9,6 +9,7 @@ import { MarkdownPage } from './components/shared/MarkdownPage';
 import { Message } from './components/shared/Message/Message';
 import { useGetSummary } from './Hooks/useGetSummary';
 import { Document } from './pages/Document';
+import tableExample from './pages/example.md';
 import buildingFromSource from './pages/GettingStarted/BuildingFromSource.md';
 import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
 import gswGradlePath from './pages/GettingStarted/GettingStartedWithGradle.md';
@@ -78,6 +79,10 @@ export const App = (): JSX.Element => {
                             element={
                                 <MarkdownPage filePath={buildingFromSource} />
                             }
+                        />
+                        <Route
+                            path="/example"
+                            element={<MarkdownPage filePath={tableExample} />}
                         />
                     </Routes>
                 </div>
