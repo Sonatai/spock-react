@@ -3,7 +3,7 @@ import './styles.css';
 import { nanoid } from 'nanoid';
 import { ReactNode } from 'react';
 
-interface IRow {
+export interface IRow {
     row: Array<string | ReactNode>;
 }
 
