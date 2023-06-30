@@ -1,49 +1,49 @@
-.table-container__table thead {
+.responsive-table-container__table thead {
     @apply hidden md:table-header-group;
 }
 
-.table-container {
+.responsive-table-container {
     @apply w-full;
     @apply mx-auto mt-0 mb-10;
     @apply max-h-[28.125rem] md:max-h-[31.25rem];
     @apply overflow-auto;
 }
 
-.table-container__table {
+.responsive-table-container__table {
     @apply w-auto;
     @apply border-collapse;
 }
 
-.table-container__header {
+.responsive-table-container__header {
     @apply md:sticky;
     @apply md:top-0;
     @apply md:z-10;
 }
 
-.table-container__table tr {
+.responsive-table-container__table tr {
     @apply md:even:bg-[#27272b] md:odd:bg-[#303036];
 
     @apply max-md:block;
     @apply max-md:mb-1 max-md:last:mb-0;
 }
 
-.table-container__table thead tr {
+.responsive-table-container__table thead tr {
     @apply md:bg-claret;
     @apply md:text-[#D0CEC8];
     @apply md:drop-shadow-lg;
 }
 
-.table-container__table thead tr th {
+.responsive-table-container__table thead tr th {
     @apply md:bg-claret;
     @apply md:text-[#D0CEC8];
 }
 
-.table-container__table th {
+.responsive-table-container__table th {
     @apply md:p-3;
     @apply md:text-left;
 }
 
-.table-container__table td {
+.responsive-table-container__table td {
     @apply block md:table-cell;
     @apply max-md:relative;
     @apply p-4 pl-32 md:p-3;

@@ -10,21 +10,10 @@ interface IRow {
 interface ITable {
     headers: string[];
     rows: IRow[];
-    breakOn?: 'small' | 'medium' | 'large';
 }
 
-export const Table = (props: ITable) => {
-    const { breakOn = 'medium', headers, rows } = props;
-
-    let tableClass = 'table-container__table';
-
-    if (breakOn === 'small') {
-        tableClass += ' table-container__table--break';
-    } else if (breakOn === 'medium') {
-        tableClass += ' table-container__table--break';
-    } else if (breakOn === 'large') {
-        tableClass += ' table-container__table--break';
-    }
+export const ResponsiveTable = (props: ITable): JSX.Element => {
+    const { headers, rows } = props;
 
     const data = rows.map((row) => {
         return (
@@ -39,14 +28,14 @@ export const Table = (props: ITable) => {
     });
 
     return (
-        <div className="table-container">
-            <table className={tableClass}>
+        <div className="responsive-table-container">
+            <table className="responsive-table-container__table">
                 <thead>
                     <tr>
                         {headers.map((col) => (
                             <th
                                 key={nanoid()}
-                                className="table-container__header"
+                                className="responsive-table-container__header"
                             >
                                 {col}
                             </th>
