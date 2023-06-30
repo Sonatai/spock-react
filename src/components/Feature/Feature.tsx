@@ -93,11 +93,17 @@ export const Feature = (props: IFeature): JSX.Element => {
                                     language="groovy"
                                 />
                             )}
-                        {block.kind === 'where' && (
-                            <WhereTable
-                                data={block.code as { [key: string]: string[] }}
-                            />
-                        )}
+                        {block.kind === 'where' &&
+                            block.code !== null &&
+                            Object.keys(block.code).length !== 0 && (
+                                <WhereTable
+                                    data={
+                                        block.code as {
+                                            [key: string]: string[];
+                                        }
+                                    }
+                                />
+                            )}
                     </Fragment>
                 ))}
             </div>
