@@ -13,7 +13,8 @@
         "prettier",
         "plugin:testing-library/react",
         "plugin:vitest/recommended",
-        "plugin:tailwindcss/recommended"
+        "plugin:tailwindcss/recommended",
+        "plugin:storybook/recommended"
     ],
     "overrides": [],
     "parserOptions": {
@@ -48,12 +49,10 @@
                 "unnamedComponents": "arrow-function"
             }
         ],
-
         "react-hooks/rules-of-hooks": "error",
         "react/react-in-jsx-scope": "off",
         "react/display-name": "off",
         "react/prop-types": "off",
-
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/explicit-member-accessibility": "off",
@@ -86,7 +85,6 @@
                 "prefix": ["I"]
             }
         ],
-
         "testing-library/no-await-sync-events": "error",
         "testing-library/no-manual-cleanup": "error",
         "testing-library/prefer-user-event": "error",
