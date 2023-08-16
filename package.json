@@ -14,7 +14,7 @@
         "format:check": "npx prettier --find-config-path  -c .",
         "prepare": "husky install",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "storybook:build": "storybook build"
     },
     "dependencies": {
         "@csstools/normalize.css": "^12.0.0",
