@@ -1,12 +1,12 @@
 import './styles.css';
 
-import { Layout } from '../../../components/shared/Layout/Layout';
+import { CustomPage } from '../../../components/shared/CustomPage';
 import { SyntaxHighlighter } from '../../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../../components/shared/Tab/CustomTab';
 
 export const NeuralNetworksQuickstart = () => {
     return (
-        <Layout>
+        <CustomPage>
             <h1 className="nnq__headline">Neural Networks : Quickstart</h1>
             <p className="nnq__description">
                 Let&apos;s build a simple neural network !
@@ -352,6 +352,6 @@ export const NeuralNetworksQuickstart = () => {
                     },
                 ]}
             />
-        </Layout>
+        </CustomPage>
     );
 };

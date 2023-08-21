@@ -7,10 +7,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Layout } from '../../components/shared/Layout/Layout';
+import { CustomPage } from '../../components/shared/CustomPage';
 import { SyntaxHighlighter } from '../../components/shared/SyntaxHighlighter';
 import { CustomTab } from '../../components/shared/Tab/CustomTab';
-import { useScrollUp } from '../../Hooks/useScrollUp';
 
 const groovySnippet = {
     content: (
@@ -43,10 +42,8 @@ const KotlinSnippet = {
 };
 
 export const Home = (): JSX.Element => {
-    useScrollUp();
-
     return (
-        <Layout>
+        <CustomPage>
             <h1 className="home__headline">Neureka</h1>
             <p className="home__description">
                 A lightweight open source platform independent nd-array library
@@ -200,6 +197,6 @@ export const Home = (): JSX.Element => {
                 the performance of Neureka as well as improve Machine Learning
                 on the JVM in general.
             </p>
-        </Layout>
+        </CustomPage>
     );
 };
