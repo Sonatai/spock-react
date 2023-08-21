@@ -1,5 +1,6 @@
 import * as config from '../../../environment.json';
 import { useMarkdown } from '../../Hooks/useMarkdown';
+import { useScrollUp } from '../../Hooks/useScrollUp';
 import { Layout } from './Layout/Layout';
 import { LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
 import { MarkdownRenderer } from './MarkdownRenderer';
@@ -12,6 +13,7 @@ interface IMarkdownPage {
 export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
     const { filePath } = props;
 
+    useScrollUp();
     const { data, isLoading, isError } = useMarkdown({ filePath });
 
     if (isError) {
