@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                             level="error"
                         >
                             Sorry but the webpage couldn&apos;t load. Some error
-                            happend. Try it later please. If the error occures,
+                            happened. Try it later please. If the error occurs,
                             open an issue
                         </Message>
                     }
