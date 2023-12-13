@@ -46,8 +46,10 @@ export interface ISummary {
 }
 
 export const useGetSummary = (): UseQueryResult<ISummary, unknown> => {
-    return useQuery<ISummary>(['summary'], async () => await getSummary(), {
-        cacheTime: 60 * 60 * 24,
+    return useQuery<ISummary>({
+        queryKey: ['summary'],
+        queryFn: async () => await getSummary(),
+        gcTime: 60 * 60 * 24,
         staleTime: 60 * 60 * 24,
     });
 };

@@ -20,7 +20,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
     const { data, isLoading, isError } = useGetSpec({ fileName });
     useScrollUp();
 
-    if (isError) {
+    if (isError || data === undefined) {
         return (
             <Message level="error" headline={`${fileName} couldn't be loaded`}>
                 The page has some loading problems. Please try again later. If

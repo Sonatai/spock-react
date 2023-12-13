@@ -16,7 +16,7 @@ export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
     useScrollUp();
     const { data, isLoading, isError } = useMarkdown({ filePath });
 
-    if (isError) {
+    if (isError || data === undefined) {
         return (
             <Message level="error" headline="Page couldn't be loaded">
                 Sorry the page could not be loaded. Please try again later. If

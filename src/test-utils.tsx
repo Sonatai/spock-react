@@ -9,14 +9,8 @@ export const HookProvider = ({ children }: { children: any }) => {
         defaultOptions: {
             queries: {
                 retry: false,
-                cacheTime: Infinity,
+                gcTime: Infinity,
             },
-        },
-        logger: {
-            // eslint-disable-next-line no-console
-            log: console.log,
-            warn: console.warn,
-            error: console.error,
         },
     });
 
