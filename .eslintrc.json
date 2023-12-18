@@ -9,7 +9,7 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "standard-with-typescript",
-        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
         "prettier",
         "plugin:testing-library/react",
         "plugin:vitest/recommended",
@@ -20,7 +20,7 @@
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": true
     },
     "plugins": [
         "react",
@@ -88,7 +88,6 @@
         "testing-library/no-await-sync-events": "error",
         "testing-library/no-manual-cleanup": "error",
         "testing-library/prefer-user-event": "error",
-        "testing-library/prefer-explicit-assert": "error",
-        "testing-library/prefer-wait-for": "warn"
+        "testing-library/prefer-explicit-assert": "error"
     }
 }

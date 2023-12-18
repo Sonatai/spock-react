@@ -4,10 +4,10 @@ import { useQuery, UseQueryResult } from '@tanstack/react-query';
 
 import config from '../../environment.json';
 
-const getSummary = async () => {
+const getSummary = async (): Promise<ISummary> => {
     const data = await axios.get(config.summaryUrl);
 
-    return data.data;
+    return data.data as ISummary;
 };
 
 export interface IExecutedFeatures {
@@ -46,8 +46,10 @@ export interface ISummary {
 }
 
 export const useGetSummary = (): UseQueryResult<ISummary, unknown> => {
-    return useQuery<ISummary>(['summary'], async () => await getSummary(), {
-        cacheTime: 60 * 60 * 24,
+    return useQuery<ISummary>({
+        queryKey: ['summary'],
+        queryFn: async () => await getSummary(),
+        gcTime: 60 * 60 * 24,
         staleTime: 60 * 60 * 24,
     });
 };

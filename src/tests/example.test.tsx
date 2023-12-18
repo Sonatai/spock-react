@@ -4,7 +4,7 @@ import { describe, expect, test } from 'vitest';
 import { renderHook } from '@testing-library/react-hooks';
 
 import { App } from '../App';
-import { useGetSummary } from '../Hooks/useGetSummary';
+import { ISummary, useGetSummary } from '../Hooks/useGetSummary';
 import { HookProvider, render } from '../test-utils';
 
 describe('test', () => {
@@ -24,12 +24,12 @@ describe('test', () => {
     });
 
     test('Axios example', async () => {
-        const getSummary = async () => {
+        const getSummary = async (): Promise<ISummary> => {
             const data = await axios.get(
                 'https://raw.githubusercontent.com/Gleethos/neureka/master/docs/spock/reports/summary.json'
             );
 
-            return data.data;
+            return data.data as ISummary;
         };
 
         const result = await getSummary();

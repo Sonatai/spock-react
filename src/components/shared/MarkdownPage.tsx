@@ -24,7 +24,7 @@ export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
                 <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
-    } else if (isLoading) {
+    } else if (isLoading || data === undefined) {
         return <LoadingSpinner isLoading={isLoading} />;
     } else {
         return (

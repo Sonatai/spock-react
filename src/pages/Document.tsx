@@ -28,14 +28,14 @@ export const Document = (props: IExampleOne): JSX.Element => {
                 <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
-    } else if (isLoading) {
+    } else if (isLoading || data === undefined) {
         return <LoadingSpinner isLoading={isLoading} />;
     } else {
         return (
-            <Layout hasOnPageNav features={data.features}>
+            <Layout hasOnPageNav features={data?.features}>
                 <div className="mb-[3rem]">
                     <h1 className="mb-[0.5rem]">
-                        {data.title !== '' ? data.title : data.className}
+                        {data?.title !== '' ? data.title : data.className}
                     </h1>
 
                     {`Class name: ${data.className}`}
@@ -45,7 +45,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
                 <pre className="whitespace-pre-line">{data.narrative}</pre>
 
                 <h2>Features</h2>
-                {data.features.map((feature: any, index: number) => (
+                {data.features.map((feature, index) => (
                     <Fragment key={nanoid()}>
                         <Feature
                             blocks={feature.blocks}
