@@ -1,12 +1,14 @@
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 
 export const handlers = [
-    rest.get('*summary.json', async (req, res, ctx) => {
-        return await res(
-            ctx.status(200),
-            ctx.json({
+    http.get('*summary.json', async () => {
+        return new HttpResponse(
+            JSON.stringify({
                 name: '',
-            })
+            }),
+            {
+                status: 200,
+            }
         );
     }),
 ];
