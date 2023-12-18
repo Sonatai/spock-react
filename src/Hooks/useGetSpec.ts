@@ -42,10 +42,10 @@ interface ISpec {
     generator: string;
 }
 
-const getSpec = async (file: string) => {
+const getSpec = async (file: string): Promise<ISpec> => {
     const data = await axios.get(`${config.specUrl}/${file}.json`);
 
-    return data.data;
+    return data.data as ISpec;
 };
 
 interface IGetSpec {

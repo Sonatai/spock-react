@@ -45,7 +45,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
                 <pre className="whitespace-pre-line">{data.narrative}</pre>
 
                 <h2>Features</h2>
-                {data.features.map((feature: any, index: number) => (
+                {data.features.map((feature, index) => (
                     <Fragment key={nanoid()}>
                         <Feature
                             blocks={feature.blocks}

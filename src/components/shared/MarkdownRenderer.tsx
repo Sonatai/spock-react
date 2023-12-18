@@ -43,7 +43,7 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
 
                     return <MdTable>{children}</MdTable>;
                 },
-                thead: (props: any) => {
+                thead: (props) => {
                     const { children } = props;
 
                     return <MdTableHead>{children}</MdTableHead>;
