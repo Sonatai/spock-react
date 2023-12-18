@@ -20,7 +20,7 @@ export const Document = (props: IExampleOne): JSX.Element => {
     const { data, isLoading, isError } = useGetSpec({ fileName });
     useScrollUp();
 
-    if (isError || data === undefined) {
+    if (isError) {
         return (
             <Message level="error" headline={`${fileName} couldn't be loaded`}>
                 The page has some loading problems. Please try again later. If
@@ -28,14 +28,14 @@ export const Document = (props: IExampleOne): JSX.Element => {
                 <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
-    } else if (isLoading) {
+    } else if (isLoading || data === undefined) {
         return <LoadingSpinner isLoading={isLoading} />;
     } else {
         return (
-            <Layout hasOnPageNav features={data.features}>
+            <Layout hasOnPageNav features={data?.features}>
                 <div className="mb-[3rem]">
                     <h1 className="mb-[0.5rem]">
-                        {data.title !== '' ? data.title : data.className}
+                        {data?.title !== '' ? data.title : data.className}
                     </h1>
 
                     {`Class name: ${data.className}`}

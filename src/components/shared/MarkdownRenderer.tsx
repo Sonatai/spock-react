@@ -1,5 +1,4 @@
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import Markdown from 'react-markdown';
 
 import { Divide } from './Divide/Divide';
 import { SyntaxHighlighter } from './SyntaxHighlighter';
@@ -11,6 +10,7 @@ import {
     MdTableHeader,
     MdTableRow,
 } from './Table';
+import remarkGfm from 'remark-gfm';
 
 interface IMarkdownRenderer {
     children: string;
@@ -20,12 +20,11 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
     const { children: content } = props;
 
     return (
-        <ReactMarkdown
+        <Markdown
             components={{
-                code: ({ inline, className, children, ...props }) => {
+                code: ({ className, children, ...props }) => {
                     const match = /language-(\w+)/.exec(className ?? '');
-                    return (inline === undefined || !inline) &&
-                        match !== null ? (
+                    return match !== null ? (
                         <SyntaxHighlighter
                             code={String(children)}
                             language={match[1]}
@@ -44,7 +43,7 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
 
                     return <MdTable>{children}</MdTable>;
                 },
-                thead: (props) => {
+                thead: (props: any) => {
                     const { children } = props;
 
                     return <MdTableHead>{children}</MdTableHead>;
@@ -73,6 +72,6 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
             remarkPlugins={[remarkGfm]}
         >
             {content}
-        </ReactMarkdown>
+        </Markdown>
     );
 };

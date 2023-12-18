@@ -16,7 +16,7 @@ export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
     useScrollUp();
     const { data, isLoading, isError } = useMarkdown({ filePath });
 
-    if (isError || data === undefined) {
+    if (isError) {
         return (
             <Message level="error" headline="Page couldn't be loaded">
                 Sorry the page could not be loaded. Please try again later. If
@@ -24,7 +24,7 @@ export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
                 <a href={config.LinkToIssueReport}>issue</a>.
             </Message>
         );
-    } else if (isLoading) {
+    } else if (isLoading || data === undefined) {
         return <LoadingSpinner isLoading={isLoading} />;
     } else {
         return (
