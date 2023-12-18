@@ -4,6 +4,8 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
+import { afterAll, afterEach, beforeAll } from 'vitest';
+
 import { server } from './mocks/server';
 
 beforeAll(() => {
