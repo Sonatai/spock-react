@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
 
 export const handlers = [
-    http.get('*summary.json', async () => {
+    http.get('*summary.json', () => {
         return new HttpResponse(
             JSON.stringify({
                 name: '',
