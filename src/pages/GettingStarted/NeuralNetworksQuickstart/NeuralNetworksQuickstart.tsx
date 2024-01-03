@@ -1,8 +1,5 @@
+import { CustomPage, CustomTab, SyntaxHighlighter } from '../../../components';
 import './styles.css';
-
-import { CustomPage } from '../../../components/shared/CustomPage';
-import { SyntaxHighlighter } from '../../../components/shared/SyntaxHighlighter';
-import { CustomTab } from '../../../components/shared/Tab/CustomTab';
 
 export const NeuralNetworksQuickstart = () => {
     return (

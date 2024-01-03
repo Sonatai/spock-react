@@ -1,10 +1,6 @@
-import * as config from '../../../environment.json';
-import { useMarkdown } from '../../Hooks/useMarkdown';
-import { useScrollUp } from '../../Hooks/useScrollUp';
-import { Layout } from './Layout/Layout';
-import { LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
-import { MarkdownRenderer } from './MarkdownRenderer';
-import { Message } from './Message/Message';
+import { Layout, LoadingSpinner, MarkdownRenderer, Message } from '..';
+import * as config from '../../../../environment.json';
+import { useMarkdown, useScrollUp } from '../../../Hooks';
 
 interface IMarkdownPage {
     filePath: string;

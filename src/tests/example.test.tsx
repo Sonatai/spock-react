@@ -4,7 +4,7 @@ import { describe, expect, test } from 'vitest';
 import { renderHook } from '@testing-library/react-hooks';
 
 import { App } from '../App';
-import { ISummary, useGetSummary } from '../Hooks/useGetSummary';
+import { ISummary, useGetSummary } from '../Hooks';
 import { HookProvider, render } from '../test-utils';
 
 describe('test', () => {

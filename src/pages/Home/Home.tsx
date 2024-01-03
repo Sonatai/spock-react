@@ -6,10 +6,7 @@ import {
     faWandSparkles,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { CustomPage } from '../../components/shared/CustomPage';
-import { SyntaxHighlighter } from '../../components/shared/SyntaxHighlighter';
-import { CustomTab } from '../../components/shared/Tab/CustomTab';
+import { CustomPage, CustomTab, SyntaxHighlighter } from '../../components';
 
 const groovySnippet = {
     content: (

@@ -5,9 +5,7 @@ import { Fragment } from 'react';
 
 import { faHashtag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { SyntaxHighlighter } from '../shared/SyntaxHighlighter';
-import { IRow, ResponsiveTable } from '../shared/Table';
+import { IRow, ResponsiveTable, SyntaxHighlighter } from '../shared';
 
 /*
 className === unique key for spec

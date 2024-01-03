@@ -1,16 +1,16 @@
 import Markdown from 'react-markdown';
 
-import { Divide } from './Divide/Divide';
-import { SyntaxHighlighter } from './SyntaxHighlighter';
+import remarkGfm from 'remark-gfm';
 import {
+    Divide,
     MdTable,
     MdTableBody,
     MdTableCell,
     MdTableHead,
     MdTableHeader,
     MdTableRow,
-} from './Table';
-import remarkGfm from 'remark-gfm';
+    SyntaxHighlighter,
+} from '..';
 
 interface IMarkdownRenderer {
     children: string;

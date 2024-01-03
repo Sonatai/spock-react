@@ -2,7 +2,7 @@ import './styles.css';
 
 import { PropsWithChildren } from 'react';
 
-import { IFeature } from '../../../Hooks/useGetSpec';
+import { IFeature } from '../../../Hooks';
 import { OnPageNav } from './OnPageNav';
 
 interface ILayout {
