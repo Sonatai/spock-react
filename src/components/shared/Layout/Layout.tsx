@@ -2,8 +2,8 @@ import './styles.css';
 
 import { PropsWithChildren } from 'react';
 
-import { IFeature } from '../../../Hooks';
 import { OnPageNav } from './OnPageNav';
+import { IFeature } from 'spock-react-types';
 
 interface ILayout {
     hasOnPageNav?: boolean;

@@ -6,9 +6,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
-import { ISummary } from '../../../Hooks/useGetSummary';
 import { getSearchScore } from '../getSearchScore';
 import { ISearchHit } from '../Search';
+import { ISummary } from 'spock-react-types';
 
 interface ISearchInput {
     summary: ISummary;

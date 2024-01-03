@@ -1,3 +1,4 @@
+import { IActiveAnchor } from 'spock-react/hooks-types';
 import { create } from 'zustand';
 
 const getInitialState = () => {
@@ -9,10 +10,6 @@ const getInitialState = () => {
     return pageAndAnchor.length === 2 ? decodeURI(pageAndAnchor[1]) : '';
 };
 
-interface IActiveAnchor {
-    activeAnchor: string;
-    setActiveAnchor: (newAnchor: string) => void;
-}
 export const useActiveAnchor = create<IActiveAnchor>((set) => ({
     activeAnchor: getInitialState(),
     setActiveAnchor: (newAnchor: string) => {

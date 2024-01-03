@@ -5,11 +5,8 @@ import {
     IMinimizedSummaryEntry,
     ISearchEntry,
 } from '../components/Search/generateSearchEntries';
-import { ISpecification, ISummary } from './useGetSummary';
-
-interface IGenerateSearchEntries {
-    summary?: ISummary;
-}
+import { ISpecification } from 'spock-react-types';
+import { IGenerateSearchEntries } from 'spock-react/hooks-types';
 
 export const useGenerateSearchEntries = (
     props: IGenerateSearchEntries

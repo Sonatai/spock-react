@@ -6,11 +6,8 @@ import { Link } from 'react-router-dom';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import {
-    IExecutedFeatures,
-    ISpecification,
-} from '../../../../Hooks/useGetSummary';
 import { ISearchHit } from '../../Search';
+import { IExecutedFeatures, ISpecification } from 'spock-react-types';
 
 interface ISearchCard {
     onClick: (e?: any) => void;

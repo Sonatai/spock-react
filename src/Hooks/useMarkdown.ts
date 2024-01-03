@@ -1,13 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
+import { IMarkdown } from 'spock-react/hooks-types';
 
 const getMarkdown = async (mdFile: string) => {
     const data = await fetch(mdFile);
     return await data.text();
 };
-
-interface IMarkdown {
-    filePath: string;
-}
 
 export const useMarkdown = (props: IMarkdown) => {
     const { filePath } = props;

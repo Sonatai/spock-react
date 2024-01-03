@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import * as config from '../../environment.json';
+import { IActiveLink } from 'spock-react/hooks-types';
 
 const getInitialState = () => {
     const pageAndAnchor = window.location.pathname.split('#');
@@ -11,10 +12,6 @@ const getInitialState = () => {
     return page;
 };
 
-interface IActiveLink {
-    activeLink: string;
-    setActiveLink: (newLink: string) => void;
-}
 export const useActiveLink = create<IActiveLink>((set) => ({
     activeLink: getInitialState(),
     setActiveLink: (newLink: string) => {

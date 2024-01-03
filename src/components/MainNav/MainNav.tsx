@@ -10,7 +10,8 @@ import * as config from '../../../environment.json';
 import GithubLogo from '../../assets/img/github-mark-white.png';
 import { Search } from '../Search';
 import { NavLink } from '../shared';
-import { ISummary, useActiveLink } from '../../Hooks';
+import { useActiveLink } from '../../Hooks';
+import { ISummary } from 'spock-react-types';
 
 interface IMainNav {
     summary: ISummary;

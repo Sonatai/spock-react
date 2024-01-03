@@ -3,9 +3,9 @@ import './styles.css';
 import { nanoid } from 'nanoid';
 import { DialogStateReturn } from 'reakit/ts';
 
-import { ISummary } from '../../../Hooks/useGetSummary';
 import { ISearchHit } from '../Search';
 import { SearchCard } from './SearchCard';
+import { ISummary } from 'spock-react-types';
 
 interface ISearchHits {
     searchHits: ISearchHit[] | null;

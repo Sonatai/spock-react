@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 
-import { IFeature } from '../../../Hooks';
 import { NavAnchor } from '..';
+import { IFeature } from '../../Feature';
 
 interface IOnPageNave {
     features: IFeature[];

@@ -4,8 +4,9 @@ import { describe, expect, test } from 'vitest';
 import { renderHook } from '@testing-library/react-hooks';
 
 import { App } from '../App';
-import { ISummary, useGetSummary } from '../Hooks';
+import { useGetSummary } from '../Hooks';
 import { HookProvider, render } from '../test-utils';
+import { ISummary } from 'spock-react-types';
 
 describe('test', () => {
     test('component example', () => {
