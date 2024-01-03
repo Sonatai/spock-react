@@ -3,11 +3,7 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import * as config from '../environment.json';
-import { MainNav } from './components/MainNav/MainNav';
-import { LoadingSpinner } from './components/shared/LoadingSpinner/LoadingSpinner';
-import { MarkdownPage } from './components/shared/MarkdownPage';
-import { Message } from './components/shared/Message/Message';
-import { useGetSummary } from './Hooks/useGetSummary';
+
 import { Document } from './pages/Document';
 import buildingFromSource from './pages/GettingStarted/BuildingFromSource.md';
 import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
@@ -16,6 +12,8 @@ import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape
 import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
 import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
 import { Home } from './pages/Home/Home';
+import { useGetSummary } from './Hooks';
+import { LoadingSpinner, MainNav, MarkdownPage, Message } from './components';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();

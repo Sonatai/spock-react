@@ -3,7 +3,7 @@ import './styles.css';
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
-import { useActiveLink } from '../../../Hooks/useActiveLink';
+import { useActiveLink } from '../../../Hooks';
 
 interface INavLink {
     href: string;

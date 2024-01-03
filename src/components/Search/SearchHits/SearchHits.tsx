@@ -5,7 +5,7 @@ import { DialogStateReturn } from 'reakit/ts';
 
 import { ISummary } from '../../../Hooks/useGetSummary';
 import { ISearchHit } from '../Search';
-import { SearchCard } from './SearchCard/SearchCard';
+import { SearchCard } from './SearchCard';
 
 interface ISearchHits {
     searchHits: ISearchHit[] | null;

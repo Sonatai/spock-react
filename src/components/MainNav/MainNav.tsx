@@ -8,10 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as config from '../../../environment.json';
 import GithubLogo from '../../assets/img/github-mark-white.png';
-import { useActiveLink } from '../../Hooks/useActiveLink';
-import { ISummary } from '../../Hooks/useGetSummary';
-import { Search } from '../Search/Search';
-import { NavLink } from '../shared/NavLink/NavLink';
+import { Search } from '../Search';
+import { NavLink } from '../shared';
+import { ISummary, useActiveLink } from '../../Hooks';
 
 interface IMainNav {
     summary: ISummary;

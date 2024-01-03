@@ -2,7 +2,7 @@ import './styles.css';
 
 import { ReactNode } from 'react';
 
-import { useActiveAnchor } from '../../../Hooks/useActiveAnchor';
+import { useActiveAnchor } from '../../../Hooks';
 
 interface INavAnchor {
     href: string;
