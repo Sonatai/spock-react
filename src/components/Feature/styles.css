@@ -1,5 +1,6 @@
 .feature {
     @apply flex;
+    @apply mb-2;
 }
 
 .feature > em {
