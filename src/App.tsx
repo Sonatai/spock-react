@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import * as config from '../environment.json';
 
-import { Document } from './pages/Document';
+import { Document } from './pages/Document/Document';
 import buildingFromSource from './pages/GettingStarted/BuildingFromSource.md';
 import gswApacheMavenPath from './pages/GettingStarted/GettingStartedWithApacheMaven.md';
 import gswGradlePath from './pages/GettingStarted/GettingStartedWithGradle.md';

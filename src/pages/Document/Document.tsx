@@ -1,21 +1,18 @@
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
 
-import * as config from '../../environment.json';
-import { useGetSpec, useScrollUp } from '../Hooks';
+import * as config from '../../../environment.json';
+import { useGetSpec, useScrollUp } from '../../Hooks';
 import {
     Divide,
     Feature,
     Layout,
     LoadingSpinner,
     Message,
-} from '../components';
+} from '../../components';
+import { IDocument } from 'spock-react/pages/document-types';
 
-interface IExampleOne {
-    fileName: string;
-}
-
-export const Document = (props: IExampleOne): JSX.Element => {
+export const Document = (props: IDocument): JSX.Element => {
     const { fileName } = props;
 
     const { data, isLoading, isError } = useGetSpec({ fileName });
