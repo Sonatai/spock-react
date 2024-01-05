@@ -7,18 +7,9 @@ import { SearchButton } from './SearchButton';
 import { SearchFooter } from './SearchFooter';
 import { SearchHits } from './SearchHits';
 import { SearchInput } from './SearchInput';
-import { ISummary } from 'spock-react-types';
+import { ISearch, ISearchHit } from 'spock-react/components/search-types';
 
-export interface ISearchHit {
-    score: number;
-    key: string;
-}
-
-interface ISearchInput {
-    summary: ISummary;
-}
-
-export const Search = (props: ISearchInput): JSX.Element => {
+export const Search = (props: ISearch): JSX.Element => {
     const { summary } = props;
 
     const dialog = useDialogState();

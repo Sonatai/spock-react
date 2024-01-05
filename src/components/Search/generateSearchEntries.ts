@@ -1,15 +1,7 @@
-export interface IMinimizedSummaryEntry {
-    className: string;
-    title: string;
-    narrative: string;
-    features: Array<{ id: string }>;
-}
-
-export interface ISearchEntry {
-    key: string;
-    href?: string;
-    keywords: string[];
-}
+import {
+    IMinimizedSummaryEntry,
+    ISearchEntry,
+} from 'spock-react/components/search-types';
 
 const fillWords = [
     'the',

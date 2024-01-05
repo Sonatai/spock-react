@@ -5,17 +5,10 @@ import { Input } from 'reakit';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { ISearchInput } from 'spock-react/components/search-input-types';
+import { ISearchHit } from 'spock-react/components/search-types';
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
 import { getSearchScore } from '../getSearchScore';
-import { ISearchHit } from '../Search';
-import { ISummary } from 'spock-react-types';
-
-interface ISearchInput {
-    summary: ISummary;
-    setSearchHits: (searchHits: ISearchHit[] | null) => void;
-    setSearchInput: (input: string) => void;
-    searchInput: string;
-}
 
 export const SearchInput = (props: ISearchInput): JSX.Element => {
     const { summary, setSearchHits, setSearchInput, searchInput } = props;

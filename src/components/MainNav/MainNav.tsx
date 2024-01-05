@@ -6,16 +6,12 @@ import { Link } from 'react-router-dom';
 import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { IMainNav } from 'spock-react/components/main-nav-types';
 import * as config from '../../../environment.json';
+import { useActiveLink } from '../../Hooks';
 import GithubLogo from '../../assets/img/github-mark-white.png';
 import { Search } from '../Search';
 import { NavLink } from '../shared';
-import { useActiveLink } from '../../Hooks';
-import { ISummary } from 'spock-react-types';
-
-interface IMainNav {
-    summary: ISummary;
-}
 
 export const MainNav = (props: IMainNav) => {
     const { summary } = props;
