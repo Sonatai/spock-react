@@ -2,6 +2,8 @@
     @apply flex;
     @apply items-center;
     @apply w-full;
+    @apply font-normal;
+    @apply no-underline;
 }
 
 .nav__link:hover {

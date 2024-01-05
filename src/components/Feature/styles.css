@@ -11,6 +11,11 @@
     @apply ml-[0.5rem];
 }
 
+.feature__link {
+    @apply font-normal;
+    @apply no-underline;
+}
+
 .feature__headline {
     @apply flex;
     @apply items-baseline;
