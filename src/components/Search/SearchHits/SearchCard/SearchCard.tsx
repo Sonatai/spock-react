@@ -5,19 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import {
-    IExecutedFeatures,
-    ISpecification,
-} from '../../../../Hooks/useGetSummary';
-import { ISearchHit } from '../../Search';
-
-interface ISearchCard {
-    onClick: (e?: any) => void;
-    hit: ISearchHit;
-    spec?: ISpecification;
-    feature?: IExecutedFeatures;
-}
+import { ISearchCard } from 'spock-react/components/search-card-types';
 
 export const SearchCard = (props: ISearchCard): JSX.Element => {
     const { onClick, hit, spec, feature } = props;

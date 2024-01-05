@@ -1,11 +1,8 @@
 import { nanoid } from 'nanoid';
 
-import { IFeature } from '../../../Hooks';
 import { NavAnchor } from '..';
-
-interface IOnPageNave {
-    features: IFeature[];
-}
+import { IOnPageNave } from 'spock-react/shared/layout-types';
+import { IMinimalFeature } from 'spock-react-types';
 
 export const OnPageNav = (props: IOnPageNave): JSX.Element => {
     const { features } = props;
@@ -15,7 +12,7 @@ export const OnPageNav = (props: IOnPageNave): JSX.Element => {
             <h4>On the Page</h4>
             <nav>
                 <ul className="layout__list">
-                    {features.map((feature: IFeature) => (
+                    {features.map((feature: IMinimalFeature) => (
                         <NavAnchor href={feature.id} key={nanoid()}>
                             {feature.id}
                         </NavAnchor>

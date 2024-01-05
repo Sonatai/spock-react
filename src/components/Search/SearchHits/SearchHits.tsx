@@ -1,19 +1,9 @@
 import './styles.css';
 
 import { nanoid } from 'nanoid';
-import { DialogStateReturn } from 'reakit/ts';
 
-import { ISummary } from '../../../Hooks/useGetSummary';
-import { ISearchHit } from '../Search';
 import { SearchCard } from './SearchCard';
-
-interface ISearchHits {
-    searchHits: ISearchHit[] | null;
-    setSearchHits: (searchHits: ISearchHit[] | null) => void;
-    summary: ISummary;
-    setSearchInput: (input: string) => void;
-    dialog: DialogStateReturn;
-}
+import { ISearchHits } from 'spock-react/components/search-hits-types';
 
 export const SearchHits = (props: ISearchHits): JSX.Element => {
     const { searchHits, summary, setSearchHits, setSearchInput, dialog } =

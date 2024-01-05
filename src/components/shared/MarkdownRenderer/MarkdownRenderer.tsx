@@ -10,11 +10,8 @@ import {
     MdTableHeader,
     MdTableRow,
     SyntaxHighlighter,
-} from '..';
-
-interface IMarkdownRenderer {
-    children: string;
-}
+} from '../..';
+import { IMarkdownRenderer } from 'spock-react/shared/markdown-renderer-types';
 
 export const MarkdownRenderer = (props: IMarkdownRenderer) => {
     const { children: content } = props;

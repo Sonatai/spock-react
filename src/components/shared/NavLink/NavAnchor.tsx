@@ -1,15 +1,9 @@
 import './styles.css';
 
-import { ReactNode } from 'react';
-
+import { INavLink } from 'spock-react/shared/nav-link-types';
 import { useActiveAnchor } from '../../../Hooks';
 
-interface INavAnchor {
-    href: string;
-    children: string | ReactNode;
-}
-
-export const NavAnchor = (props: INavAnchor) => {
+export const NavAnchor = (props: INavLink) => {
     const { children: displayText, href } = props;
 
     const { activeAnchor, setActiveAnchor } = useActiveAnchor();
