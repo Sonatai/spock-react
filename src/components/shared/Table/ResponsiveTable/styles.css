@@ -10,7 +10,7 @@
 }
 
 .responsive-table-container__table {
-    @apply w-auto;
+    @apply w-full;
     @apply border-collapse;
 }
 
@@ -69,5 +69,5 @@
     @apply max-md:before:font-bold;
 
     @apply max-md:before:even:bg-[#af084b];
-    @apply max-md:even:bg-[#27272b]  max-md:odd:bg-[#303036];
+    @apply max-md:even:bg-[#303036] max-md:odd:bg-[#27272b];
 }
