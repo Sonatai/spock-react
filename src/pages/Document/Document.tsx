@@ -8,6 +8,7 @@ import {
     Feature,
     Layout,
     LoadingSpinner,
+    MarkdownRenderer,
     Message,
 } from '../../components';
 import { IDocument } from 'spock-react/pages/document-types';
@@ -40,7 +41,7 @@ export const Document = (props: IDocument): JSX.Element => {
                 </div>
 
                 <h2>Description</h2>
-                <pre className="whitespace-pre-line">{data.narrative}</pre>
+                <MarkdownRenderer>{data.narrative}</MarkdownRenderer>
 
                 <h2>Features</h2>
                 {data.features.map((feature, index) => (

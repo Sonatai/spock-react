@@ -13,7 +13,15 @@ import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
 import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
 import { Home } from './pages/Home/Home';
 import { useGetSummary } from './Hooks';
-import { LoadingSpinner, MainNav, MarkdownPage, Message } from './components';
+import {
+    CustomPage,
+    LoadingSpinner,
+    MainNav,
+    MarkdownPage,
+    MarkdownRenderer,
+    Message,
+} from './components';
+import example from './pages/example.json';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -75,6 +83,16 @@ export const App = (): JSX.Element => {
                             path="/getting-started/building-from-source"
                             element={
                                 <MarkdownPage filePath={buildingFromSource} />
+                            }
+                        />
+                        <Route
+                            path="/example"
+                            element={
+                                <CustomPage>
+                                    <MarkdownRenderer>
+                                        {example.narrative}
+                                    </MarkdownRenderer>
+                                </CustomPage>
                             }
                         />
                     </Routes>
