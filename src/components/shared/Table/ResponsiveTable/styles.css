@@ -10,7 +10,7 @@
 }
 
 .responsive-table-container__table {
-    @apply w-auto;
+    @apply w-full;
     @apply border-collapse;
 }
 
