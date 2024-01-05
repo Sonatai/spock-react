@@ -2,10 +2,7 @@ import './styles.css';
 
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-interface ILoadingSpinner {
-    isLoading: boolean;
-}
+import { ILoadingSpinner } from 'spock-react/shared/loading-spinner-types';
 
 export const LoadingSpinner = (props: ILoadingSpinner): JSX.Element => {
     const { isLoading } = props;

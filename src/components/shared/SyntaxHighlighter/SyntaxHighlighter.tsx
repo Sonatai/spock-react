@@ -1,10 +1,6 @@
 import { Prism } from 'react-syntax-highlighter';
 import { gruvboxDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
-interface ISyntaxHighlighter {
-    code: string;
-    language: string;
-}
+import { ISyntaxHighlighter } from 'spock-react/shared/syntax-highlighter-types';
 
 /**
  * Have no accessibility problems:

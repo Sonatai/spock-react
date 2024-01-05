@@ -1,16 +1,7 @@
 import './styles.css';
 
 import { nanoid } from 'nanoid';
-import { ReactNode } from 'react';
-
-export interface IRow {
-    row: Array<string | ReactNode>;
-}
-
-interface ITable {
-    headers: string[];
-    rows: IRow[];
-}
+import { ITable } from 'spock-react/shared/responsive-table-types';
 
 export const ResponsiveTable = (props: ITable): JSX.Element => {
     const { headers, rows } = props;

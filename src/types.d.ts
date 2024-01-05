@@ -37,7 +37,8 @@ declare module 'spock-react-types' {
     interface IBlock {
         kind: string;
         text: string;
-        code: string[];
+        /* eslint-disable  @typescript-eslint/consistent-indexed-object-style */
+        code: string[] | { [key: string]: string[] };
     }
 
     export interface IFeature {
@@ -51,5 +52,10 @@ declare module 'spock-react-types' {
         };
         blocks: IBlock[];
         problems: any[];
+    }
+
+    export interface IMinimalFeature {
+        id: string;
+        blocks: IBlock[];
     }
 }

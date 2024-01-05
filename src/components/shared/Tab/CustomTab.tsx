@@ -1,16 +1,7 @@
 import './styles.css';
 
-import { ReactNode } from 'react';
 import { Tab, TabList, TabPanel, useTabState } from 'reakit';
-
-interface ITab {
-    content: ReactNode;
-    header: string;
-}
-
-interface ICustomTab {
-    tabConfigs: ITab[];
-}
+import { ICustomTab } from 'spock-react/shared/tab-types';
 
 export const CustomTab = (props: ICustomTab) => {
     const { tabConfigs } = props;

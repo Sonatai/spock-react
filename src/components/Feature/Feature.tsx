@@ -5,7 +5,10 @@ import { Fragment } from 'react';
 
 import { faHashtag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IRow, ResponsiveTable, SyntaxHighlighter } from '../shared';
+import { ResponsiveTable, SyntaxHighlighter } from '../shared';
+import { IMinimalFeature } from 'spock-react-types';
+import { IWhereTable } from 'spock-react/components/feature-types';
+import { IRow } from 'spock-react/shared/responsive-table-types';
 
 /*
 className === unique key for spec
@@ -13,23 +16,6 @@ executedFeatures === unique key for test
 feature.id === unique key for test
 kind: GIVEN | WHEN | THEN | AND | CLEANUP | WHERE | EXPECT
 */
-
-export interface IBlock {
-    kind: string;
-    text: string;
-    /* eslint-disable  @typescript-eslint/consistent-indexed-object-style */
-    code: string[] | { [key: string]: string[] };
-}
-
-export interface IFeature {
-    id: string;
-    blocks: IBlock[];
-}
-
-interface IWhereTable {
-    /* eslint-disable  @typescript-eslint/consistent-indexed-object-style */
-    data: { [key: string]: string[] };
-}
 
 // It gives you a responsive table with the where-table from the specs
 const WhereTable = (props: IWhereTable): JSX.Element => {
@@ -56,7 +42,7 @@ const WhereTable = (props: IWhereTable): JSX.Element => {
     return <ResponsiveTable headers={headers} rows={rows as IRow[]} />;
 };
 
-export const Feature = (props: IFeature): JSX.Element => {
+export const Feature = (props: IMinimalFeature): JSX.Element => {
     const { id, blocks } = props;
 
     return (
@@ -96,6 +82,7 @@ export const Feature = (props: IFeature): JSX.Element => {
                             Object.keys(block.code).length !== 0 && (
                                 <WhereTable
                                     data={
+                                        /* eslint-disable  @typescript-eslint/consistent-indexed-object-style */
                                         block.code as {
                                             [key: string]: string[];
                                         }

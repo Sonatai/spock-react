@@ -1,10 +1,7 @@
+import { IMarkdownPage } from 'spock-react/shared/page-template-types';
 import { Layout, LoadingSpinner, MarkdownRenderer, Message } from '..';
 import * as config from '../../../../environment.json';
 import { useMarkdown, useScrollUp } from '../../../Hooks';
-
-interface IMarkdownPage {
-    filePath: string;
-}
 
 export const MarkdownPage = (props: IMarkdownPage): JSX.Element => {
     const { filePath } = props;

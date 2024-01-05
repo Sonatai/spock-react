@@ -1,14 +1,9 @@
 import './styles.css';
 
-import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 
+import { INavLink } from 'spock-react/shared/nav-link-types';
 import { useActiveLink } from '../../../Hooks';
-
-interface INavLink {
-    href: string;
-    children: string | ReactNode;
-}
 
 export const NavLink = (props: INavLink): JSX.Element => {
     const { children: displayText, href } = props;

@@ -1,7 +1,5 @@
 import './styles.css';
 
-import { ReactNode } from 'react';
-
 import {
     faCircleCheck,
     faCircleInfo,
@@ -9,14 +7,7 @@ import {
     faTriangleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-type TLevel = 'error' | 'success' | 'info' | 'warning';
-
-interface IErrorMessage {
-    headline: string;
-    level: TLevel;
-    children: ReactNode;
-}
+import { IErrorMessage, TLevel } from 'spock-react/shared/message-types';
 
 export const Message = (props: IErrorMessage): JSX.Element => {
     const { headline, level, children } = props;
@@ -25,7 +16,10 @@ export const Message = (props: IErrorMessage): JSX.Element => {
         <div className="message">
             {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
             <div className={`message__header message__${level}`}>
-                <FontAwesomeIcon icon={icon(level)} className="message__icon" />
+                <FontAwesomeIcon
+                    icon={getIcon(level)}
+                    className="message__icon"
+                />
                 {headline}
             </div>
             <div className="message__content">{children}</div>
@@ -33,7 +27,7 @@ export const Message = (props: IErrorMessage): JSX.Element => {
     );
 };
 
-const icon = (level: TLevel) => {
+const getIcon = (level: TLevel) => {
     switch (level) {
         case 'error':
             return faCircleXmark;
