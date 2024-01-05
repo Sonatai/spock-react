@@ -29,7 +29,10 @@ a {
 }
 
 a {
-    @apply hover:text-[#ff3f81];
+    @apply hover:decoration-2;
+    @apply font-bold;
+    @apply underline;
+    @apply decoration-[#ff3f81];
 }
 
 h1,

@@ -49,7 +49,7 @@ export const Feature = (props: IMinimalFeature): JSX.Element => {
         <section id={id}>
             <div className="feature__headline group">
                 <h3>
-                    <a href={`#${id}`} className="">
+                    <a href={`#${id}`} className="feature__link">
                         {id}
                         <FontAwesomeIcon
                             icon={faHashtag}
