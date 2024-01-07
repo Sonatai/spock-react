@@ -1,6 +1,7 @@
-import { create } from 'zustand';
-import * as config from '../../environment.json';
 import { IActiveLink } from 'spock-react/hooks-types';
+import { create } from 'zustand';
+
+import * as config from '../../environment.json';
 
 const getInitialState = () => {
     const pageAndAnchor = window.location.pathname.split('#');

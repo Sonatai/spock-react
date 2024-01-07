@@ -7,9 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+import * as config from '../environment.json';
 import { App } from './App';
 import { Message } from './components/shared';
-import * as config from '../environment.json';
 
 const queryClient = new QueryClient();
 

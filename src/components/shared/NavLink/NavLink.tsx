@@ -1,8 +1,8 @@
 import './styles.css';
 
 import { Link } from 'react-router-dom';
-
 import { INavLink } from 'spock-react/shared/nav-link-types';
+
 import { useActiveLink } from '../../../Hooks';
 
 export const NavLink = (props: INavLink): JSX.Element => {

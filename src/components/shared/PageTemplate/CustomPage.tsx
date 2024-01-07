@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
+import { Layout } from '../';
 import { useScrollUp } from '../../../Hooks';
-import { Layout } from '..';
 
 export const CustomPage = (props: PropsWithChildren<unknown>): JSX.Element => {
     const { children } = props;

@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
-
-import { NavAnchor } from '..';
-import { IOnPageNave } from 'spock-react/shared/layout-types';
 import { IMinimalFeature } from 'spock-react-types';
+import { IOnPageNave } from 'spock-react/shared/layout-types';
+
+import { NavAnchor } from '../';
 
 export const OnPageNav = (props: IOnPageNave): JSX.Element => {
     const { features } = props;

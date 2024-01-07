@@ -1,9 +1,9 @@
 import axios from 'axios';
+import { ISummary } from 'spock-react-types';
 
 import { useQuery, UseQueryResult } from '@tanstack/react-query';
 
 import config from '../../environment.json';
-import { ISummary } from 'spock-react-types';
 
 const getSummary = async (): Promise<ISummary> => {
     const data = await axios.get(config.summaryUrl);

@@ -1,5 +1,7 @@
 import './styles.css';
 
+import { IErrorMessage, TLevel } from 'spock-react/shared/message-types';
+
 import {
     faCircleCheck,
     faCircleInfo,
@@ -7,7 +9,6 @@ import {
     faTriangleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IErrorMessage, TLevel } from 'spock-react/shared/message-types';
 
 export const Message = (props: IErrorMessage): JSX.Element => {
     const { headline, level, children } = props;

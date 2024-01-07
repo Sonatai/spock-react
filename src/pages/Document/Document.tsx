@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
+import { IDocument } from 'spock-react/pages/document-types';
 
 import * as config from '../../../environment.json';
-import { useGetSpec, useScrollUp } from '../../Hooks';
 import {
     Divide,
     Feature,
@@ -11,7 +11,7 @@ import {
     MarkdownRenderer,
     Message,
 } from '../../components';
-import { IDocument } from 'spock-react/pages/document-types';
+import { useGetSpec, useScrollUp } from '../../Hooks';
 
 export const Document = (props: IDocument): JSX.Element => {
     const { fileName } = props;
