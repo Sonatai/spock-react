@@ -1,5 +1,6 @@
 import { IMarkdownPage } from 'spock-react/shared/page-template-types';
-import { Layout, LoadingSpinner, MarkdownRenderer, Message } from '..';
+
+import { Layout, LoadingSpinner, MarkdownRenderer, Message } from '../';
 import * as config from '../../../../environment.json';
 import { useMarkdown, useScrollUp } from '../../../Hooks';
 

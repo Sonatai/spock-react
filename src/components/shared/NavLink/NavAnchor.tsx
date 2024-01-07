@@ -1,6 +1,7 @@
 import './styles.css';
 
 import { INavLink } from 'spock-react/shared/nav-link-types';
+
 import { useActiveAnchor } from '../../../Hooks';
 
 export const NavAnchor = (props: INavLink) => {

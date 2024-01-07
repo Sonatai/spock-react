@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-
-import { cleanedSearchData } from '../components/Search/generateSearchEntries';
 import { ISpecification } from 'spock-react-types';
-import { IGenerateSearchEntries } from 'spock-react/hooks-types';
 import {
     IMinimizedSummaryEntry,
     ISearchEntry,
 } from 'spock-react/components/search-types';
+import { IGenerateSearchEntries } from 'spock-react/hooks-types';
+
+import { cleanedSearchData } from '../components/Search/generateSearchEntries';
 
 export const useGenerateSearchEntries = (
     props: IGenerateSearchEntries

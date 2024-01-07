@@ -1,9 +1,9 @@
 import axios from 'axios';
+import { IGetSpec, ISpec } from 'spock-react/hooks-types';
 
 import { useQuery, UseQueryResult } from '@tanstack/react-query';
 
 import config from '../../environment.json';
-import { IGetSpec, ISpec } from 'spock-react/hooks-types';
 
 const getSpec = async (file: string): Promise<ISpec> => {
     const data = await axios.get(`${config.specUrl}/${file}.json`);

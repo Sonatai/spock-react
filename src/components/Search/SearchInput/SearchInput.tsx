@@ -1,12 +1,12 @@
 import './styles.css';
 
 import { Input } from 'reakit';
+import { ISearchInput } from 'spock-react/components/search-input-types';
+import { ISearchHit } from 'spock-react/components/search-types';
 
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { ISearchInput } from 'spock-react/components/search-input-types';
-import { ISearchHit } from 'spock-react/components/search-types';
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
 import { getSearchScore } from '../getSearchScore';
 

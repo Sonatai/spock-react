@@ -2,13 +2,14 @@ import './styles.css';
 
 import { nanoid } from 'nanoid';
 import { Fragment } from 'react';
-
-import { faHashtag } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ResponsiveTable, SyntaxHighlighter } from '../shared';
 import { IMinimalFeature } from 'spock-react-types';
 import { IWhereTable } from 'spock-react/components/feature-types';
 import { IRow } from 'spock-react/shared/responsive-table-types';
+
+import { faHashtag } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { ResponsiveTable, SyntaxHighlighter } from '../shared';
 
 /*
 className === unique key for spec

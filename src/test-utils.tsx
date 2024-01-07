@@ -46,4 +46,4 @@ const customRender = (
     options?: Omit<RenderOptions, 'wrapper'>
 ) => render(ui, { wrapper: AllTheProviders, ...options });
 
-export { testingStuff as testing, customRender as render };
+export { customRender as render, testingStuff as testing };

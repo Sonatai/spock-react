@@ -2,12 +2,12 @@ import './styles.css';
 
 import { useState } from 'react';
 import { Dialog, DialogBackdrop, Separator, useDialogState } from 'reakit';
+import { ISearch, ISearchHit } from 'spock-react/components/search-types';
 
 import { SearchButton } from './SearchButton';
 import { SearchFooter } from './SearchFooter';
 import { SearchHits } from './SearchHits';
 import { SearchInput } from './SearchInput';
-import { ISearch, ISearchHit } from 'spock-react/components/search-types';
 
 export const Search = (props: ISearch): JSX.Element => {
     const { summary } = props;

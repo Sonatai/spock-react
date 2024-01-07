@@ -2,14 +2,14 @@ import './styles.css';
 
 import { nanoid } from 'nanoid';
 import { Link } from 'react-router-dom';
+import { IMainNav } from 'spock-react/components/main-nav-types';
 
 import { faBook, faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { IMainNav } from 'spock-react/components/main-nav-types';
 import * as config from '../../../environment.json';
-import { useActiveLink } from '../../Hooks';
 import GithubLogo from '../../assets/img/github-mark-white.png';
+import { useActiveLink } from '../../Hooks';
 import { Search } from '../Search';
 import { NavLink } from '../shared';
 

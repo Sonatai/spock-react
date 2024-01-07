@@ -1,6 +1,7 @@
 import Markdown from 'react-markdown';
-
 import remarkGfm from 'remark-gfm';
+import { IMarkdownRenderer } from 'spock-react/shared/markdown-renderer-types';
+
 import {
     Divide,
     MdTable,
@@ -11,7 +12,6 @@ import {
     MdTableRow,
     SyntaxHighlighter,
 } from '../..';
-import { IMarkdownRenderer } from 'spock-react/shared/markdown-renderer-types';
 
 export const MarkdownRenderer = (props: IMarkdownRenderer) => {
     const { children: content } = props;

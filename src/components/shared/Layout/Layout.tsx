@@ -1,9 +1,9 @@
 import './styles.css';
 
 import { PropsWithChildren } from 'react';
+import { ILayout } from 'spock-react/shared/layout-types';
 
 import { OnPageNav } from './OnPageNav';
-import { ILayout } from 'spock-react/shared/layout-types';
 
 export const Layout = (props: PropsWithChildren<ILayout>): JSX.Element => {
     const { hasOnPageNav, children, features } = props;

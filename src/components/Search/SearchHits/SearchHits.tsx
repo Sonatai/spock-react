@@ -1,9 +1,9 @@
 import './styles.css';
 
 import { nanoid } from 'nanoid';
+import { ISearchHits } from 'spock-react/components/search-hits-types';
 
 import { SearchCard } from './SearchCard';
-import { ISearchHits } from 'spock-react/components/search-hits-types';
 
 export const SearchHits = (props: ISearchHits): JSX.Element => {
     const { searchHits, summary, setSearchHits, setSearchInput, dialog } =
