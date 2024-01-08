@@ -12,6 +12,7 @@ import {
     MdTableRow,
     SyntaxHighlighter,
 } from '../..';
+import { CodeTag } from '../CodeTag/CodeTag';
 
 export const MarkdownRenderer = (props: IMarkdownRenderer) => {
     const { children: content } = props;
@@ -27,9 +28,7 @@ export const MarkdownRenderer = (props: IMarkdownRenderer) => {
                             language={match[1]}
                         />
                     ) : (
-                        <code {...props} className={className}>
-                            {children}
-                        </code>
+                        <CodeTag {...props}>{children}</CodeTag>
                     );
                 },
                 hr: () => {

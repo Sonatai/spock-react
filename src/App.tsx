@@ -21,6 +21,7 @@ import gswGroovyGrape from './pages/GettingStarted/GettingStartedWithGroovyGrape
 import gswJitpack from './pages/GettingStarted/GettingStartedWithJitpack.md';
 import { NeuralNetworksQuickstart } from './pages/GettingStarted/NeuralNetworksQuickstart/NeuralNetworksQuickstart';
 import { Home } from './pages/Home/Home';
+import { CodeTag } from './components/shared/CodeTag/CodeTag';
 
 export const App = (): JSX.Element => {
     const { data: summary, isLoading, isError } = useGetSummary();
@@ -91,6 +92,8 @@ export const App = (): JSX.Element => {
                                     <MarkdownRenderer>
                                         {example.narrative}
                                     </MarkdownRenderer>
+                                    <br />
+                                    <CodeTag>Code Tag</CodeTag>
                                 </CustomPage>
                             }
                         />

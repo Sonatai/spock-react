@@ -1,0 +1,5 @@
+.code-tag {
+    @apply bg-[#61052A];
+    @apply rounded-md;
+    @apply p-1;
+}
