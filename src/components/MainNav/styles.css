@@ -41,6 +41,7 @@
     -webkit-text-fill-color: transparent;
     @apply w-fit;
     block-size: fit-content;
+    @apply no-underline;
 }
 
 .main__github {
