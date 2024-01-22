@@ -3,20 +3,20 @@
     @apply my-2;
     @apply mx-3;
     @apply flex;
-    @apply text-[#FF85AF];
+    @apply text-[#565661];
     @apply justify-between;
     @apply items-center;
 }
 
 .modal__footer__link {
     @apply no-underline;
-    @apply hover:text-[#ff3f81];
+    @apply hover:text-redNcs;
 }
 
 .modal__footer__image {
     @apply w-auto;
     @apply h-8;
     @apply rounded-full;
-    @apply bg-[#FF85AF];
-    @apply hover:bg-[#ff3f81];
+    @apply bg-[#565661];
+    @apply hover:bg-redNcs;
 }
