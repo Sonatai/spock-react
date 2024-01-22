@@ -2,8 +2,8 @@
     z-index: 999;
     position: fixed;
 
-    -webkit-tap-highlight-color: #fff;
-    background-color: #cae0e280;
+    -webkit-tap-highlight-color: #131315d9;
+    background-color: #131315d9;
 
     box-sizing: border-box;
     inset: 0;
@@ -18,13 +18,13 @@
     left: 40%;
 
     -webkit-tap-highlight-color: #fff;
-    background-color: #ffebf2;
+    background-color: #26262c;
 
     box-sizing: border-box;
-    border: 1px solid #ffebf2;
+    border: 1px solid #303036;
     @apply rounded-xl;
 
-    @apply drop-shadow-lg;
+    @apply drop-shadow-md;
 
     outline: 0;
     transform: translateX(-50%);
