@@ -10,7 +10,7 @@
 
 .modal__footer__link {
     @apply no-underline;
-    @apply hover:text-redNcs;
+    @apply hover:text-claret;
 }
 
 .modal__footer__image {
@@ -18,5 +18,5 @@
     @apply h-8;
     @apply rounded-full;
     @apply bg-[#565661];
-    @apply hover:bg-redNcs;
+    @apply hover:bg-claret;
 }
