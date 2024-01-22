@@ -1,6 +1,7 @@
 .modal__footer {
     @apply h-10;
-    @apply m-2;
+    @apply my-2;
+    @apply mx-3;
     @apply flex;
     @apply text-[#FF85AF];
     @apply justify-between;
@@ -8,6 +9,7 @@
 }
 
 .modal__footer__link {
+    @apply no-underline;
     @apply hover:text-[#ff3f81];
 }
 

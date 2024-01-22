@@ -32,5 +32,5 @@
 }
 
 .separator {
-    @apply border-[#ff3f81]/75;
+    @apply border-[#ff3f81];
 }
