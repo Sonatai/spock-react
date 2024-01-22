@@ -5,6 +5,7 @@ SpockReact is an easy way to automatically generate documentation from Spock tes
 ![Build & Test](https://github.com/Sonatai/spock-react/actions/workflows/build.yaml/badge.svg) ![Deployment](https://github.com/Sonatai/spock-react/actions/workflows/deploy.yaml/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Prerequisite**
+
 ![nodejs](https://img.shields.io/badge/NodeJs-21.5.0-green) ![npm](https://img.shields.io/badge/npm-8.15.0-green) ![yarn](https://img.shields.io/badge/yarn-1.22.19-green)
 
 Please install NodeJs and yarn in the right version (see above). Normally npm will be install in the matching version - please check if the version match with above.
