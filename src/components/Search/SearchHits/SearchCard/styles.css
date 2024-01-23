@@ -1,13 +1,13 @@
 .search__card {
-    @apply bg-[#B0CFD4] hover:bg-[#6DA7B0];
+    @apply bg-claret hover:bg-[#61052A];
+    @apply text-gray-400 hover:text-gray-400;
+    @apply no-underline;
 
     @apply mb-2 mr-6 ml-2 first:mt-2;
 
     @apply h-14;
 
     @apply rounded-md;
-
-    @apply text-[#24282D] hover:text-[#24282D];
 
     @apply leading-5;
 
@@ -21,7 +21,7 @@
 }
 
 .card__icon {
-    @apply text-[#508A91];
+    @apply text-gray-400;
     @apply mr-2;
 }
 

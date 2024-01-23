@@ -8,8 +8,8 @@
 
     border: 2px solid #e0004f;
 
-    @apply placeholder:text-gray-400;
-    @apply text-slate-800;
+    @apply placeholder:text-[#565661];
+    @apply text-gray-400;
 }
 
 .input__icon {

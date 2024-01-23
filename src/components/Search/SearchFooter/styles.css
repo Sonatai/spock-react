@@ -1,20 +1,22 @@
 .modal__footer {
     @apply h-10;
-    @apply m-2;
+    @apply my-2;
+    @apply mx-3;
     @apply flex;
-    @apply text-[#FF85AF];
+    @apply text-[#565661];
     @apply justify-between;
     @apply items-center;
 }
 
 .modal__footer__link {
-    @apply hover:text-[#ff3f81];
+    @apply no-underline;
+    @apply hover:text-claret;
 }
 
 .modal__footer__image {
     @apply w-auto;
     @apply h-8;
     @apply rounded-full;
-    @apply bg-[#FF85AF];
-    @apply hover:bg-[#ff3f81];
+    @apply bg-[#565661];
+    @apply hover:bg-claret;
 }

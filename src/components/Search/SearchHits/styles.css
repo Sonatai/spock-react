@@ -7,4 +7,5 @@
 .no__search__hit {
     @apply text-center;
     @apply pt-6;
+    @apply text-gray-400;
 }
