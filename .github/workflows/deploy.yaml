@@ -28,10 +28,6 @@ jobs:
               with:
                   cmd: install
 
-            - name: AutoClean
-              run: |
-                  yarn autoclean
-
             - name: Build production bundle
               uses: borales/actions-yarn@v4
               with:

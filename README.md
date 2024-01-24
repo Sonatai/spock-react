@@ -6,7 +6,7 @@ SpockReact is an easy way to automatically generate documentation from Spock tes
 
 **Prerequisite**
 
-![nodejs](https://img.shields.io/badge/NodeJs-21.5.0-green) ![npm](https://img.shields.io/badge/npm-8.15.0-green) ![yarn](https://img.shields.io/badge/yarn-1.22.19-green)
+![nodejs](https://img.shields.io/badge/NodeJs-21.6.1-green) ![npm](https://img.shields.io/badge/npm-10.2.4-green) ![yarn](https://img.shields.io/badge/yarn-3.6.4-green)
 
 Please install NodeJs and yarn in the right version (see above). Normally npm will be install in the matching version - please check if the version match with above.
 
