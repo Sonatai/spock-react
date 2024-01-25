@@ -13,7 +13,7 @@ export const SearchCard = (props: ISearchCard): JSX.Element => {
     return (
         <Link
             key={nanoid()}
-            to={hit.key}
+            to={hit.id}
             onClick={onClick}
             className="search__card"
         >

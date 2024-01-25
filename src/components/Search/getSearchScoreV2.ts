@@ -1,15 +1,9 @@
-import { IMinimizedSummaryEntry } from 'spock-react/components/search-types';
+import {
+    IFeatureScore,
+    IMinimizedSummaryEntry,
+    IScore,
+} from 'spock-react/components/search-types';
 
-interface IScore {
-    id: string;
-    score: number;
-    featureScores: IFeatureScore[];
-}
-
-interface IFeatureScore {
-    id: string;
-    score: number;
-}
 export const getSearchScoreV2TS = (
     searchInput: string,
     specifications: IMinimizedSummaryEntry[]

@@ -2,13 +2,12 @@ import './styles.css';
 
 import { Input } from 'reakit';
 import { ISearchInput } from 'spock-react/components/search-input-types';
-import { ISearchHit } from 'spock-react/components/search-types';
 
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
-import { getSearchScore } from '../getSearchScore';
+import { getSearchScoreV2TS } from '../getSearchScoreV2';
 
 export const SearchInput = (props: ISearchInput): JSX.Element => {
     const { summary, setSearchHits, setSearchInput, searchInput } = props;
@@ -21,23 +20,8 @@ export const SearchInput = (props: ISearchInput): JSX.Element => {
         } else if (searchInput === '') {
             setSearchHits(null);
         } else {
-            const toLowerSearchInput = searchInput.trim().toLowerCase();
-
-            const scoreEntries: ISearchHit[] = searchEntries.map((entry) => {
-                const score = getSearchScore(
-                    toLowerSearchInput,
-                    entry.keywords
-                );
-                return {
-                    key: entry.key,
-                    score,
-                };
-            });
-
-            const hits = scoreEntries.filter((entry) => entry.score > 0);
-            hits.length > 0
-                ? setSearchHits(hits.sort((a, b) => b.score - a.score))
-                : setSearchHits(null);
+            const hits = getSearchScoreV2TS(searchInput, searchEntries);
+            hits.length > 0 ? setSearchHits(hits) : setSearchHits(null);
         }
     };
 
