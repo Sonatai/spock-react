@@ -6,7 +6,7 @@ import { ISearchInput } from 'spock-react/components/search-input-types';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
+import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries/useGenerateSearchEntries';
 import { getSearchScoreV2TS } from '../getSearchScore';
 
 export const SearchInput = (props: ISearchInput): JSX.Element => {
