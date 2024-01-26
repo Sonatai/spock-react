@@ -28,15 +28,17 @@ export const getSearchScoreV2TS = (
 
         specification.features.forEach((feature) => {
             const normalizedFeature = normalizeString(feature.id);
+
             const featureScore = featureSearchScore(
                 searchTerm,
                 normalizedFeature
             );
-            score += featureScore;
             featureScores.push({
                 id: feature.id,
                 score: featureScore,
             });
+
+            score += featureScore;
         });
 
         const sortedFeatureScores = featureScores.sort(sortScore);
@@ -53,8 +55,7 @@ export const getSearchScoreV2TS = (
     return chosen;
 };
 
-const getTop25 = (sortedScores: IScore[]) =>
-    sortedScores.filter((score) => score.score > 0).slice(0, 25);
+const getTop25 = (sortedScores: IScore[]) => sortedScores.slice(0, 25);
 
 const sortScore = (
     scoreA: IScore | IFeatureScore,
@@ -67,17 +68,11 @@ const normalizeString = (term: string) => {
 
 const getSearchWordsScore = (searchWords: string[], searchTerm: string) => {
     let searchWordsScore = 0;
-    if (searchWords.length > 1) {
-        searchWords.forEach((word) => {
-            if (word.length === 0) {
-                searchWordsScore += 0;
-            }
-
-            if (word.includes(searchTerm)) {
-                searchWordsScore += 0.25;
-            }
-        });
-    }
+    searchWords.forEach((word) => {
+        if (word.includes(searchTerm)) {
+            searchWordsScore += 0.25;
+        }
+    });
 
     return searchWordsScore;
 };
@@ -171,6 +166,7 @@ const removeFillWords = (sentence: string) =>
 const fillWords = [
     'the',
     'a',
+    'an',
     'of',
     'and',
     'or',
@@ -191,7 +187,6 @@ const fillWords = [
     'with',
     'by',
     'for',
-    'an',
 ];
 
 const replaceCharSet = ['.', '`', ',', '"', '?', '_'];

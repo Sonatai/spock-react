@@ -7,7 +7,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries';
-import { getSearchScoreV2TS } from '../getSearchScoreV2';
+import { getSearchScoreV2TS } from '../getSearchScore';
 
 export const SearchInput = (props: ISearchInput): JSX.Element => {
     const { summary, setSearchHits, setSearchInput, searchInput } = props;
