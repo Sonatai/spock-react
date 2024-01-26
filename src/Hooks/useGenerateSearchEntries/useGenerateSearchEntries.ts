@@ -14,12 +14,17 @@ export const useGenerateSearchEntries = (
 
     useEffect(() => {
         const minimizedSummary = summary?.specifications.map(
-            (entry: ISpecification): IMinimizedSummaryEntry => ({
-                className: entry.className,
-                features: entry.executedFeatures,
-                narrative: entry.narrative,
-                title: entry.title,
-            })
+            (entry: ISpecification): IMinimizedSummaryEntry => {
+                const features = entry.executedFeatures.map((feature) => ({
+                    id: feature.id,
+                }));
+                return {
+                    className: entry.className,
+                    features,
+                    narrative: entry.narrative,
+                    title: entry.title,
+                };
+            }
         );
 
         minimizedSummary !== undefined && setSearchEntries(minimizedSummary);
