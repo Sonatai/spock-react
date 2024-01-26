@@ -1,21 +1,16 @@
 import { useEffect, useState } from 'react';
 import { ISpecification } from 'spock-react-types';
-import {
-    IMinimizedSummaryEntry,
-    ISearchEntry,
-} from 'spock-react/components/search-types';
+import { IMinimizedSummaryEntry } from 'spock-react/components/search-types';
 import { IGenerateSearchEntries } from 'spock-react/hooks-types';
-
-import { cleanedSearchData } from '../components/Search/generateSearchEntries';
 
 export const useGenerateSearchEntries = (
     props: IGenerateSearchEntries
-): ISearchEntry[] | null => {
+): IMinimizedSummaryEntry[] | null => {
     const { summary } = props;
 
-    const [searchEntries, setSearchEntries] = useState<ISearchEntry[] | null>(
-        null
-    );
+    const [searchEntries, setSearchEntries] = useState<
+        IMinimizedSummaryEntry[] | null
+    >(null);
 
     useEffect(() => {
         const minimizedSummary = summary?.specifications.map(
@@ -27,8 +22,7 @@ export const useGenerateSearchEntries = (
             })
         );
 
-        minimizedSummary !== undefined &&
-            setSearchEntries(cleanedSearchData(minimizedSummary));
+        minimizedSummary !== undefined && setSearchEntries(minimizedSummary);
     }, [summary]);
 
     return searchEntries;

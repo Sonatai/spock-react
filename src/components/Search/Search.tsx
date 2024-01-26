@@ -2,7 +2,7 @@ import './styles.css';
 
 import { useState } from 'react';
 import { Dialog, DialogBackdrop, Separator, useDialogState } from 'reakit';
-import { ISearch, ISearchHit } from 'spock-react/components/search-types';
+import { IScore, ISearch } from 'spock-react/components/search-types';
 
 import { SearchButton } from './SearchButton';
 import { SearchFooter } from './SearchFooter';
@@ -14,7 +14,7 @@ export const Search = (props: ISearch): JSX.Element => {
 
     const dialog = useDialogState();
 
-    const [searchHits, setSearchHits] = useState<ISearchHit[] | null>(null);
+    const [searchHits, setSearchHits] = useState<IScore[] | null>(null);
     const [searchInput, setSearchInput] = useState('');
 
     return (
