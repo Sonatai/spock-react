@@ -2,7 +2,7 @@ import { expect, test } from 'vitest';
 
 import { renderHook } from '@testing-library/react-hooks';
 import { HookProvider } from '../../test-utils';
-import mockedSummery from './mockSummery.json';
+import mockedSummery from './mock.summary.json';
 import { useGenerateSearchEntries } from './useGenerateSearchEntries';
 import { IMinimizedSummaryEntry } from 'spock-react/components/search-types';
 

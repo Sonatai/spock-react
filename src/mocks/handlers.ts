@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import mockedSummery from './mockedSummery.json';
+import mockedSummery from './mocked.summary.json';
 
 export const handlers = [
     http.get('*summary.json', () => {
