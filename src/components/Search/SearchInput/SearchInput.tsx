@@ -7,7 +7,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useGenerateSearchEntries } from '../../../Hooks/useGenerateSearchEntries/useGenerateSearchEntries';
-import { getSearchScoreV2TS } from '../getSearchScore';
+import { getSearchScore } from '../getSearchScore';
 
 export const SearchInput = (props: ISearchInput): JSX.Element => {
     const { summary, setSearchHits, setSearchInput, searchInput } = props;
@@ -20,7 +20,7 @@ export const SearchInput = (props: ISearchInput): JSX.Element => {
         } else if (searchInput === '') {
             setSearchHits(null);
         } else {
-            const hits = getSearchScoreV2TS(searchInput, searchEntries);
+            const hits = getSearchScore(searchInput, searchEntries);
             hits.length > 0 ? setSearchHits(hits) : setSearchHits(null);
         }
     };

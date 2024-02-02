@@ -53,7 +53,7 @@ const minimizedSummaries: IMinimizedSummaryEntry[] = [
     },
 ];
 
-test('hook example', () => {
+test('generate search entries', () => {
     const { result } = renderHook(
         () => useGenerateSearchEntries({ summary: mockedSummery }),
         {

@@ -4,7 +4,7 @@ import {
     IScore,
 } from 'spock-react/components/search-types';
 
-export const getSearchScoreV2TS = (
+export const getSearchScore = (
     searchInput: string,
     specifications: IMinimizedSummaryEntry[]
 ) => {
