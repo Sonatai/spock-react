@@ -5,19 +5,22 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Search } from './Search';
 import mockData from './search.mock.json';
 
-/***
- * !TODO: Wrap router
- */
-
 const meta = {
-    title: 'Search',
+    title: 'Components/Search',
     component: Search,
     decorators: [
         (Story): React.JSX.Element => {
             return (
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/*" element={<Story />} />
+                        <Route
+                            path="/*"
+                            element={
+                                <div className="w-60">
+                                    <Story />
+                                </div>
+                            }
+                        />
                     </Routes>
                 </BrowserRouter>
             );
