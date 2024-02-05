@@ -1,11 +1,6 @@
 declare module 'spock-react/components/search-types' {
     import { ISummary } from 'spock-react-types';
 
-    export interface ISearchHit {
-        score: number;
-        key: string;
-    }
-
     interface ISearch {
         summary: ISummary;
     }
@@ -17,9 +12,14 @@ declare module 'spock-react/components/search-types' {
         features: Array<{ id: string }>;
     }
 
-    export interface ISearchEntry {
-        key: string;
-        href?: string;
-        keywords: string[];
+    interface IScore {
+        id: string;
+        score: number;
+        featureScores: IFeatureScore[];
+    }
+
+    interface IFeatureScore {
+        id: string;
+        score: number;
     }
 }

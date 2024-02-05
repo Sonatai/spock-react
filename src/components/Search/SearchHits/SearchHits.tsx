@@ -20,11 +20,11 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
             {searchHits !== null ? (
                 searchHits.map((hit) => {
                     const spec = summary.specifications.find(
-                        (spec) => spec.className === hit.key
+                        (spec) => spec.className === hit.id
                     );
                     const feature = summary.specifications.map((spec) =>
                         spec.executedFeatures.find(
-                            (feature) => feature.id === hit.key
+                            (feature) => feature.id === hit.id
                         )
                     )[0];
 
