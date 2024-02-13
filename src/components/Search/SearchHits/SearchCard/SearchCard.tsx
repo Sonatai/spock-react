@@ -1,18 +1,17 @@
 import './styles.css';
 
-import { nanoid } from 'nanoid';
 import { Link } from 'react-router-dom';
+import { ISearchCard } from 'spock-react/components/search-card-types';
 
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ISearchCard } from 'spock-react/components/search-card-types';
 
 export const SearchCard = (props: ISearchCard): JSX.Element => {
     const { onClick, hit, spec, feature } = props;
 
     return (
         <Link
-            key={nanoid()}
+            key={hit.id}
             to={hit.id}
             onClick={onClick}
             className="search__card"

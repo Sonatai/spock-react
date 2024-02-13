@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import mockData from '../search.mock.json';
+import mockData from '../../../mocks/fullSummary.mock.json';
 import { SearchInput } from './SearchInput';
 
 const meta = {
@@ -28,7 +28,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Component: Story = {
+export const SearchInputComponent: Story = {
+    name: 'Search Input',
     args: {
         summary: mockData,
         searchInput: '',
