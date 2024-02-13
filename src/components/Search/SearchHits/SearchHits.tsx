@@ -1,6 +1,5 @@
 import './styles.css';
 
-import { nanoid } from 'nanoid';
 import { ISearchHits } from 'spock-react/components/search-hits-types';
 
 import { SearchCard } from './SearchCard';
@@ -30,7 +29,7 @@ export const SearchHits = (props: ISearchHits): JSX.Element => {
 
                     return (
                         <SearchCard
-                            key={nanoid()}
+                            key={hit.id}
                             onClick={handleClick}
                             hit={hit}
                             spec={spec}
